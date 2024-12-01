@@ -47,7 +47,7 @@ def parse_datetime(value):
     print(f"Could not parse date: {value}")
     return None  # Trả về None nếu không thể phân tích cú pháp
 
-# câu query để chèn weather vào staing
+# đọc dữ liệu từ file csv
 def get_data_from_csv(filepath):
     """Trích xuất và định dạng dữ liệu từ CSV để chèn vào MySQL."""
     data = []

@@ -47,7 +47,7 @@ def parse_datetime(value):
     print(f"Could not parse date: {value}")
     return None  # Trả về None nếu không thể phân tích cú pháp
 
-# câu query để chèn location
+# đọc lấy dữ liệu từ cột location
 def get_data_location_from_csv(filepath):
     data = set()  # Sử dụng tập hợp (set) để lưu trữ các địa điểm duy nhất
     with open(filepath, mode='r', encoding='utf-8', errors='ignore') as file:
@@ -59,7 +59,7 @@ def get_data_location_from_csv(filepath):
             print(f"Dữ liệu dòng: location={location}")
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
-# câu query để chèn country
+# đọc lấy dữ liệu từ cột country
 def get_data_country_from_csv(filepath):
     data = set()  # Sử dụng tập hợp (set) để lưu trữ các địa điểm duy nhất
     with open(filepath, mode='r', encoding='utf-8', errors='ignore') as file:
@@ -71,7 +71,7 @@ def get_data_country_from_csv(filepath):
             print(f"Dữ liệu dòng: country={country}")
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
-# câu query để chèn weather_description
+# đọc lấy dữ liệu từ cột weather_description
 def get_data_weather_description_from_csv(filepath):
     data = set()  # Sử dụng tập hợp (set) để lưu trữ các địa điểm duy nhất
     with open(filepath, mode='r', encoding='utf-8', errors='ignore') as file:
