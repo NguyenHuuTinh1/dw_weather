@@ -98,7 +98,7 @@ def transform_staging_to_fact(db_credentials):
 
 if __name__ == "__main__":
     # Load database credentials
-    CONNECT_DB_FILE = r"D:\dw_weather\crawl_data\src\connect_db.txt"
+    CONNECT_DB_FILE = r"/\src\connect_db.txt"
     db_credentials = read_db_credentials(CONNECT_DB_FILE)
 
     # Transform and load data from staging to fact table
