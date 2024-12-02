@@ -22,7 +22,7 @@ mainFilePath = ''
 def CrawInformationDB():
     lines = []
     try:
-        with open(r"D:\dw_weather\crawl_data\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"/\src\connect_db.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())
         return lines

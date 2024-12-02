@@ -147,5 +147,6 @@ def transform_staging_to_fact():
         write_log_to_db("ERROR", f"Error during staging to fact transformation: {e}")
 
 
+
 # Entry point
 transform_staging_to_fact()
