@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\data_warehouse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\views\\staging\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\views\\staging\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\services\\stagingserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\services\\stagingserviceimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\models\\staging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\models\\staging.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\models\\log.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\models\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\models\\controldataconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\models\\controldataconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\controllers\\stagingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\controllers\\stagingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\services\\stagingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\services\\stagingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|c:\\users\\pc\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{30DAD17A-D815-4503-AF9F-B990EBC1602B}|data_warehouse\\data_warehouse.csproj|solutionrelative:data_warehouse\\data_warehouse.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Models\\Location.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\Location.cs",
+              "RelativeToolTip": "data_warehouse\\Models\\Location.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T08:19:13.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Log.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\Log.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Models\\Log.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\Log.cs",
+              "RelativeToolTip": "data_warehouse\\Models\\Log.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T08:19:13.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Staging.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\Staging.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Models\\Staging.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\Staging.cs",
+              "RelativeToolTip": "data_warehouse\\Models\\Staging.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:51:18.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Views\\Staging\\Index.cshtml",
+              "RelativeDocumentMoniker": "data_warehouse\\Views\\Staging\\Index.cshtml",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Views\\Staging\\Index.cshtml",
+              "RelativeToolTip": "data_warehouse\\Views\\Staging\\Index.cshtml",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAUwHkAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T07:46:14.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "StagingController.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Controllers\\StagingController.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Controllers\\StagingController.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Controllers\\StagingController.cs",
+              "RelativeToolTip": "data_warehouse\\Controllers\\StagingController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:45:14.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StagingServiceImpl.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Services\\StagingServiceImpl.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Services\\StagingServiceImpl.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Services\\StagingServiceImpl.cs",
+              "RelativeToolTip": "data_warehouse\\Services\\StagingServiceImpl.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:43:27.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StagingService.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Services\\StagingService.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Services\\StagingService.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Services\\StagingService.cs",
+              "RelativeToolTip": "data_warehouse\\Services\\StagingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:43:06.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Models\\MyDbContext.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\MyDbContext.cs",
+              "RelativeToolTip": "data_warehouse\\Models\\MyDbContext.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAIwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:40:23.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "data_warehouse.csproj",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
+              "RelativeDocumentMoniker": "data_warehouse\\data_warehouse.csproj",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
+              "RelativeToolTip": "data_warehouse\\data_warehouse.csproj",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-30T07:40:08.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\appsettings.json",
+              "RelativeDocumentMoniker": "data_warehouse\\appsettings.json",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\appsettings.json",
+              "RelativeToolTip": "data_warehouse\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-30T07:34:28.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Program.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Program.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Program.cs",
+              "RelativeToolTip": "data_warehouse\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T07:33:51.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ControlDataConfig.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\ControlDataConfig.cs",
+              "RelativeDocumentMoniker": "data_warehouse\\Models\\ControlDataConfig.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\Models\\ControlDataConfig.cs",
+              "RelativeToolTip": "data_warehouse\\Models\\ControlDataConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T08:14:42.671Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

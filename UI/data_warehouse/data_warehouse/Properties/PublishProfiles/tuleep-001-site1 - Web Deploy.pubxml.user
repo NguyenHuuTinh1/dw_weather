@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqnMNSbxukybfInv+9+PtAAAAAACAAAAAAAQZgAAAAEAACAAAABYi4A3MxrXx149YuoF8I6OqLOERRXR+G+qU9xxIvUlOAAAAAAOgAAAAAIAACAAAABvHL0wpucOUkrb2u3YlAKLj/BmFxqFUJXzhtoZamCb6CAAAAATE1rI791Q+l0LqAz61c3aKUgPpGFHDo8dq7kGUt8aYUAAAAD1yu2Rcxd50ifUfL6lUsK3PLpNReRb3KQrmXUvy/tvIUQqN9S93kHSf4WaNo//4K+xT8m+YHWNnPG0+oM4XFlb</EncryptedPassword>
+    <History>False|2024-11-30T08:35:34.5295251Z||;True|2024-11-30T15:25:23.2096793+07:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=mysql9001.site4now.net%3bDatabase=db_aaffed_tuleep%3bUid=aaffed_tuleep%3bPwd=lethanhtu2803</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="data_warehouse.Models.MyDbContext">
+      <Value>Server=mysql9001.site4now.net%3bDatabase=db_aaffed_tuleep%3bUid=aaffed_tuleep%3bPwd=lethanhtu2803</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "q1veTnAXniwbAsG5x9zc0BgqCLDSwGTuDXyykDogWjk=",
+  "Source": "data_warehouse",
+  "BasePath": "_content/data_warehouse",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

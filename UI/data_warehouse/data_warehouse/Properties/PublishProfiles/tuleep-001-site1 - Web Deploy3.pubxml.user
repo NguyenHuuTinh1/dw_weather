@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAuqnMNSbxukybfInv+9+PtAAAAAACAAAAAAAQZgAAAAEAACAAAAAgTw72Xck74WAD5HNT0q7+yxt2Y3KKcjx5Lwqr1tCy3gAAAAAOgAAAAAIAACAAAACjUq+XFhHYc/QCyesrzdXewIJI5uDWz3/Kef9Bb9u7oiAAAACd6YnlcoxFvtSNAL/+4RgwdGK7vsSaOLURf6ndeWGLqkAAAAA+guprqNuJMyfqFY2Vutq23ItUiOQEew80oP9zruOyQfFJVdfew+u79cX5b98j8KYUix8GfaRkLbRFGCgEYyIu</EncryptedPassword>
+    <History>True|2024-11-30T08:43:09.0127283Z||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=mysql9001.site4now.net%3bDatabase=db_aaffed_tuleep%3bUid=aaffed_tuleep%3bPwd=lethanhtu2803</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
