@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Thực Tế</title>
+
+    <!-- Thêm link đến CSS của DataTables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .checkbox-container {
+            margin-bottom: 15px;
+        }
+
+            .checkbox-container label {
+                margin-right: 15px;
+            }
+    </style>
+</head>
+<body>
+
+    <h2>Bảng Thực Tế</h2>
+
+    <!-- Phần checkbox để chọn các cột cần hiển thị -->
+    <div class="checkbox-container">
+      
+        <label><input type="checkbox" class="column-toggle" data-column="0" checked> #</label>
+        <label><input type="checkbox" class="column-toggle" data-column="1" checked> Quốc Gia</label>
+        <label><input type="checkbox" class="column-toggle" data-column="2" checked> Nhiệt độ</label>
+        <label><input type="checkbox" class="column-toggle" data-column="3" checked> Tình trạng thời tiết</label>
+        <label><input type="checkbox" class="column-toggle" data-column="4" checked> Vị trí</label>
+        <label><input type="checkbox" class="column-toggle" data-column="5" checked> Thời gian hiện tại</label>
+        <label><input type="checkbox" class="column-toggle" data-column="6" checked> Báo cáo mới nhất</label>
+        <label><input type="checkbox" class="column-toggle" data-column="7" checked> Tầm nhìn</label>
+        <label><input type="checkbox" class="column-toggle" data-column="8" checked> Áp suất</label>
+        <label><input type="checkbox" class="column-toggle" data-column="9" checked> Độ ẩm</label>
+        <label><input type="checkbox" class="column-toggle" data-column="10" checked> Điểm sương</label>
+        <label><input type="checkbox" class="column-toggle" data-column="11" checked> Thời gian chết</label>
+    </div>
+
+    <!-- Bảng dữ liệu -->
+    <table id="example">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Quốc Gia</th>
+                <th>Nhiệt độ</th>
+                <th>Tình trạng thời tiết</th>
+                <th>Vị trí</th>
+                <th>Thời gian hiện tại</th>
+                <th>Báo cáo mới nhất</th>
+                <th>Tầm nhìn</th>
+                <th>Áp suất</th>
+                <th>Độ ẩm</th>
+                <th>Điểm sương</th>
+                <th>Thời gian chết</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var staging in ViewBag.Staging)
+            {
+                <tr>
+                    <td>@staging.Id</td>
+                    <td>@staging.Nation</td>
+                    <td>@staging.Temperature</td>
+                    <td>@staging.WeatherStatus</td>
+                    <td>@staging.Location</td>
+                    <td>@staging.CurrentTime.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                    <td>@staging.LatestReport.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                    <td>@staging.Visibility</td>
+                    <td>@staging.Pressure</td>
+                    <td>@staging.Humidity</td>
+                    <td>@staging.DewPoint</td>
+                    <td>@staging.DeadTime.ToString("dd/MM/yyyy HH:mm:ss")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Thêm thư viện jQuery và DataTables JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Khởi tạo DataTable
+            var table = $('#example').DataTable();
+
+            // Xử lý sự kiện thay đổi trạng thái checkbox để ẩn/hiện cột
+            $('.column-toggle').on('change', function () {
+                var column = table.column($(this).data('column'));
+                column.visible($(this).prop('checked'));
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gNOF0Xb2wLDNbbYm7TULiZFe+XvWeVMAOxbCYRmE6y4=",
+  "Source": "data_warehouse",
+  "BasePath": "_content/data_warehouse",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
