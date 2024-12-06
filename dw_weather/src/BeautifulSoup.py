@@ -22,7 +22,7 @@ mainFilePath = ''
 def CrawInformationDB():
     lines = []
     try:
-        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"E:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())
         return lines
@@ -42,8 +42,8 @@ def select_data_control_file_config():
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',  # Đảm bảo mật khẩu đúng
-            database=lines[2]
+            password=lines[2],  # Đảm bảo mật khẩu đúng
+            database=lines[3]
         )
 
         if connection.open:
@@ -93,8 +93,8 @@ def write_log_to_db(status, note, log_date=None):
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',
-            database=lines[2]
+            password=lines[2],
+            database=lines[3]
         )
         if connection.open:
             cursor = connection.cursor()
@@ -268,6 +268,46 @@ def CrawDetailedInformation(url):
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi trong phương thức CrawDetailedInformation: {e}")
         return []
+# Insert data into date_dim table
+def InsertDateDim():
+    lines = CrawInformationDB()
+    if not lines:
+        print("Không thể ghi vào date_dim do không có thông tin kết nối database.")
+        return
+
+    try:
+        # Connect to the database
+        connection = pymysql.connect(
+            host=lines[0],
+            user=lines[1],
+            password=lines[2],
+            database=lines[3]
+        )
+        if connection.open:
+            cursor = connection.cursor()
+
+            # Get the current date values
+            current_date = datetime.now()
+            date_values = current_date.strftime('%Y-%m-%d %H:%M:%S')  # Store the full datetime value
+            day = current_date.day  # Extract integer day
+            month = current_date.month  # Extract integer month
+            year = current_date.year  # Extract integer year
+
+            # Insert the record into the date_dim table
+            sql_query = """INSERT INTO date_dim (date_values, day, month, year) VALUES (%s, %s, %s, %s)"""
+            data = (date_values, day, month, year)
+            cursor.execute(sql_query, data)
+            connection.commit()
+            print("Dữ liệu đã được thêm vào bảng date_dim thành công!")
+            write_log_to_db("SUCCESS", "Dữ liệu được thêm vào bảng date_dim thành công")
+    except Exception as e:
+        print(f"Lỗi khi thêm dữ liệu vào bảng date_dim: {e}")
+        write_log_to_db("ERROR", f"Lỗi khi thêm dữ liệu vào bảng date_dim: {e}")
+    finally:
+        if 'cursor' in locals():
+            cursor.close()
+        if 'connection' in locals() and connection.open:
+            connection.close()
 
 # Xuất dữ liệu ra file CSV
 def ExportCsv(data, filePath):
@@ -310,6 +350,7 @@ def CrawData():
         return
 
     try:
+        InsertDateDim()
         data = CrawDetailedInformation(url_web)
         ExportCsv(data, mainFilePath)
     except Exception as e:

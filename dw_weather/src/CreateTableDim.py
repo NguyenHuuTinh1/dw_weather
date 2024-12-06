@@ -40,7 +40,7 @@ def parse_datetime(value):
 def CrawInformationDB():
     lines = []
     try:
-        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"E:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())
         return lines
@@ -57,8 +57,8 @@ def select_location_file_csv():
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',  # Đảm bảo mật khẩu đúng
-            database=lines[2]
+            password=lines[2],  # Đảm bảo mật khẩu đúng
+            database=lines[3]
         )
         write_log_to_db("SUCCESS", "Kết nối database thành công.")
         if connection.open:
@@ -93,8 +93,8 @@ def write_log_to_db(status, note, log_date=None):
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',
-            database=lines[2]
+            password=lines[2],
+            database=lines[3]
         )
         if connection.open:
             cursor = connection.cursor()
@@ -156,8 +156,8 @@ def insert_data_location_in_DB():
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',
-            database=lines[2]
+            password=lines[2],
+            database=lines[3]
         )
 
         if connection.open:
@@ -190,8 +190,8 @@ def insert_data_country_in_DB():
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',
-            database=lines[2]
+            password=lines[2],
+            database=lines[3]
         )
 
         if connection.open:
@@ -224,8 +224,8 @@ def insert_data_weather_description_in_DB():
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',
-            database=lines[2]
+            password=lines[2],
+            database=lines[3]
         )
 
         if connection.open:
@@ -257,8 +257,8 @@ def insert_data_late_report_in_DB():
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password='',
-            database=lines[2]
+            password=lines[2],
+            database=lines[3]
         )
 
         if connection.open:

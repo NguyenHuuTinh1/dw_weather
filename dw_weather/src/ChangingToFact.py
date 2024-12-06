@@ -10,7 +10,7 @@ def write_log_to_db(status, note, log_date=None):
     :param note: Description of the log
     :param log_date: Optional log date; uses current time if not provided
     """
-    db_credentials = read_db_credentials(r"E:\dw_weather\crawl_data\src\connect_db.txt")
+    db_credentials = read_db_credentials(r"E:\dw_weather\dw_weather\src\connect_db.txt")
     if not db_credentials:
         print("Cannot write log because no database credentials found.")
         return
@@ -76,10 +76,10 @@ class DatabaseConnection:
 # Method to transform staging data to fact table
 def transform_staging_to_fact():
     """
-    Transforms data from staging tables into the fact table.
-    Logs events during the process.
+    Transforms data from staging tables into the fact table,
+    including mapping to `date_dim` and `latest_report`.
     """
-    db_credentials = read_db_credentials(r"E:\dw_weather\crawl_data\src\connect_db.txt")
+    db_credentials = read_db_credentials(r"E:\dw_weather\dw_weather\src\connect_db.txt")
     if not db_credentials:
         write_log_to_db("ERROR", "Missing database credentials for staging to fact transformation.")
         return
@@ -98,6 +98,12 @@ def transform_staging_to_fact():
 
                 cursor.execute("SELECT id, values_weather FROM weather_description")
                 weather_map = {row[1]: row[0] for row in cursor.fetchall()}
+
+                cursor.execute("SELECT id, time FROM latesreport")
+                latest_report_map = {row[1]: row[0] for row in cursor.fetchall()}
+
+                cursor.execute("SELECT id, date_values FROM date_dim")
+                date_map = {row[1]: row[0] for row in cursor.fetchall()}
 
                 # Fetch raw data from the staging table
                 write_log_to_db("INFO", "Fetching data from staging table.")
@@ -118,13 +124,28 @@ def transform_staging_to_fact():
                     country_id = country_map.get(nation)
                     location_id = location_map.get(location)
                     weather_id = weather_map.get(weather_status)
+                    report_id = latest_report_map.get(latest_report)
+
+                    # Check or insert into date_dim
+                    if current_time not in date_map:
+                        day = current_time.day
+                        month = current_time.month
+                        year = current_time.year
+                        cursor.execute(
+                            "INSERT INTO date_dim (date_values, day, month, year) VALUES (%s, %s, %s, %s)",
+                            (current_time, day, month, year)
+                        )
+                        conn.commit()
+                        cursor.execute("SELECT LAST_INSERT_ID()")
+                        date_id = cursor.fetchone()[0]
+                        date_map[current_time] = date_id
+                    else:
+                        date_id = date_map[current_time]
 
                     # Verify mappings
-                    if country_id and location_id and weather_id:
-                        fact_inserts.append((
-                            country_id, location_id, weather_id, temperature, current_time, latest_report,
-                            visibility, pressure, humidity, dew_point, dead_time
-                        ))
+                    if country_id and location_id and weather_id and report_id and date_id:
+                        fact_inserts.append((country_id, location_id, weather_id, date_id, report_id,
+                                             temperature, visibility, pressure, humidity, dew_point, dead_time))
                     else:
                         write_log_to_db("WARNING", f"Skipping record due to missing mapping: {record}")
 
@@ -133,7 +154,7 @@ def transform_staging_to_fact():
                     write_log_to_db("INFO", "Inserting data into the fact table.")
                     insert_query = """
                         INSERT INTO fact_table (
-                            country_id, location_id, weather_id, temperature, currentTime, latestReport, 
+                            country_id, location_id, weather_id, date_id, report_id, temperature,
                             visibility, pressure, humidity, dew_point, dead_time
                         ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
                     """
