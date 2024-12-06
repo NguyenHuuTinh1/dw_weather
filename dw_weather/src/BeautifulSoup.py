@@ -22,12 +22,12 @@ mainFilePath = ''
 def CrawInformationDB():
     lines = []
     try:
-        with open(r"/\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())
         return lines
     except Exception as e:
-        write_log_to_db("ERROR", f"Lỗi đọc file cấu hình: {e}")
+        print(f"Lỗi đọc file cấu hình: {e}")
         return []
 
 
