@@ -164,13 +164,25 @@ def insert_data_location_in_DB():
             write_log_to_db("SUCCESS", "Kết nối thành công đến MySQL cho bảng location")
             print("Kết nối thành công đến MySQL")
             cursor = connection.cursor()
-            sql_query = """INSERT INTO location (values_location) VALUES (%s)"""
 
+            # Load data from CSV
             data = get_data_location_from_csv(csv_file_path)
 
-            cursor.executemany(sql_query, data)
+            # Prepare query to check for existing data
+            check_query = "SELECT COUNT(*) FROM location WHERE values_location = %s"
+            insert_query = "INSERT INTO location (values_location) VALUES (%s)"
+
+            for value in data:
+                cursor.execute(check_query, (value,))
+                count = cursor.fetchone()[0]
+                if count == 0:
+                    cursor.execute(insert_query, (value,))
+                    write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.")
+                else:
+                    write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.")
+
             connection.commit()
-            write_log_to_db("SUCCESS", "Dữ liệu location đã được chèn thành công!")
+            write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu location đã hoàn tất.")
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu location: {e}")
         print(f"Lỗi khi chèn dữ liệu: {e}")
@@ -198,13 +210,25 @@ def insert_data_country_in_DB():
             write_log_to_db("SUCCESS", "Kết nối thành công đến MySQL cho bảng country")
             print("Kết nối thành công đến MySQL")
             cursor = connection.cursor()
-            sql_query = """INSERT INTO country (values_country) VALUES (%s)"""
 
+            # Load data from CSV
             data = get_data_country_from_csv(csv_file_path)
 
-            cursor.executemany(sql_query, data)
+            # Prepare query to check for existing data
+            check_query = "SELECT COUNT(*) FROM country WHERE values_country = %s"
+            insert_query = "INSERT INTO country (values_country) VALUES (%s)"
+
+            for value in data:
+                cursor.execute(check_query, (value,))
+                count = cursor.fetchone()[0]
+                if count == 0:
+                    cursor.execute(insert_query, (value,))
+                    write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.")
+                else:
+                    write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.")
+
             connection.commit()
-            write_log_to_db("SUCCESS", "Dữ liệu country đã được chèn thành công!")
+            write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu country đã hoàn tất.")
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu country: {e}")
         print(f"Lỗi khi chèn dữ liệu: {e}")
@@ -215,6 +239,7 @@ def insert_data_country_in_DB():
             connection.close()
             write_log_to_db("SUCCESS", "Đã đóng kết nối MySQL")
             print("Đã đóng kết nối MySQL")
+
 
 # Chèn dữ liệu weather_description để làm bảng dim
 def insert_data_weather_description_in_DB():
@@ -232,13 +257,25 @@ def insert_data_weather_description_in_DB():
             write_log_to_db("SUCCESS", "Kết nối thành công đến MySQL cho bảng weather_description")
             print("Kết nối thành công đến MySQL")
             cursor = connection.cursor()
-            sql_query = """INSERT INTO weather_description (values_weather) VALUES (%s)"""
 
+            # Load data from CSV
             data = get_data_weather_description_from_csv(csv_file_path)
 
-            cursor.executemany(sql_query, data)
+            # Prepare query to check for existing data
+            check_query = "SELECT COUNT(*) FROM weather_description WHERE values_weather = %s"
+            insert_query = "INSERT INTO weather_description (values_weather) VALUES (%s)"
+
+            for value in data:
+                cursor.execute(check_query, (value,))
+                count = cursor.fetchone()[0]
+                if count == 0:
+                    cursor.execute(insert_query, (value,))
+                    write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.")
+                else:
+                    write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.")
+
             connection.commit()
-            write_log_to_db("SUCCESS", "Dữ liệu weather_description đã được chèn thành công!")
+            write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu weather_description đã hoàn tất.")
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu weather_description: {e}")
         print(f"Lỗi khi chèn dữ liệu: {e}")
@@ -265,13 +302,25 @@ def insert_data_late_report_in_DB():
             write_log_to_db("SUCCESS", "Kết nối thành công đến MySQL cho bảng latesReport")
             print("Kết nối thành công đến MySQL")
             cursor = connection.cursor()
-            sql_query = """INSERT INTO latesReport (time) VALUES (%s)"""
 
+            # Data to be inserted
             data = ["SÁNG", "CHIỀU", "TỐI", "ĐÊM"]
 
-            cursor.executemany(sql_query, data)
+            # Prepare query to check for existing data
+            check_query = "SELECT COUNT(*) FROM latesReport WHERE time = %s"
+            insert_query = "INSERT INTO latesReport (time) VALUES (%s)"
+
+            for value in data:
+                cursor.execute(check_query, (value,))
+                count = cursor.fetchone()[0]
+                if count == 0:
+                    cursor.execute(insert_query, (value,))
+                    write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.")
+                else:
+                    write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.")
+
             connection.commit()
-            write_log_to_db("SUCCESS", "Dữ liệu latesReport đã được chèn thành công!")
+            write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu latesReport đã hoàn tất.")
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu latesReport: {e}")
         print(f"Lỗi khi chèn dữ liệu: {e}")
@@ -282,6 +331,7 @@ def insert_data_late_report_in_DB():
             connection.close()
             write_log_to_db("SUCCESS", "Đã đóng kết nối MySQL")
             print("Đã đóng kết nối MySQL")
+
 # ----------------------------------------------------------------
 # Hàm insert gọi tất cả các hàm chèn dữ liệu
 def insert():
