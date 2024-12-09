@@ -1,13 +1,3 @@
-USA,25,Sunny,Washington DC,2024-11-28,2024-11-28 10:00,10km,1013hPa,50%,18°C,2024-12-31
-Canada,15,Cloudy,Ottawa,2024-11-28,2024-11-28 10:00,8km,1020hPa,60%,10°C,2024-12-31
-USA,25,Sunny,Washington DC,2024-11-28,2024-11-28 10:00,10km,1013hPa,50%,18°C,2024-12-31
-Canada,15,Cloudy,Ottawa,2024-11-28,2024-11-28 10:00,8km,1020hPa,60%,10°C,2024-12-31
-USA,25,Sunny,Washington DC,2024-11-28,2024-11-28 10:00,10km,1013hPa,50%,18°C,2024-12-31
-Canada,15,Cloudy,Ottawa,2024-11-28,2024-11-28 10:00,8km,1020hPa,60%,10°C,2024-12-31
-USA,25,Sunny,Washington DC,2024-11-28,2024-11-28 10:00,10km,1013hPa,50%,18°C,2024-12-31
-Canada,15,Cloudy,Ottawa,2024-11-28,2024-11-28 10:00,8km,1020hPa,60%,10°C,2024-12-31
-USA,25,Sunny,Washington DC,2024-11-28,2024-11-28 10:00,10km,1013hPa,50%,18°C,2024-12-31
-Canada,15,Cloudy,Ottawa,2024-11-28,2024-11-28 10:00,8km,1020hPa,60%,10°C,2024-12-31
 Albania,16,Broken clouds.,Tirana Airport,"28 Nov 2024, 16:34:06","28 Nov 2024, 15:50",N/A,1023,83,13,24/12/2999
 Algeria,20,Passing clouds.,Alger-Port,"28 Nov 2024, 16:34:06","28 Nov 2024, 13:00",9,1024,82,17,24/12/2999
 Angola,28,Broken clouds.,Luanda  Airport,"28 Nov 2024, 16:34:07","28 Nov 2024, 16:00",N/A,1010,70,22,24/12/2999
@@ -197,3 +187,561 @@ Vatican City State,20,Scattered clouds.,Rome Urbe Airport,"28 Nov 2024, 16:35:42
 Venezuela,32,Scattered clouds.,Caracas / Maiquetia Aerop. Intl. Simon Bolivar,"28 Nov 2024, 11:35:43","28 Nov 2024, 11:00",N/A,1012,71,26,24/12/2999
 Vietnam,19,Clear.,Ha Noi Airport,"28 Nov 2024, 22:35:43","28 Nov 2024, 21:30",16,1025,56,10,24/12/2999
 Zimbabwe,30,Partly sunny.,Harare Kutsaga,"28 Nov 2024, 17:35:44","28 Nov 2024, 14:00",30,N/A,43,16,24/12/2999
+Albania,9,Mostly cloudy.,Tirana Airport,"6 Dec 2024, 05:08:18","6 Dec 2024, 04:20",N/A,1016,87,7,24/12/2999
+Algeria,16,Passing clouds.,Alger-Port,"6 Dec 2024, 05:08:18","6 Dec 2024, 04:00",10,1025,73,11,24/12/2999
+Angola,26,Partly cloudy.,Luanda  Airport,"6 Dec 2024, 05:08:19","6 Dec 2024, 04:00",N/A,1010,84,23,24/12/2999
+Antigua and Barbuda,27,Passing clouds.,Vc Bird International Antigua Airport,"6 Dec 2024, 00:08:19","5 Dec 2024, 23:00",N/A,1015,70,21,24/12/2999
+Argentina,22,Clear.,Buenos Aires Airport,"6 Dec 2024, 01:08:19","6 Dec 2024, 00:00",16,1004,73,17,24/12/2999
+Armenia,-1,Clear.,Makko,"6 Dec 2024, 08:08:19","6 Dec 2024, 07:00",10,1030,86,-3,24/12/2999
+Aruba,28,Passing clouds.,Queen Beatrix Airport - Aruba,"6 Dec 2024, 00:08:19","5 Dec 2024, 23:00",N/A,1012,70,22,24/12/2999
+Australia,31,Scattered clouds.,Canberra Airport,"6 Dec 2024, 15:08:20","6 Dec 2024, 14:30",N/A,1016,49,19,24/12/2999
+Austria,0,Passing clouds.,Vienna Schwechat-Flughafen Airport,"6 Dec 2024, 05:08:20","6 Dec 2024, 04:20",N/A,1015,80,-3,24/12/2999
+Azerbaijan,8,Overcast.,Baku / Bine Airport,"6 Dec 2024, 08:08:20","6 Dec 2024, 07:00",8,1030,93,7,24/12/2999
+Bahamas,19,Partly cloudy.,Nassau Airport,"5 Dec 2024, 23:08:21","5 Dec 2024, 22:00",N/A,1021,78,15,24/12/2999
+Bahrain,20,Clear.,Bahrain International Airport,"6 Dec 2024, 07:08:21","6 Dec 2024, 06:00",16,1020,88,18,24/12/2999
+Bangladesh,23,Sunny.,Dhaka,"6 Dec 2024, 10:08:21","6 Dec 2024, 09:00",4,1014,58,14,24/12/2999
+Barbados,27,Scattered showers. Passing clouds.,Grantley Adams,"6 Dec 2024, 00:08:21","5 Dec 2024, 23:00",N/A,1012,79,23,24/12/2999
+Belarus,-3,Overcast.,Minsk,"6 Dec 2024, 07:08:21","6 Dec 2024, 06:30",N/A,1025,86,-5,24/12/2999
+Belgium,9,Passing clouds.,Brussels National Airport,"6 Dec 2024, 05:08:22","6 Dec 2024, 04:20",N/A,1004,71,4,24/12/2999
+Belize,22,Passing clouds.,Belize / Phillip Goldston Intl. Airport,"5 Dec 2024, 22:08:22","5 Dec 2024, 21:00",25,1019,84,20,24/12/2999
+Benin,28,Passing clouds.,Cotonou Airport,"6 Dec 2024, 05:08:22","6 Dec 2024, 03:00",N/A,1010,84,25,24/12/2999
+Bermuda,20,Passing clouds.,Bermuda,"6 Dec 2024, 00:08:22","5 Dec 2024, 22:55",N/A,1016,60,12,24/12/2999
+Bhutan,-12,Heavy snow. Cloudy.,Pagri,"6 Dec 2024, 10:08:22","6 Dec 2024, 06:00",0,1020,90,-14,24/12/2999
+Bosnia-Herzegovina,0,Ice fog.,Sarajevo / Butmir,"6 Dec 2024, 05:08:23","6 Dec 2024, 04:30",5,1019,100,0,24/12/2999
+Botswana,22,Clear.,Seretse Khama International Airport,"6 Dec 2024, 06:08:23","6 Dec 2024, 05:00",16,1012,44,9,24/12/2999
+Brazil,21,Passing clouds.,Brasilia Aeroporto,"6 Dec 2024, 01:08:23","6 Dec 2024, 00:00",N/A,1017,94,20,24/12/2999
+British Virgin Islands,27,Passing clouds.,Beef Island - Tortola,"6 Dec 2024, 00:08:23","5 Dec 2024, 22:00",16,1016,79,23,24/12/2999
+Brunei,30,Broken clouds.,Brunei Airport,"6 Dec 2024, 12:08:23","6 Dec 2024, 11:00",N/A,1009,66,23,24/12/2999
+Bulgaria,3,Light rain. Overcast.,Sofia Observ.,"6 Dec 2024, 06:08:24","6 Dec 2024, 05:00",8,1024,90,2,24/12/2999
+Cambodia,31,Scattered clouds.,Phnom-Penh / Pochentong,"6 Dec 2024, 11:08:24","6 Dec 2024, 10:30",N/A,1009,59,22,24/12/2999
+Cameroon,22,Passing clouds.,Yaounde Airport,"6 Dec 2024, 05:08:24","6 Dec 2024, 04:00",6,1014,94,21,24/12/2999
+Canada,-4,Light snow. Passing clouds.,Ottawa Int'L. Ont.,"5 Dec 2024, 23:08:24","5 Dec 2024, 22:00",16,1009,74,-8,24/12/2999
+Cayman Islands,26,Passing clouds.,Owen Roberts Airportgrand Cayman,"5 Dec 2024, 23:08:25","5 Dec 2024, 22:00",N/A,1017,70,20,24/12/2999
+Central African Republic,20,Clear.,Bangui Airport,"6 Dec 2024, 05:08:25","6 Dec 2024, 04:00",7,1012,94,19,24/12/2999
+Chad,19,Clear.,Ndjamena,"6 Dec 2024, 05:08:25","6 Dec 2024, 03:00",8,1011,52,9,24/12/2999
+Chile,13,Clear.,Pudahuel,"6 Dec 2024, 01:08:25","6 Dec 2024, 00:00",16,1017,63,6,24/12/2999
+China,7,Quite cool.,Beijing,"6 Dec 2024, 12:08:26","6 Dec 2024, 11:00",30,1024,28,-11,24/12/2999
+Colombia,14,Passing clouds.,Bogota / Eldorado,"5 Dec 2024, 23:08:26","5 Dec 2024, 22:00",N/A,1026,94,13,24/12/2999
+Congo,22,Clear.,Brazzaville / Maya-Maya,"6 Dec 2024, 05:08:26","6 Dec 2024, 03:00",8,1012,100,22,24/12/2999
+Congo Dem. Rep.,22,Clear.,Brazzaville / Maya-Maya,"6 Dec 2024, 05:08:26","6 Dec 2024, 03:00",8,1012,100,22,24/12/2999
+Cook Islands,26,Partly sunny.,Rarotonga,"5 Dec 2024, 18:08:26","5 Dec 2024, 17:00",N/A,1012,74,21,24/12/2999
+Costa Rica,21,Passing clouds.,Juan Santamaria,"5 Dec 2024, 22:08:27","5 Dec 2024, 21:00",N/A,1016,94,20,24/12/2999
+Cote d'Ivoire (Ivory Coast),22,Clear.,Yamoussoukro,"6 Dec 2024, 04:08:27","5 Dec 2024, 21:00",8,1011,93,21,24/12/2999
+Croatia,0,Overcast.,Zagreb / Pleso,"6 Dec 2024, 05:08:27","6 Dec 2024, 04:00",N/A,1020,93,-1,24/12/2999
+Cuba,15,Passing clouds.,Aeropuerto Jose Marti - Rancho-Boyeros - Habana,"5 Dec 2024, 23:08:27","5 Dec 2024, 21:50",7,1021,94,14,24/12/2999
+Cyprus,10,Passing clouds.,Ercan,"6 Dec 2024, 06:08:27","6 Dec 2024, 05:20",N/A,1022,88,8,24/12/2999
+Cyprus,10,Passing clouds.,Ercan,"6 Dec 2024, 06:08:28","6 Dec 2024, 05:20",N/A,1022,88,8,24/12/2999
+Czechia,2,Passing clouds.,Václav Havel Airport Prague,"6 Dec 2024, 05:08:28","6 Dec 2024, 04:00",N/A,1007,70,-3,24/12/2999
+Denmark,4,Overcast.,Koebenhavn-Kastrup Airport,"6 Dec 2024, 05:08:28","6 Dec 2024, 04:20",N/A,1001,81,1,24/12/2999
+Djibouti,23,Passing clouds.,Djibouti  Ambouli,"6 Dec 2024, 07:08:28","6 Dec 2024, 06:00",N/A,1016,83,20,24/12/2999
+Dominica,27,Passing clouds.,Melville Hall Airport,"6 Dec 2024, 00:08:29","5 Dec 2024, 22:00",N/A,1015,79,23,24/12/2999
+Dominican Republic,27,Passing clouds.,Santo Domingo,"6 Dec 2024, 00:08:29","5 Dec 2024, 20:00",16,1016,89,25,24/12/2999
+Ecuador,10,Light rain. Mostly cloudy.,Latacunga Airport,"5 Dec 2024, 23:08:29","5 Dec 2024, 22:00",N/A,1030,94,9,24/12/2999
+Egypt,15,Passing clouds.,Cairo Airport,"6 Dec 2024, 06:08:29","6 Dec 2024, 05:00",6,1018,82,12,24/12/2999
+El Salvador,28,Passing clouds.,El Salvador Intl. Airport / Comalapa,"5 Dec 2024, 22:08:30","5 Dec 2024, 21:00",N/A,1012,55,18,24/12/2999
+Equatorial Guinea,23,Thunderstorms. Passing clouds.,Malabo/Fernando Poo,"6 Dec 2024, 05:08:30","6 Dec 2024, 04:00",N/A,1010,100,23,24/12/2999
+Estonia,-2,Low clouds.,Tallinn,"6 Dec 2024, 06:08:30","6 Dec 2024, 05:20",N/A,1022,86,-4,24/12/2999
+Ethiopia,7,Clear.,Addis Ababa Airport,"6 Dec 2024, 07:08:30","6 Dec 2024, 06:00",16,1027,66,1,24/12/2999
+Falkland Islands,3,Overcast.,Mount Pleasant Airport,"6 Dec 2024, 01:08:31","5 Dec 2024, 23:50",N/A,1013,65,-3,24/12/2999
+Fiji,26,Overcast.,Nausori,"6 Dec 2024, 16:08:31","6 Dec 2024, 12:00",20,1012,93,25,24/12/2999
+Finland,0,Passing clouds.,Helsinki-Vantaa,"6 Dec 2024, 06:08:31","6 Dec 2024, 05:20",N/A,1021,93,-1,24/12/2999
+France,8,Clear.,Villacoublay,"6 Dec 2024, 05:08:31","6 Dec 2024, 04:00",16,1012,82,5,24/12/2999
+Gabon,24,Passing clouds.,Libreville Airport,"6 Dec 2024, 05:08:31","6 Dec 2024, 04:00",N/A,1010,100,24,24/12/2999
+Gambia,23,Clear.,Banjul / Yundum,"6 Dec 2024, 04:08:32","6 Dec 2024, 03:00",9,1012,31,5,24/12/2999
+Georgia,0,Clear.,Tbilisi,"6 Dec 2024, 08:08:32","6 Dec 2024, 07:00",N/A,1033,92,-2,24/12/2999
+Germany,3,Passing clouds.,Berlin-Schoenefeld,"6 Dec 2024, 05:08:32","6 Dec 2024, 04:20",N/A,1002,81,0,24/12/2999
+Ghana,27,Clear.,Accra Airport,"6 Dec 2024, 04:08:32","6 Dec 2024, 03:00",16,1010,89,25,24/12/2999
+Gibraltar,14,Clear.,Gibraltar Airport,"6 Dec 2024, 05:08:32","6 Dec 2024, 04:20",N/A,1028,82,11,24/12/2999
+Greece,15,Cool.,Athinai Airport,"6 Dec 2024, 06:08:33","6 Dec 2024, 05:00",N/A,1017,80,12,24/12/2999
+Greenland,-7,Overcast.,Godthaab / Nuuk,"6 Dec 2024, 02:08:33","6 Dec 2024, 01:20",N/A,1012,68,-12,24/12/2999
+Grenada,27,Sprinkles. Passing clouds.,Point Salines Airport,"6 Dec 2024, 00:08:33","5 Dec 2024, 22:00",N/A,1013,79,23,24/12/2999
+Guatemala,16,Passing clouds.,Guatemala Aeropuertola Aurora,"5 Dec 2024, 22:08:33","5 Dec 2024, 21:00",N/A,1024,88,14,24/12/2999
+Guinea,26,Fog.,Conakry / Gbessia,"6 Dec 2024, 04:08:34","6 Dec 2024, 03:00",5,1010,89,24,24/12/2999
+Guinea-Bissau,22,Overcast.,Bissau Aeroport,"6 Dec 2024, 04:08:34","5 Dec 2024, 21:00",10,1013,49,11,24/12/2999
+Guyana,25,Partly sunny.,Georgetown,"6 Dec 2024, 00:08:34","5 Dec 2024, 17:00",10,1010,92,24,24/12/2999
+Honduras,19,Scattered showers. Passing clouds.,Tegucigalpa Airport,"5 Dec 2024, 22:08:34","5 Dec 2024, 21:00",8,1021,88,17,24/12/2999
+Hungary,-1,Ice fog.,Ferenc Liszt International Airport,"6 Dec 2024, 05:08:35","6 Dec 2024, 04:30",0,1020,100,-1,24/12/2999
+Iceland,-1,Clear.,Reykjavik Airport,"6 Dec 2024, 04:08:35","6 Dec 2024, 03:00",16,995,93,-2,24/12/2999
+India,14,Sunny.,New Delhi / Safdarjung,"6 Dec 2024, 09:38:35","6 Dec 2024, 08:30",2,1015,67,8,24/12/2999
+Indonesia,27,Overcast.,Jakarta/Observatory,"6 Dec 2024, 11:08:35","6 Dec 2024, 10:00",7,1009,84,24,24/12/2999
+Iran,4,Clear.,Tehran-Mehrabad,"6 Dec 2024, 07:38:36","6 Dec 2024, 06:30",7,1026,42,-8,24/12/2999
+Iraq,6,Clear.,Baghdad,"6 Dec 2024, 07:08:36","6 Dec 2024, 06:00",10,1024,65,0,24/12/2999
+Ireland,4,Passing clouds.,Dublin Airport,"6 Dec 2024, 04:08:36","6 Dec 2024, 03:00",N/A,1015,87,2,24/12/2999
+Isle of Man,8,Passing clouds.,Isle Of Man / Ronaldsway Airport,"6 Dec 2024, 04:08:36","6 Dec 2024, 02:50",N/A,1011,71,3,24/12/2999
+Israel,12,Quite cool.,Khallat Ḩamāmah - MADIS Station,"6 Dec 2024, 06:08:37","6 Dec 2024, 05:30",N/A,918,60,4,24/12/2999
+Italy,4,Clear.,Rome / Ciampino,"6 Dec 2024, 05:08:37","6 Dec 2024, 04:20",16,1018,75,0,24/12/2999
+Jamaica,26,Passing clouds.,Kingston / Norman Manley,"5 Dec 2024, 23:08:37","5 Dec 2024, 22:00",20,1015,85,24,24/12/2999
+Japan,16,Passing clouds.,Tokyo Heliport,"6 Dec 2024, 13:08:37","6 Dec 2024, 12:00",N/A,1006,36,1,24/12/2999
+Jordan,10,Haze.,Amman Airport,"6 Dec 2024, 07:08:37","6 Dec 2024, 06:00",5,1023,47,-1,24/12/2999
+Kazakhstan,-8,Light snow. Overcast.,Astana,"6 Dec 2024, 09:08:38","6 Dec 2024, 08:00",8,1025,93,-9,24/12/2999
+Kenya,17,Passing clouds.,Nairobi / Wilson,"6 Dec 2024, 07:08:38","6 Dec 2024, 06:00",N/A,1023,83,14,24/12/2999
+Kiribati,31,Overcast.,Tarawa,"6 Dec 2024, 16:08:38","6 Dec 2024, 12:00",50,1006,71,25,24/12/2999
+Kosovo,4,Chilly.,Vranje,"6 Dec 2024, 05:08:38","6 Dec 2024, 04:00",N/A,1022,100,4,24/12/2999
+Kuwait,15,Clear.,Kuwait Internationalairport,"6 Dec 2024, 07:08:38","6 Dec 2024, 06:00",10,1022,65,9,24/12/2999
+Kyrgyzstan,-7,Fog.,Bishkek,"6 Dec 2024, 10:08:39","6 Dec 2024, 09:00",0,1035,94,-8,24/12/2999
+Laos,27,Scattered clouds.,Vientiane Airport,"6 Dec 2024, 11:08:39","6 Dec 2024, 10:00",8,1014,79,23,24/12/2999
+Latvia,0,Overcast.,Riga Airport,"6 Dec 2024, 06:08:39","6 Dec 2024, 05:20",N/A,1021,80,-3,24/12/2999
+Lebanon,14,Passing clouds.,Beirut Airport,"6 Dec 2024, 06:08:39","6 Dec 2024, 05:00",8,1021,59,6,24/12/2999
+Liberia,24,Fog.,Roberts Field,"6 Dec 2024, 04:08:40","6 Dec 2024, 03:30",9,1010,94,23,24/12/2999
+Liechtenstein,5,Rain. Overcast.,Vaduz,"6 Dec 2024, 05:08:40","6 Dec 2024, 04:00",9,1014,70,0,24/12/2999
+Lithuania,-2,Low clouds.,Vilnius Airport,"6 Dec 2024, 06:08:40","6 Dec 2024, 05:20",N/A,1022,86,-4,24/12/2999
+Luxembourg,7,Passing clouds.,Luxembourg Airport,"6 Dec 2024, 05:08:40","6 Dec 2024, 04:20",N/A,1005,71,2,24/12/2999
+Madagascar,19,Scattered clouds.,Antananarivo / Ivato,"6 Dec 2024, 07:08:40","6 Dec 2024, 06:00",N/A,1019,83,16,24/12/2999
+Malaysia,31,Passing clouds.,Sultan Abdul Aziz Shah-Subang,"6 Dec 2024, 12:08:41","6 Dec 2024, 11:00",N/A,1009,66,24,24/12/2999
+Maldives,29,Partly sunny.,Male Airport,"6 Dec 2024, 09:08:41","6 Dec 2024, 08:00",N/A,1011,70,23,24/12/2999
+Mali,21,Clear.,Bamako / Senou,"6 Dec 2024, 04:08:41","6 Dec 2024, 03:30",16,1014,27,1,24/12/2999
+Malta,16,Partly cloudy.,Luqa,"6 Dec 2024, 05:08:41","6 Dec 2024, 04:15",N/A,1012,72,11,24/12/2999
+Marshall Islands,28,Cloudy.,Majuro Atoll,"6 Dec 2024, 16:08:41","6 Dec 2024, 14:56",24,1005,86,26,24/12/2999
+Mauritius,22,Passing clouds.,Vacoas (Mauritius),"6 Dec 2024, 08:08:42","6 Dec 2024, 07:00",25,N/A,83,19,24/12/2999
+Mexico,18,Passing clouds.,Mexico City / Licenci,"5 Dec 2024, 22:08:42","5 Dec 2024, 20:40",14,1014,49,7,24/12/2999
+Micronesia,31,Cloudy.,Pohnpei,"6 Dec 2024, 15:08:42","6 Dec 2024, 13:54",24,1006,73,26,24/12/2999
+Moldova,-2,Overcast.,Chisinau International Airport,"6 Dec 2024, 06:08:42","6 Dec 2024, 05:30",N/A,1026,93,-3,24/12/2999
+Monaco,7,Partly cloudy.,Nice Airport,"6 Dec 2024, 05:08:42","6 Dec 2024, 04:00",N/A,1019,71,2,24/12/2999
+Mongolia,-14,Sunny.,Ulan-Bator,"6 Dec 2024, 12:08:43","6 Dec 2024, 11:00",16,1025,85,-16,24/12/2999
+Montenegro,7,Light rain. Fog.,Podgorica Titograd,"6 Dec 2024, 05:08:43","6 Dec 2024, 04:00",5,1019,100,7,24/12/2999
+Montserrat,27,Passing clouds.,Vc Bird International Antigua Airport,"6 Dec 2024, 00:08:43","5 Dec 2024, 23:00",N/A,1015,70,21,24/12/2999
+Morocco,10,Clear.,Rabat-Sale,"6 Dec 2024, 05:08:43","6 Dec 2024, 04:00",8,1028,100,10,24/12/2999
+Mozambique,26,Partly sunny.,Maputo / Mavalane,"6 Dec 2024, 06:08:44","6 Dec 2024, 05:00",N/A,1008,79,22,24/12/2999
+Namibia,20,Mild.,Windhoek,"6 Dec 2024, 06:08:44","6 Dec 2024, 05:00",N/A,N/A,25,0,24/12/2999
+Nepal,13,Fog.,Kathmandu Airport,"6 Dec 2024, 09:53:44","6 Dec 2024, 09:15",3,1018,77,9,24/12/2999
+Netherlands,9,Passing clouds.,Amsterdam Schiphol Airport,"6 Dec 2024, 05:08:44","6 Dec 2024, 04:25",N/A,999,76,5,24/12/2999
+New Zealand,16,Clear.,Wellington Airport,"6 Dec 2024, 17:08:44","6 Dec 2024, 16:00",N/A,1015,72,11,24/12/2999
+Nicaragua,25,Passing clouds.,Managua A. C. Sandino,"5 Dec 2024, 22:08:45","5 Dec 2024, 21:00",N/A,1012,94,24,24/12/2999
+Niger,20,Clear.,Niamey-Aero,"6 Dec 2024, 05:08:45","6 Dec 2024, 04:00",16,1013,28,1,24/12/2999
+Niue,27,Passing clouds.,Alofi / Niue,"5 Dec 2024, 17:08:45","5 Dec 2024, 16:00",N/A,1012,74,22,24/12/2999
+North Korea,0,Sunny.,Pyongyang,"6 Dec 2024, 13:08:45","6 Dec 2024, 12:00",10,1022,50,-9,24/12/2999
+North Macedonia,7,Fog.,Skopje-Petrovec,"6 Dec 2024, 05:08:46","6 Dec 2024, 04:20",5,1021,100,7,24/12/2999
+Norway,1,Freezing rain. Overcast.,Oslo-Blindern,"6 Dec 2024, 05:08:46","6 Dec 2024, 04:00",3,1005,98,1,24/12/2999
+Oman,24,Mild.,Mina Sultan Qaboos,"6 Dec 2024, 08:08:46","6 Dec 2024, 07:00",N/A,1018,64,17,24/12/2999
+Pakistan,8,Sunny.,Islamabad Airport,"6 Dec 2024, 09:08:46","6 Dec 2024, 08:00",4,1018,80,4,24/12/2999
+Palau,28,Overcast.,Babelthuap Island  Babelthuap/Koror Airport,"6 Dec 2024, 13:08:47","6 Dec 2024, 09:00",24,1008,84,25,24/12/2999
+Panama,27,Passing clouds.,Marcos A. Gelabert,"5 Dec 2024, 23:08:47","5 Dec 2024, 22:00",N/A,1010,89,25,24/12/2999
+Papua New Guinea,32,Partly sunny.,Moresby,"6 Dec 2024, 14:08:47","6 Dec 2024, 13:00",N/A,1005,67,25,24/12/2999
+Paraguay,27,Clear.,Asuncion / Aeropuerto,"6 Dec 2024, 01:08:47","6 Dec 2024, 00:00",16,1005,84,24,24/12/2999
+Peru,19,Passing clouds.,Lima-Callao / Aerop. Internacional Jorgechavez,"5 Dec 2024, 23:08:48","5 Dec 2024, 22:00",10,1013,83,16,24/12/2999
+Philippines,28,Scattered clouds.,Science Garden,"6 Dec 2024, 12:08:48","6 Dec 2024, 08:00",8,1010,78,24,24/12/2999
+Poland,2,Passing clouds.,Warsaw Okecie Airport,"6 Dec 2024, 05:08:48","6 Dec 2024, 04:30",8,1017,93,1,24/12/2999
+Portugal,12,Clear.,Lisbon Portela Airport,"6 Dec 2024, 04:08:48","6 Dec 2024, 03:30",16,1031,100,12,24/12/2999
+Puerto Rico,27,Passing clouds.,Luis Munoz Marin,"6 Dec 2024, 00:08:49","5 Dec 2024, 22:56",16,1016,81,23,24/12/2999
+Qatar,20,Clear.,Doha International Airport,"6 Dec 2024, 07:08:49","6 Dec 2024, 06:30",9,1020,83,17,24/12/2999
+Réunion (French),26,Sunny.,Saint-Denis / Gillot,"6 Dec 2024, 08:08:49","6 Dec 2024, 07:00",16,1015,51,15,24/12/2999
+Romania,1,Drizzle. Overcast.,Bucharest / Imh,"6 Dec 2024, 06:08:49","6 Dec 2024, 05:00",8,1025,93,0,24/12/2999
+Russia,-6,Light snow. Overcast.,Moskva,"6 Dec 2024, 07:08:49","6 Dec 2024, 06:00",17,1039,83,-9,24/12/2999
+Rwanda,18,Mild.,Kigali Airport,"6 Dec 2024, 06:08:50","6 Dec 2024, 05:30",N/A,1020,100,18,24/12/2999
+Saint Helena,17,Overcast.,Saint Helena Island,"6 Dec 2024, 04:08:50","6 Dec 2024, 03:00",N/A,1016,80,14,24/12/2999
+Saint Kitts and Nevis,27,Passing clouds.,Golden Rock,"6 Dec 2024, 00:08:50","5 Dec 2024, 21:00",N/A,1016,74,22,24/12/2999
+Saint Lucia,28,Passing clouds.,Vigie,"6 Dec 2024, 00:08:50","5 Dec 2024, 21:00",N/A,1014,70,22,24/12/2999
+Saint Vincent and Grenadines,27,Passing clouds.,Hewanorra International Airport,"6 Dec 2024, 00:08:51","5 Dec 2024, 23:00",N/A,1013,79,23,24/12/2999
+Samoa,30,Partly sunny.,Apia / Upolu Island,"6 Dec 2024, 17:08:51","6 Dec 2024, 16:00",20,1009,80,26,24/12/2999
+San Marino,5,Passing clouds.,Rimini Airport,"6 Dec 2024, 05:08:51","6 Dec 2024, 04:20",N/A,1019,66,-1,24/12/2999
+Saudi Arabia,16,Clear.,King Khaled International Airport,"6 Dec 2024, 07:08:51","6 Dec 2024, 06:00",16,1021,48,5,24/12/2999
+Senegal,24,Passing clouds.,Dakar / Yoff,"6 Dec 2024, 04:08:51","6 Dec 2024, 02:00",N/A,1014,69,18,24/12/2999
+Serbia,4,Overcast.,Beograd,"6 Dec 2024, 05:08:52","6 Dec 2024, 04:00",15,1022,88,2,24/12/2999
+Seychelles,25,Sprinkles. Partly sunny.,National Airport,"6 Dec 2024, 08:08:52","6 Dec 2024, 07:00",8,1010,94,24,24/12/2999
+Singapore,31,Scattered clouds.,Singapore / Paya Lebar,"6 Dec 2024, 12:08:52","6 Dec 2024, 11:00",N/A,1009,66,24,24/12/2999
+Slovakia,-3,Passing clouds.,Bratislava Ivanka,"6 Dec 2024, 05:08:52","6 Dec 2024, 04:30",7,1017,93,-4,24/12/2999
+Slovenia,-2,Overcast.,Ljubljana / Bezigrad,"6 Dec 2024, 05:08:52","6 Dec 2024, 04:00",25,1022,87,-4,24/12/2999
+Solomon Islands,30,Overcast.,Munda,"6 Dec 2024, 15:08:53","6 Dec 2024, 14:00",20,1007,76,25,24/12/2999
+Solomon Islands,34,Partly sunny.,Honiara,"6 Dec 2024, 15:08:53","6 Dec 2024, 14:00",20,1007,58,24,24/12/2999
+South Africa,18,Mild.,Waterkloof Lmb,"6 Dec 2024, 06:08:53","6 Dec 2024, 05:00",N/A,1016,56,9,24/12/2999
+South Korea,5,Sunny.,Seoul / Kimp'O International Airport,"6 Dec 2024, 13:08:53","6 Dec 2024, 12:00",16,1021,42,-7,24/12/2999
+Spain,7,Clear.,Madrid / Cuatro Vientos,"6 Dec 2024, 05:08:54","6 Dec 2024, 04:00",16,1029,93,6,24/12/2999
+Sri Lanka,24,Passing clouds.,Colombo,"6 Dec 2024, 09:38:54","6 Dec 2024, 05:30",18,1010,90,23,24/12/2999
+Suriname,29,Haze.,Zorg En Hoop,"6 Dec 2024, 01:08:54","5 Dec 2024, 18:00",10,1010,69,23,24/12/2999
+Sweden,1,Clear.,Stockholm Bromma Airport,"6 Dec 2024, 05:08:54","6 Dec 2024, 04:20",N/A,1012,93,0,24/12/2999
+Switzerland,4,Passing clouds.,Bern / Belp,"6 Dec 2024, 05:08:54","6 Dec 2024, 04:20",N/A,1012,100,4,24/12/2999
+Syria,3,Clear.,Damascus Int. Airport,"6 Dec 2024, 07:08:55","6 Dec 2024, 06:00",16,1024,70,-2,24/12/2999
+Taiwan,24,Scattered clouds.,Sungshan / Taipei,"6 Dec 2024, 12:08:55","6 Dec 2024, 11:00",N/A,1017,65,17,24/12/2999
+Tajikistan,0,Sleet. Cloudy.,Dushanbe Airport,"6 Dec 2024, 09:08:55","6 Dec 2024, 08:30",1,1028,93,-1,24/12/2999
+Thailand,30,Passing clouds.,Don Muang Airport,"6 Dec 2024, 11:08:55","6 Dec 2024, 10:00",N/A,1012,49,18,24/12/2999
+Togo,28,Passing clouds.,Lome Airport,"6 Dec 2024, 04:08:55","6 Dec 2024, 03:00",N/A,1010,84,25,24/12/2999
+Tonga,28,Broken clouds.,Fua'Amotu,"6 Dec 2024, 17:08:56","6 Dec 2024, 16:00",N/A,1013,84,25,24/12/2999
+Trinidad and Tobago,26,Passing clouds.,Piarco International Airport - Trinidad,"6 Dec 2024, 00:08:56","5 Dec 2024, 23:00",N/A,1012,84,23,24/12/2999
+Tunisia,13,Passing clouds.,Tunis-Carthage,"6 Dec 2024, 05:08:56","6 Dec 2024, 04:00",N/A,1021,63,6,24/12/2999
+Turkey,3,Fog.,Ankara / Guvercin Lik,"6 Dec 2024, 07:08:56","6 Dec 2024, 05:50",4,1026,93,2,24/12/2999
+Turkmenistan,2,Overcast.,Ashgabat,"6 Dec 2024, 09:08:57","6 Dec 2024, 08:00",6,1030,100,2,24/12/2999
+Tuvalu,31,Partly sunny.,Funafuti,"6 Dec 2024, 16:08:57","6 Dec 2024, 15:00",N/A,1006,75,26,24/12/2999
+Uganda,21,Passing clouds.,Entebbe Airport,"6 Dec 2024, 07:08:57","6 Dec 2024, 06:00",N/A,1016,88,19,24/12/2999
+Ukraine,-2,Fog.,Kyiv,"6 Dec 2024, 06:08:57","6 Dec 2024, 05:00",4,1028,93,-3,24/12/2999
+United Arab Emirates,22,Sunny.,Abu Dhabi Bateen Airport,"6 Dec 2024, 08:08:58","6 Dec 2024, 07:00",16,1019,83,19,24/12/2999
+United Kingdom,7,Clear.,Northolt,"6 Dec 2024, 04:08:58","6 Dec 2024, 03:20",N/A,1011,71,2,24/12/2999
+Uruguay,24,Clear.,Carrasco,"6 Dec 2024, 01:08:58","6 Dec 2024, 00:00",16,1005,61,16,24/12/2999
+USA,-1,Clear.,Reagan National Airport,"5 Dec 2024, 23:08:58","5 Dec 2024, 21:52",16,1021,41,-13,24/12/2999
+Uzbekistan,1,Fog.,Tashkent,"6 Dec 2024, 09:08:59","6 Dec 2024, 08:00",3,1030,93,0,24/12/2999
+Vanuatu,31,Broken clouds.,Bauerfield Efate,"6 Dec 2024, 15:08:59","6 Dec 2024, 14:00",N/A,1011,70,25,24/12/2999
+Vatican City State,4,Clear.,Rome / Ciampino,"6 Dec 2024, 05:08:59","6 Dec 2024, 04:20",16,1018,75,0,24/12/2999
+Venezuela,25,Clear.,Caracas / Maiquetia Aerop. Intl. Simon Bolivar,"6 Dec 2024, 00:08:59","5 Dec 2024, 23:03",N/A,1013,61,17,24/12/2999
+Vietnam,20,Light rain. Fog.,Ha Noi Airport,"6 Dec 2024, 11:08:59","6 Dec 2024, 10:30",2,1016,94,19,24/12/2999
+Zimbabwe,33,Passing clouds.,Harare Kutsaga,"6 Dec 2024, 06:09:00","5 Dec 2024, 14:00",30,N/A,20,7,24/12/2999
+Albania,9,Drizzle. Mostly cloudy.,Tirana Airport,"6 Dec 2024, 05:24:14","6 Dec 2024, 04:50",N/A,1016,87,7,24/12/2999
+Algeria,16,Passing clouds.,Alger-Port,"6 Dec 2024, 05:24:14","6 Dec 2024, 04:00",10,1025,73,11,24/12/2999
+Angola,25,Passing clouds.,Luanda  Airport,"6 Dec 2024, 05:24:14","6 Dec 2024, 05:00",N/A,1010,89,23,24/12/2999
+Antigua and Barbuda,27,Passing clouds.,Vc Bird International Antigua Airport,"6 Dec 2024, 00:24:14","6 Dec 2024, 00:00",N/A,1015,74,22,24/12/2999
+Argentina,21,Clear.,Buenos Aires Airport,"6 Dec 2024, 01:24:14","6 Dec 2024, 01:00",16,1003,64,14,24/12/2999
+Armenia,-1,Clear.,Makko,"6 Dec 2024, 08:24:15","6 Dec 2024, 07:00",10,1030,86,-3,24/12/2999
+Aruba,28,Passing clouds.,Queen Beatrix Airport - Aruba,"6 Dec 2024, 00:24:15","6 Dec 2024, 00:00",N/A,1012,70,22,24/12/2999
+Australia,33,Passing clouds.,Canberra Airport,"6 Dec 2024, 15:24:15","6 Dec 2024, 15:00",N/A,1015,44,19,24/12/2999
+Austria,1,Passing clouds.,Vienna Schwechat-Flughafen Airport,"6 Dec 2024, 05:24:15","6 Dec 2024, 04:50",N/A,1014,70,-4,24/12/2999
+Azerbaijan,8,Overcast.,Baku / Bine Airport,"6 Dec 2024, 08:24:16","6 Dec 2024, 08:00",7,1030,93,7,24/12/2999
+Bahamas,17,Partly cloudy.,Nassau Airport,"5 Dec 2024, 23:24:16","5 Dec 2024, 23:00",N/A,1021,83,14,24/12/2999
+Bahrain,20,Clear.,Bahrain International Airport,"6 Dec 2024, 07:24:16","6 Dec 2024, 06:00",16,1020,88,18,24/12/2999
+Bangladesh,23,Sunny.,Dhaka,"6 Dec 2024, 10:24:16","6 Dec 2024, 09:00",4,1014,58,14,24/12/2999
+Barbados,27,Passing clouds.,Grantley Adams,"6 Dec 2024, 00:24:16","6 Dec 2024, 00:00",N/A,1012,84,24,24/12/2999
+Belarus,-3,Overcast.,Minsk,"6 Dec 2024, 07:24:17","6 Dec 2024, 07:00",N/A,1025,93,-4,24/12/2999
+Belgium,8,Sprinkles. Passing clouds.,Brussels National Airport,"6 Dec 2024, 05:24:17","6 Dec 2024, 04:50",N/A,1005,76,4,24/12/2999
+Belize,22,Passing clouds.,Belize / Phillip Goldston Intl. Airport,"5 Dec 2024, 22:24:17","5 Dec 2024, 21:00",25,1019,84,20,24/12/2999
+Benin,28,Passing clouds.,Cotonou Airport,"6 Dec 2024, 05:24:17","6 Dec 2024, 03:00",N/A,1010,84,25,24/12/2999
+Bermuda,21,Scattered showers. Partly cloudy.,Bermuda,"6 Dec 2024, 00:24:18","6 Dec 2024, 00:08",N/A,1015,57,12,24/12/2999
+Bhutan,-9,Low level haze.,Pagri,"6 Dec 2024, 10:24:18","6 Dec 2024, 09:00",2,1023,91,-10,24/12/2999
+Bosnia-Herzegovina,0,Partly cloudy.,Sarajevo / Butmir,"6 Dec 2024, 05:24:18","6 Dec 2024, 05:00",6,1018,100,0,24/12/2999
+Botswana,22,Sunny.,Seretse Khama International Airport,"6 Dec 2024, 06:24:18","6 Dec 2024, 06:00",16,1013,41,8,24/12/2999
+Brazil,21,Clear.,Brasilia Aeroporto,"6 Dec 2024, 01:24:18","6 Dec 2024, 01:00",16,1017,94,20,24/12/2999
+British Virgin Islands,27,Passing clouds.,Beef Island - Tortola,"6 Dec 2024, 00:24:19","5 Dec 2024, 22:00",16,1016,79,23,24/12/2999
+Brunei,30,Partly sunny.,Brunei Airport,"6 Dec 2024, 12:24:19","6 Dec 2024, 11:30",N/A,1009,70,24,24/12/2999
+Bulgaria,3,Light rain. Overcast.,Sofia Observ.,"6 Dec 2024, 06:24:19","6 Dec 2024, 05:00",8,1024,90,2,24/12/2999
+Cambodia,31,Scattered clouds.,Phnom-Penh / Pochentong,"6 Dec 2024, 11:24:19","6 Dec 2024, 10:30",N/A,1009,59,22,24/12/2999
+Cameroon,22,Passing clouds.,Yaounde Airport,"6 Dec 2024, 05:24:20","6 Dec 2024, 04:00",6,1014,94,21,24/12/2999
+Canada,-5,Light snow. Overcast.,Ottawa Int'L. Ont.,"5 Dec 2024, 23:24:20","5 Dec 2024, 23:00",16,1010,74,-9,24/12/2999
+Cayman Islands,26,Passing clouds.,Owen Roberts Airportgrand Cayman,"5 Dec 2024, 23:24:20","5 Dec 2024, 23:00",N/A,1017,70,20,24/12/2999
+Central African Republic,20,Clear.,Bangui Airport,"6 Dec 2024, 05:24:20","6 Dec 2024, 04:00",7,1012,94,19,24/12/2999
+Chad,19,Clear.,Ndjamena,"6 Dec 2024, 05:24:20","6 Dec 2024, 03:00",8,1011,52,9,24/12/2999
+Chile,13,Clear.,Pudahuel,"6 Dec 2024, 01:24:21","6 Dec 2024, 01:00",16,1017,63,6,24/12/2999
+China,7,Quite cool.,Beijing,"6 Dec 2024, 12:24:21","6 Dec 2024, 11:00",30,1024,28,-11,24/12/2999
+Colombia,13,Passing clouds.,Bogota / Eldorado,"5 Dec 2024, 23:24:21","5 Dec 2024, 23:00",N/A,1026,100,13,24/12/2999
+Congo,22,Clear.,Brazzaville / Maya-Maya,"6 Dec 2024, 05:24:22","6 Dec 2024, 04:00",8,1013,100,22,24/12/2999
+Congo Dem. Rep.,22,Clear.,Brazzaville / Maya-Maya,"6 Dec 2024, 05:24:22","6 Dec 2024, 04:00",8,1013,100,22,24/12/2999
+Cook Islands,26,Scattered clouds.,Rarotonga,"5 Dec 2024, 18:24:22","5 Dec 2024, 17:30",N/A,1013,74,21,24/12/2999
+Costa Rica,22,Passing clouds.,Juan Santamaria,"5 Dec 2024, 22:24:22","5 Dec 2024, 22:00",N/A,1016,73,17,24/12/2999
+Cote d'Ivoire (Ivory Coast),22,Clear.,Yamoussoukro,"6 Dec 2024, 04:24:23","5 Dec 2024, 21:00",8,1011,93,21,24/12/2999
+Croatia,0,Passing clouds.,Zagreb / Pleso,"6 Dec 2024, 05:24:23","6 Dec 2024, 05:00",N/A,1018,93,-1,24/12/2999
+Cuba,15,Passing clouds.,Aeropuerto Jose Marti - Rancho-Boyeros - Habana,"5 Dec 2024, 23:24:23","5 Dec 2024, 22:50",7,1021,94,14,24/12/2999
+Cyprus,8,Passing clouds.,Ercan,"6 Dec 2024, 06:24:23","6 Dec 2024, 05:50",N/A,1022,93,7,24/12/2999
+Cyprus,8,Passing clouds.,Ercan,"6 Dec 2024, 06:24:23","6 Dec 2024, 05:50",N/A,1022,93,7,24/12/2999
+Czechia,2,Mostly cloudy.,Václav Havel Airport Prague,"6 Dec 2024, 05:24:24","6 Dec 2024, 05:00",N/A,1005,70,-3,24/12/2999
+Denmark,4,Passing clouds.,Koebenhavn-Kastrup Airport,"6 Dec 2024, 05:24:24","6 Dec 2024, 04:50",N/A,1001,81,1,24/12/2999
+Djibouti,23,Passing clouds.,Djibouti  Ambouli,"6 Dec 2024, 07:24:24","6 Dec 2024, 06:00",N/A,1016,83,20,24/12/2999
+Dominica,27,Passing clouds.,Melville Hall Airport,"6 Dec 2024, 00:24:24","5 Dec 2024, 22:00",N/A,1015,79,23,24/12/2999
+Dominican Republic,25,Passing clouds.,Santo Domingo,"6 Dec 2024, 00:24:25","5 Dec 2024, 23:00",16,1016,91,24,24/12/2999
+Ecuador,10,Light rain. Mostly cloudy.,Latacunga Airport,"5 Dec 2024, 23:24:25","5 Dec 2024, 22:00",N/A,1030,94,9,24/12/2999
+Egypt,15,Clear.,Cairo Airport,"6 Dec 2024, 06:24:25","6 Dec 2024, 06:00",6,1017,82,12,24/12/2999
+El Salvador,27,Clear.,El Salvador Intl. Airport / Comalapa,"5 Dec 2024, 22:24:25","5 Dec 2024, 22:00",16,1013,58,18,24/12/2999
+Equatorial Guinea,23,Thunderstorms. Passing clouds.,Malabo/Fernando Poo,"6 Dec 2024, 05:24:25","6 Dec 2024, 04:00",N/A,1010,100,23,24/12/2999
+Estonia,-2,Low clouds.,Tallinn,"6 Dec 2024, 06:24:26","6 Dec 2024, 05:50",N/A,1021,86,-4,24/12/2999
+Ethiopia,7,Clear.,Addis Ababa Airport,"6 Dec 2024, 07:24:26","6 Dec 2024, 06:00",16,1027,66,1,24/12/2999
+Falkland Islands,3,Passing clouds.,Mount Pleasant Airport,"6 Dec 2024, 01:24:26","6 Dec 2024, 00:50",N/A,1013,56,-5,24/12/2999
+Fiji,25,Hail. Overcast.,Nausori,"6 Dec 2024, 16:24:26","6 Dec 2024, 15:00",10,1012,99,25,24/12/2999
+Finland,0,Passing clouds.,Helsinki-Vantaa,"6 Dec 2024, 06:24:26","6 Dec 2024, 05:50",N/A,1021,93,-1,24/12/2999
+France,9,Mostly cloudy.,Villacoublay,"6 Dec 2024, 05:24:27","6 Dec 2024, 05:00",N/A,1014,82,6,24/12/2999
+Gabon,24,Passing clouds.,Libreville Airport,"6 Dec 2024, 05:24:27","6 Dec 2024, 04:00",N/A,1010,100,24,24/12/2999
+Gambia,23,Clear.,Banjul / Yundum,"6 Dec 2024, 04:24:28","6 Dec 2024, 03:00",9,1012,31,5,24/12/2999
+Georgia,0,Clear.,Tbilisi,"6 Dec 2024, 08:24:28","6 Dec 2024, 07:00",N/A,1033,92,-2,24/12/2999
+Germany,3,Light rain. Passing clouds.,Berlin-Schoenefeld,"6 Dec 2024, 05:24:28","6 Dec 2024, 04:50",N/A,1001,81,0,24/12/2999
+Ghana,26,Passing clouds.,Accra Airport,"6 Dec 2024, 04:24:29","6 Dec 2024, 04:00",N/A,1010,94,25,24/12/2999
+Gibraltar,13,Clear.,Gibraltar Airport,"6 Dec 2024, 05:24:29","6 Dec 2024, 04:50",N/A,1028,82,10,24/12/2999
+Greece,15,Cool.,Athinai Airport,"6 Dec 2024, 06:24:29","6 Dec 2024, 05:00",N/A,1017,80,12,24/12/2999
+Greenland,-8,Passing clouds.,Godthaab / Nuuk,"6 Dec 2024, 02:24:29","6 Dec 2024, 01:50",N/A,1012,73,-12,24/12/2999
+Grenada,27,Sprinkles. Passing clouds.,Point Salines Airport,"6 Dec 2024, 00:24:29","5 Dec 2024, 22:00",N/A,1013,79,23,24/12/2999
+Guatemala,16,Passing clouds.,Guatemala Aeropuertola Aurora,"5 Dec 2024, 22:24:30","5 Dec 2024, 22:00",N/A,1025,88,14,24/12/2999
+Guinea,26,Fog.,Conakry / Gbessia,"6 Dec 2024, 04:24:30","6 Dec 2024, 04:00",4,1010,89,24,24/12/2999
+Guinea-Bissau,22,Overcast.,Bissau Aeroport,"6 Dec 2024, 04:24:30","5 Dec 2024, 21:00",10,1013,49,11,24/12/2999
+Guyana,25,Partly sunny.,Georgetown,"6 Dec 2024, 00:24:30","5 Dec 2024, 17:00",10,1010,92,24,24/12/2999
+Honduras,20,Scattered showers. Passing clouds.,Tegucigalpa Airport,"5 Dec 2024, 22:24:31","5 Dec 2024, 22:00",N/A,1021,83,17,24/12/2999
+Hungary,-1,Ice fog.,Ferenc Liszt International Airport,"6 Dec 2024, 05:24:31","6 Dec 2024, 05:00",0,1020,100,-1,24/12/2999
+Iceland,-3,Passing clouds.,Reykjavik Airport,"6 Dec 2024, 04:24:31","6 Dec 2024, 04:00",N/A,996,93,-4,24/12/2999
+India,14,Sunny.,New Delhi / Safdarjung,"6 Dec 2024, 09:54:32","6 Dec 2024, 08:30",2,1015,67,8,24/12/2999
+Indonesia,27,Overcast.,Jakarta/Observatory,"6 Dec 2024, 11:24:32","6 Dec 2024, 10:00",7,1009,84,24,24/12/2999
+Iran,3,Haze.,Tehran-Mehrabad,"6 Dec 2024, 07:54:32","6 Dec 2024, 07:30",5,1026,45,-8,24/12/2999
+Iraq,6,Clear.,Baghdad,"6 Dec 2024, 07:24:32","6 Dec 2024, 06:00",10,1024,65,0,24/12/2999
+Ireland,4,Passing clouds.,Dublin Airport,"6 Dec 2024, 04:24:32","6 Dec 2024, 04:00",N/A,1015,87,2,24/12/2999
+Isle of Man,8,Passing clouds.,Isle Of Man / Ronaldsway Airport,"6 Dec 2024, 04:24:33","6 Dec 2024, 03:50",N/A,1013,71,3,24/12/2999
+Israel,12,Quite cool.,Khallat Ḩamāmah - MADIS Station,"6 Dec 2024, 06:24:33","6 Dec 2024, 05:40",N/A,918,60,5,24/12/2999
+Italy,3,Clear.,Rome / Ciampino,"6 Dec 2024, 05:24:33","6 Dec 2024, 04:50",16,1018,81,0,24/12/2999
+Jamaica,26,Passing clouds.,Kingston / Norman Manley,"5 Dec 2024, 23:24:33","5 Dec 2024, 22:00",20,1015,85,24,24/12/2999
+Japan,16,Passing clouds.,Tokyo Heliport,"6 Dec 2024, 13:24:33","6 Dec 2024, 12:00",N/A,1006,36,1,24/12/2999
+Jordan,10,Haze.,Amman Airport,"6 Dec 2024, 07:24:34","6 Dec 2024, 07:00",5,1024,50,0,24/12/2999
+Kazakhstan,-8,Passing clouds.,Astana,"6 Dec 2024, 09:24:34","6 Dec 2024, 08:30",9,1025,93,-9,24/12/2999
+Kenya,17,Passing clouds.,Nairobi / Wilson,"6 Dec 2024, 07:24:34","6 Dec 2024, 06:00",N/A,1023,83,14,24/12/2999
+Kiribati,31,Overcast.,Tarawa,"6 Dec 2024, 16:24:34","6 Dec 2024, 12:00",50,1006,71,25,24/12/2999
+Kosovo,4,Chilly.,Vranje,"6 Dec 2024, 05:24:35","6 Dec 2024, 04:00",N/A,1022,100,4,24/12/2999
+Kuwait,15,Clear.,Kuwait Internationalairport,"6 Dec 2024, 07:24:35","6 Dec 2024, 06:00",10,1022,65,9,24/12/2999
+Kyrgyzstan,-7,Fog.,Bishkek,"6 Dec 2024, 10:24:35","6 Dec 2024, 09:00",0,1035,94,-8,24/12/2999
+Laos,28,Passing clouds.,Vientiane Airport,"6 Dec 2024, 11:24:35","6 Dec 2024, 10:30",8,1014,74,23,24/12/2999
+Latvia,0,Overcast.,Riga Airport,"6 Dec 2024, 06:24:35","6 Dec 2024, 05:50",N/A,1021,80,-3,24/12/2999
+Lebanon,14,Passing clouds.,Beirut Airport,"6 Dec 2024, 06:24:36","6 Dec 2024, 06:00",8,1021,59,6,24/12/2999
+Liberia,24,Fog.,Roberts Field,"6 Dec 2024, 04:24:36","6 Dec 2024, 04:00",9,1010,94,23,24/12/2999
+Liechtenstein,5,Rain. Overcast.,Vaduz,"6 Dec 2024, 05:24:36","6 Dec 2024, 04:00",9,1014,70,0,24/12/2999
+Lithuania,-3,Low clouds.,Vilnius Airport,"6 Dec 2024, 06:24:36","6 Dec 2024, 05:50",N/A,1022,86,-5,24/12/2999
+Luxembourg,7,Passing clouds.,Luxembourg Airport,"6 Dec 2024, 05:24:36","6 Dec 2024, 04:50",N/A,1006,71,2,24/12/2999
+Madagascar,21,Passing clouds.,Antananarivo / Ivato,"6 Dec 2024, 07:24:37","6 Dec 2024, 07:00",N/A,1020,69,15,24/12/2999
+Malaysia,31,Passing clouds.,Sultan Abdul Aziz Shah-Subang,"6 Dec 2024, 12:24:37","6 Dec 2024, 11:00",N/A,1009,66,24,24/12/2999
+Maldives,30,Partly sunny.,Male Airport,"6 Dec 2024, 09:24:37","6 Dec 2024, 09:00",N/A,1012,70,24,24/12/2999
+Mali,21,Clear.,Bamako / Senou,"6 Dec 2024, 04:24:37","6 Dec 2024, 03:30",16,1014,27,1,24/12/2999
+Malta,16,Partly cloudy.,Luqa,"6 Dec 2024, 05:24:38","6 Dec 2024, 04:45",N/A,1012,72,11,24/12/2999
+Marshall Islands,28,Cloudy.,Majuro Atoll,"6 Dec 2024, 16:24:38","6 Dec 2024, 15:51",24,1005,87,25,24/12/2999
+Mauritius,22,Passing clouds.,Vacoas (Mauritius),"6 Dec 2024, 08:24:38","6 Dec 2024, 07:00",25,N/A,83,19,24/12/2999
+Mexico,16,Passing clouds.,Mexico City / Licenci,"5 Dec 2024, 22:24:39","5 Dec 2024, 21:45",16,1029,55,7,24/12/2999
+Micronesia,31,Cloudy.,Pohnpei,"6 Dec 2024, 15:24:39","6 Dec 2024, 13:54",24,1006,73,26,24/12/2999
+Moldova,-3,Overcast.,Chisinau International Airport,"6 Dec 2024, 06:24:39","6 Dec 2024, 06:00",N/A,1026,93,-4,24/12/2999
+Monaco,7,Clear.,Nice Airport,"6 Dec 2024, 05:24:39","6 Dec 2024, 05:00",16,1018,71,2,24/12/2999
+Mongolia,-12,Sunny.,Ulan-Bator,"6 Dec 2024, 12:24:39","6 Dec 2024, 12:00",16,1026,72,-16,24/12/2999
+Montenegro,7,Sprinkles. Mostly cloudy.,Podgorica Titograd,"6 Dec 2024, 05:24:40","6 Dec 2024, 05:00",6,1019,100,7,24/12/2999
+Montserrat,27,Passing clouds.,Vc Bird International Antigua Airport,"6 Dec 2024, 00:24:40","6 Dec 2024, 00:00",N/A,1015,74,22,24/12/2999
+Morocco,10,Clear.,Rabat-Sale,"6 Dec 2024, 05:24:40","6 Dec 2024, 05:00",8,1027,100,10,24/12/2999
+Mozambique,26,Partly sunny.,Maputo / Mavalane,"6 Dec 2024, 06:24:40","6 Dec 2024, 05:00",N/A,1008,79,22,24/12/2999
+Namibia,20,Mild.,Windhoek,"6 Dec 2024, 06:24:41","6 Dec 2024, 05:00",N/A,N/A,25,0,24/12/2999
+Nepal,14,Fog.,Kathmandu Airport,"6 Dec 2024, 10:09:41","6 Dec 2024, 09:45",4,1018,72,9,24/12/2999
+Netherlands,9,Passing clouds.,Amsterdam Schiphol Airport,"6 Dec 2024, 05:24:41","6 Dec 2024, 04:55",N/A,999,76,5,24/12/2999
+New Zealand,17,Clear.,Wellington Airport,"6 Dec 2024, 17:24:41","6 Dec 2024, 16:30",N/A,1015,68,11,24/12/2999
+Nicaragua,25,Passing clouds.,Managua A. C. Sandino,"5 Dec 2024, 22:24:41","5 Dec 2024, 21:00",N/A,1012,94,24,24/12/2999
+Niger,20,Clear.,Niamey-Aero,"6 Dec 2024, 05:24:42","6 Dec 2024, 04:00",16,1013,28,1,24/12/2999
+Niue,27,Passing clouds.,Alofi / Niue,"5 Dec 2024, 17:24:42","5 Dec 2024, 16:30",N/A,1011,74,22,24/12/2999
+North Korea,0,Sunny.,Pyongyang,"6 Dec 2024, 13:24:42","6 Dec 2024, 12:00",10,1022,50,-9,24/12/2999
+North Macedonia,7,Fog.,Skopje-Petrovec,"6 Dec 2024, 05:24:42","6 Dec 2024, 04:50",5,1021,100,7,24/12/2999
+Norway,1,Freezing rain. Overcast.,Oslo-Blindern,"6 Dec 2024, 05:24:42","6 Dec 2024, 04:00",3,1005,98,1,24/12/2999
+Oman,24,Mild.,Mina Sultan Qaboos,"6 Dec 2024, 08:24:43","6 Dec 2024, 07:00",N/A,1018,64,17,24/12/2999
+Pakistan,8,Sunny.,Islamabad Airport,"6 Dec 2024, 09:24:43","6 Dec 2024, 08:00",4,1018,80,4,24/12/2999
+Palau,28,Overcast.,Babelthuap Island  Babelthuap/Koror Airport,"6 Dec 2024, 13:24:43","6 Dec 2024, 09:00",24,1008,84,25,24/12/2999
+Panama,27,Overcast.,Marcos A. Gelabert,"5 Dec 2024, 23:24:43","5 Dec 2024, 23:00",N/A,1010,84,24,24/12/2999
+Papua New Guinea,31,Scattered clouds.,Moresby,"6 Dec 2024, 14:24:44","6 Dec 2024, 14:00",N/A,1005,70,25,24/12/2999
+Paraguay,26,Clear.,Asuncion / Aeropuerto,"6 Dec 2024, 01:24:44","6 Dec 2024, 01:00",16,1004,89,24,24/12/2999
+Peru,19,Passing clouds.,Lima-Callao / Aerop. Internacional Jorgechavez,"5 Dec 2024, 23:24:44","5 Dec 2024, 22:00",10,1013,83,16,24/12/2999
+Philippines,32,Scattered clouds.,Science Garden,"6 Dec 2024, 12:24:44","6 Dec 2024, 11:00",8,1009,54,22,24/12/2999
+Poland,2,Passing clouds.,Warsaw Okecie Airport,"6 Dec 2024, 05:24:44","6 Dec 2024, 05:00",N/A,1016,93,1,24/12/2999
+Portugal,12,Clear.,Lisbon Portela Airport,"6 Dec 2024, 04:24:45","6 Dec 2024, 03:30",16,1031,100,12,24/12/2999
+Puerto Rico,27,Passing clouds.,Luis Munoz Marin,"6 Dec 2024, 00:24:45","5 Dec 2024, 23:56",16,1016,79,23,24/12/2999
+Qatar,20,Clear.,Doha International Airport,"6 Dec 2024, 07:24:45","6 Dec 2024, 06:30",9,1020,83,17,24/12/2999
+Réunion (French),28,Sunny.,Saint-Denis / Gillot,"6 Dec 2024, 08:24:45","6 Dec 2024, 08:00",16,1015,51,17,24/12/2999
+Romania,1,Drizzle. Fog.,Bucharest / Imh,"6 Dec 2024, 06:24:45","6 Dec 2024, 05:30",3,1025,93,0,24/12/2999
+Russia,-6,Light snow. Overcast.,Moskva,"6 Dec 2024, 07:24:46","6 Dec 2024, 06:00",17,1039,83,-9,24/12/2999
+Rwanda,18,Fog.,Kigali Airport,"6 Dec 2024, 06:24:46","6 Dec 2024, 06:00",2,1020,100,18,24/12/2999
+Saint Helena,17,Overcast.,Saint Helena Island,"6 Dec 2024, 04:24:46","6 Dec 2024, 03:00",N/A,1016,80,14,24/12/2999
+Saint Kitts and Nevis,27,Passing clouds.,Golden Rock,"6 Dec 2024, 00:24:46","5 Dec 2024, 21:00",N/A,1016,74,22,24/12/2999
+Saint Lucia,28,Passing clouds.,Vigie,"6 Dec 2024, 00:24:47","5 Dec 2024, 21:00",N/A,1014,70,22,24/12/2999
+Saint Vincent and Grenadines,27,Passing clouds.,Hewanorra International Airport,"6 Dec 2024, 00:24:47","5 Dec 2024, 23:00",N/A,1013,79,23,24/12/2999
+Samoa,30,Partly sunny.,Apia / Upolu Island,"6 Dec 2024, 17:24:47","6 Dec 2024, 16:00",20,1009,80,26,24/12/2999
+San Marino,5,Passing clouds.,Rimini Airport,"6 Dec 2024, 05:24:47","6 Dec 2024, 04:50",N/A,1019,66,-1,24/12/2999
+Saudi Arabia,15,Sunny.,King Khaled International Airport,"6 Dec 2024, 07:24:48","6 Dec 2024, 07:00",16,1022,51,5,24/12/2999
+Senegal,24,Passing clouds.,Dakar / Yoff,"6 Dec 2024, 04:24:48","6 Dec 2024, 02:00",N/A,1014,69,18,24/12/2999
+Serbia,4,Overcast.,Beograd,"6 Dec 2024, 05:24:48","6 Dec 2024, 04:00",15,1022,88,2,24/12/2999
+Seychelles,27,Sprinkles. Partly sunny.,National Airport,"6 Dec 2024, 08:24:48","6 Dec 2024, 08:00",N/A,1011,79,23,24/12/2999
+Singapore,33,Broken clouds.,Singapore / Paya Lebar,"6 Dec 2024, 12:24:48","6 Dec 2024, 12:00",N/A,1009,52,22,24/12/2999
+Slovakia,-3,Passing clouds.,Bratislava Ivanka,"6 Dec 2024, 05:24:49","6 Dec 2024, 05:00",8,1017,93,-4,24/12/2999
+Slovenia,-2,Overcast.,Ljubljana / Bezigrad,"6 Dec 2024, 05:24:49","6 Dec 2024, 04:00",25,1022,87,-4,24/12/2999
+Solomon Islands,30,Overcast.,Munda,"6 Dec 2024, 15:24:49","6 Dec 2024, 14:00",20,1007,76,25,24/12/2999
+Solomon Islands,34,Partly sunny.,Honiara,"6 Dec 2024, 15:24:49","6 Dec 2024, 14:00",20,1007,58,24,24/12/2999
+South Africa,21,Mild.,Waterkloof Lmb,"6 Dec 2024, 06:24:49","6 Dec 2024, 06:00",N/A,1017,50,10,24/12/2999
+South Korea,5,Sunny.,Seoul / Kimp'O International Airport,"6 Dec 2024, 13:24:50","6 Dec 2024, 13:00",16,1021,42,-7,24/12/2999
+Spain,8,Clear.,Madrid / Cuatro Vientos,"6 Dec 2024, 05:24:50","6 Dec 2024, 04:30",16,1029,87,6,24/12/2999
+Sri Lanka,24,Passing clouds.,Colombo,"6 Dec 2024, 09:54:50","6 Dec 2024, 05:30",18,1010,90,23,24/12/2999
+Suriname,29,Haze.,Zorg En Hoop,"6 Dec 2024, 01:24:50","5 Dec 2024, 18:00",10,1010,69,23,24/12/2999
+Sweden,0,Clear.,Stockholm Bromma Airport,"6 Dec 2024, 05:24:51","6 Dec 2024, 04:50",N/A,1012,93,-1,24/12/2999
+Switzerland,4,Passing clouds.,Bern / Belp,"6 Dec 2024, 05:24:51","6 Dec 2024, 04:50",7,1011,100,4,24/12/2999
+Syria,3,Clear.,Damascus Int. Airport,"6 Dec 2024, 07:24:51","6 Dec 2024, 06:00",16,1024,70,-2,24/12/2999
+Taiwan,24,Scattered clouds.,Sungshan / Taipei,"6 Dec 2024, 12:24:51","6 Dec 2024, 11:30",N/A,1016,65,17,24/12/2999
+Tajikistan,0,Sleet. Cloudy.,Dushanbe Airport,"6 Dec 2024, 09:24:51","6 Dec 2024, 08:30",1,1028,93,-1,24/12/2999
+Thailand,32,Passing clouds.,Don Muang Airport,"6 Dec 2024, 11:24:52","6 Dec 2024, 11:00",N/A,1011,41,17,24/12/2999
+Togo,28,Passing clouds.,Lome Airport,"6 Dec 2024, 04:24:52","6 Dec 2024, 03:00",N/A,1010,84,25,24/12/2999
+Tonga,28,Mostly cloudy.,Fua'Amotu,"6 Dec 2024, 17:24:52","6 Dec 2024, 17:00",N/A,1013,84,25,24/12/2999
+Trinidad and Tobago,26,Passing clouds.,Piarco International Airport - Trinidad,"6 Dec 2024, 00:24:52","5 Dec 2024, 23:00",N/A,1012,84,23,24/12/2999
+Tunisia,12,Passing clouds.,Tunis-Carthage,"6 Dec 2024, 05:24:53","6 Dec 2024, 04:30",N/A,1021,72,7,24/12/2999
+Turkey,2,Fog.,Ankara / Guvercin Lik,"6 Dec 2024, 07:24:53","6 Dec 2024, 06:50",4,1026,100,2,24/12/2999
+Turkmenistan,3,Overcast.,Ashgabat,"6 Dec 2024, 09:24:53","6 Dec 2024, 09:00",6,1031,93,2,24/12/2999
+Tuvalu,31,Scattered showers. More clouds than sun.,Funafuti,"6 Dec 2024, 16:24:53","6 Dec 2024, 16:00",N/A,1006,75,26,24/12/2999
+Uganda,21,Passing clouds.,Entebbe Airport,"6 Dec 2024, 07:24:54","6 Dec 2024, 06:30",9,1016,88,19,24/12/2999
+Ukraine,-2,Fog.,Kyiv,"6 Dec 2024, 06:24:54","6 Dec 2024, 05:00",4,1028,93,-3,24/12/2999
+United Arab Emirates,23,Sunny.,Abu Dhabi Bateen Airport,"6 Dec 2024, 08:24:54","6 Dec 2024, 08:00",16,1019,78,19,24/12/2999
+United Kingdom,7,Clear.,Northolt,"6 Dec 2024, 04:24:54","6 Dec 2024, 03:50",N/A,1012,71,2,24/12/2999
+Uruguay,21,Clear.,Carrasco,"6 Dec 2024, 01:24:54","6 Dec 2024, 01:00",16,1005,94,20,24/12/2999
+USA,-1,Clear.,Reagan National Airport,"5 Dec 2024, 23:24:55","5 Dec 2024, 22:52",16,1021,45,-12,24/12/2999
+Uzbekistan,1,Fog.,Tashkent,"6 Dec 2024, 09:24:55","6 Dec 2024, 08:30",3,1031,87,-1,24/12/2999
+Vanuatu,29,Thunderstorms. Broken clouds.,Bauerfield Efate,"6 Dec 2024, 15:24:55","6 Dec 2024, 15:00",N/A,1011,79,25,24/12/2999
+Vatican City State,3,Clear.,Rome / Ciampino,"6 Dec 2024, 05:24:55","6 Dec 2024, 04:50",16,1018,81,0,24/12/2999
+Venezuela,24,Clear.,Caracas / Maiquetia Aerop. Intl. Simon Bolivar,"6 Dec 2024, 00:24:56","6 Dec 2024, 00:00",16,1013,89,22,24/12/2999
+Vietnam,20,Light rain. Fog.,Ha Noi Airport,"6 Dec 2024, 11:24:56","6 Dec 2024, 10:30",2,1016,94,19,24/12/2999
+Zimbabwe,33,Passing clouds.,Harare Kutsaga,"6 Dec 2024, 06:24:56","5 Dec 2024, 14:00",30,N/A,20,7,24/12/2999
+Albania,12,Broken clouds.,Tirana Airport,"6 Dec 2024, 10:22:33","6 Dec 2024, 09:50",N/A,1016,77,8,24/12/2999
+Algeria,15,Passing clouds.,Alger-Port,"6 Dec 2024, 10:22:33","6 Dec 2024, 07:00",10,1025,78,11,24/12/2999
+Angola,28,Broken clouds.,Luanda  Airport,"6 Dec 2024, 10:22:33","6 Dec 2024, 09:00",N/A,1011,74,23,24/12/2999
+Antigua and Barbuda,26,Scattered showers. Passing clouds.,Vc Bird International Antigua Airport,"6 Dec 2024, 05:22:33","6 Dec 2024, 04:00",N/A,1013,79,22,24/12/2999
+Argentina,17,Light rain. Clear.,Buenos Aires Airport,"6 Dec 2024, 06:22:34","6 Dec 2024, 05:00",6,1003,88,15,24/12/2999
+Armenia,-1,Overcast.,Makko,"6 Dec 2024, 13:22:34","6 Dec 2024, 10:00",10,1031,87,-3,24/12/2999
+Aruba,28,Passing clouds.,Queen Beatrix Airport - Aruba,"6 Dec 2024, 05:22:34","6 Dec 2024, 04:00",N/A,1011,66,21,24/12/2999
+Australia,22,Lots of rain. Partly sunny.,Canberra Airport,"6 Dec 2024, 20:22:35","6 Dec 2024, 19:39",5,1015,88,20,24/12/2999
+Austria,1,Sleet. Overcast.,Vienna Schwechat-Flughafen Airport,"6 Dec 2024, 10:22:35","6 Dec 2024, 09:20",N/A,1009,81,-2,24/12/2999
+Azerbaijan,11,Partly sunny.,Baku / Bine Airport,"6 Dec 2024, 13:22:36","6 Dec 2024, 12:30",N/A,1030,82,8,24/12/2999
+Bahamas,19,Passing clouds.,Nassau Airport,"6 Dec 2024, 04:22:36","6 Dec 2024, 03:00",N/A,1020,83,16,24/12/2999
+Bahrain,25,Passing clouds.,Bahrain International Airport,"6 Dec 2024, 12:22:36","6 Dec 2024, 11:00",N/A,1020,65,18,24/12/2999
+Bangladesh,27,Sunny.,Dhaka,"6 Dec 2024, 15:22:37","6 Dec 2024, 12:00",4,1013,32,9,24/12/2999
+Barbados,27,Passing clouds.,Grantley Adams,"6 Dec 2024, 05:22:38","6 Dec 2024, 04:00",N/A,1011,79,23,24/12/2999
+Belarus,-2,Light snow. Mostly cloudy.,Minsk,"6 Dec 2024, 12:22:38","6 Dec 2024, 11:30",9,1023,86,-4,24/12/2999
+Belgium,8,Partly sunny.,Brussels National Airport,"6 Dec 2024, 10:22:38","6 Dec 2024, 09:20",N/A,1012,71,3,24/12/2999
+Belize,22,Passing clouds.,Belize / Phillip Goldston Intl. Airport,"6 Dec 2024, 03:22:39","6 Dec 2024, 00:00",25,1019,92,20,24/12/2999
+Benin,28,Scattered clouds.,Cotonou Airport,"6 Dec 2024, 10:22:39","6 Dec 2024, 09:00",6,1011,84,25,24/12/2999
+Bermuda,20,Passing clouds.,Bermuda,"6 Dec 2024, 05:22:39","6 Dec 2024, 03:55",N/A,1014,73,15,24/12/2999
+Bhutan,7,Quite cool.,Pagri,"6 Dec 2024, 15:22:40","6 Dec 2024, 12:00",30,1006,16,-17,24/12/2999
+Bosnia-Herzegovina,0,Ice fog.,Sarajevo / Butmir,"6 Dec 2024, 10:22:40","6 Dec 2024, 09:30",0,1016,100,0,24/12/2999
+Botswana,35,Sunny.,Seretse Khama International Airport,"6 Dec 2024, 11:22:40","6 Dec 2024, 10:00",16,1013,14,4,24/12/2999
+Brazil,18,Clear.,Brasilia Aeroporto,"6 Dec 2024, 06:22:40","6 Dec 2024, 05:00",16,1017,100,18,24/12/2999
+British Virgin Islands,26,Clear.,Cyril E. King International Airport,"6 Dec 2024, 05:22:41","6 Dec 2024, 03:53",16,1014,76,21,24/12/2999
+Brunei,31,Broken clouds.,Brunei Airport,"6 Dec 2024, 17:22:41","6 Dec 2024, 16:30",N/A,1006,62,23,24/12/2999
+Bulgaria,3,Light rain. Overcast.,Sofia Observ.,"6 Dec 2024, 11:22:41","6 Dec 2024, 08:00",8,1023,92,2,24/12/2999
+Burundi,23,Partly sunny.,Bujumbura Airport,"6 Dec 2024, 11:22:42","6 Dec 2024, 08:00",N/A,1016,83,20,24/12/2999
+Cambodia,33,Scattered clouds.,Phnom-Penh / Pochentong,"6 Dec 2024, 16:22:42","6 Dec 2024, 15:30",N/A,1005,52,22,24/12/2999
+Cameroon,22,Partly sunny.,Yaounde Airport,"6 Dec 2024, 10:22:42","6 Dec 2024, 07:00",6,1015,88,20,24/12/2999
+Canada,-7,Snow flurries. Passing clouds.,Ottawa Int'L. Ont.,"6 Dec 2024, 04:22:43","6 Dec 2024, 03:18",16,1014,73,-11,24/12/2999
+Central African Republic,22,Fog.,Bangui Airport,"6 Dec 2024, 10:22:43","6 Dec 2024, 07:00",3,1013,88,20,24/12/2999
+Chad,25,Clear.,Ndjamena,"6 Dec 2024, 10:22:43","6 Dec 2024, 09:00",8,1014,22,2,24/12/2999
+Chile,11,Clear.,Pudahuel,"6 Dec 2024, 06:22:43","6 Dec 2024, 05:00",16,1016,77,7,24/12/2999
+China,7,Quite cool.,Beijing,"6 Dec 2024, 17:22:43","6 Dec 2024, 14:00",30,1024,19,-15,24/12/2999
+Colombia,11,Scattered showers. Passing clouds.,Bogota / Eldorado,"6 Dec 2024, 04:22:44","6 Dec 2024, 03:00",8,1025,100,11,24/12/2999
+Congo,23,Passing clouds.,Brazzaville / Maya-Maya,"6 Dec 2024, 10:22:44","6 Dec 2024, 07:00",N/A,1014,94,22,24/12/2999
+Congo Dem. Rep.,23,Passing clouds.,Brazzaville / Maya-Maya,"6 Dec 2024, 10:22:44","6 Dec 2024, 07:00",N/A,1014,94,22,24/12/2999
+Cook Islands,24,Passing clouds.,Rarotonga,"5 Dec 2024, 23:22:45","5 Dec 2024, 22:30",N/A,1015,89,22,24/12/2999
+Costa Rica,19,Clear.,Juan Santamaria,"6 Dec 2024, 03:22:45","6 Dec 2024, 02:00",16,1015,94,18,24/12/2999
+Cote d'Ivoire (Ivory Coast),18,Fog.,Yamoussoukro,"6 Dec 2024, 09:22:46","6 Dec 2024, 06:00",4,1010,98,18,24/12/2999
+Croatia,2,Partly sunny.,Zagreb / Pleso,"6 Dec 2024, 10:22:47","6 Dec 2024, 09:30",6,1014,87,0,24/12/2999
+Cuba,14,Passing clouds.,Aeropuerto Jose Marti - Rancho-Boyeros - Habana,"6 Dec 2024, 04:22:48","6 Dec 2024, 02:50",7,1020,100,14,24/12/2999
+Cyprus,12,Passing clouds.,Athalassa,"6 Dec 2024, 11:22:48","6 Dec 2024, 08:00",12,1023,89,10,24/12/2999
+Cyprus,12,Passing clouds.,Athalassa,"6 Dec 2024, 11:22:48","6 Dec 2024, 08:00",12,1023,89,10,24/12/2999
+Czechia,2,Light rain. Mostly cloudy.,Václav Havel Airport Prague,"6 Dec 2024, 10:22:49","6 Dec 2024, 09:30",N/A,1002,100,2,24/12/2999
+Denmark,4,Light rain. Partly sunny.,Koebenhavn-Kastrup Airport,"6 Dec 2024, 10:22:49","6 Dec 2024, 09:20",5,1001,93,3,24/12/2999
+Dominican Republic,25,Passing clouds.,Santo Domingo,"6 Dec 2024, 05:22:49","6 Dec 2024, 02:00",16,1015,95,24,24/12/2999
+Egypt,19,Passing clouds.,Cairo Airport,"6 Dec 2024, 11:22:49","6 Dec 2024, 10:30",6,1018,73,14,24/12/2999
+El Salvador,26,Clear.,El Salvador Intl. Airport / Comalapa,"6 Dec 2024, 03:22:50","6 Dec 2024, 02:00",16,1011,61,18,24/12/2999
+Equatorial Guinea,24,Scattered clouds.,Malabo/Fernando Poo,"6 Dec 2024, 10:22:50","6 Dec 2024, 07:00",8,1011,100,24,24/12/2999
+Estonia,-2,Low clouds.,Tallinn,"6 Dec 2024, 11:22:50","6 Dec 2024, 10:20",N/A,1021,86,-4,24/12/2999
+Eswatini,26,Partly sunny.,Manzini / Matsapa Airport,"6 Dec 2024, 11:22:51","6 Dec 2024, 10:00",N/A,1013,58,17,24/12/2999
+Ethiopia,20,Sunny.,Addis Ababa Airport,"6 Dec 2024, 12:22:51","6 Dec 2024, 11:00",16,1028,24,-1,24/12/2999
+Falkland Islands,1,Snow showers. Partly cloudy.,Mount Pleasant Airport,"6 Dec 2024, 06:22:51","6 Dec 2024, 05:20",1,1012,93,0,24/12/2999
+Fiji,24,Overcast.,Nausori,"6 Dec 2024, 21:22:52","6 Dec 2024, 18:00",20,1011,96,24,24/12/2999
+Finland,0,Partly sunny.,Helsinki-Vantaa,"6 Dec 2024, 11:22:52","6 Dec 2024, 10:20",N/A,1021,93,-1,24/12/2999
+France,8,Sunny.,Villacoublay,"6 Dec 2024, 10:22:52","6 Dec 2024, 09:30",16,1020,82,5,24/12/2999
+Gabon,28,Scattered clouds.,Libreville Airport,"6 Dec 2024, 10:22:53","6 Dec 2024, 09:00",N/A,1012,84,25,24/12/2999
+Gambia,21,Sunny.,Banjul / Yundum,"6 Dec 2024, 09:22:53","6 Dec 2024, 08:00",16,1012,38,6,24/12/2999
+Georgia,1,Overcast.,Tbilisi,"6 Dec 2024, 13:22:53","6 Dec 2024, 10:00",10,1033,83,-1,24/12/2999
+Germany,4,Light rain. Mostly cloudy.,Berlin-Schoenefeld,"6 Dec 2024, 10:22:54","6 Dec 2024, 09:50",N/A,1000,93,3,24/12/2999
+Ghana,28,Fog.,Accra Airport,"6 Dec 2024, 09:22:54","6 Dec 2024, 08:00",3,1012,84,25,24/12/2999
+Gibraltar,13,Sunny.,Gibraltar Airport,"6 Dec 2024, 10:22:54","6 Dec 2024, 09:20",16,1029,82,10,24/12/2999
+Greece,14,Light rain. Overcast.,Athinai Airport,"6 Dec 2024, 11:22:55","6 Dec 2024, 08:00",10,1017,89,12,24/12/2999
+Greenland,-7,Passing clouds.,Godthaab / Nuuk,"6 Dec 2024, 07:22:55","6 Dec 2024, 06:20",N/A,1014,86,-9,24/12/2999
+Grenada,25,Passing clouds.,Point Salines Airport,"6 Dec 2024, 05:22:55","6 Dec 2024, 03:00",N/A,1010,83,22,24/12/2999
+Guatemala,16,Passing clouds.,Guatemala Aeropuertola Aurora,"6 Dec 2024, 03:22:55","6 Dec 2024, 02:00",N/A,1022,88,14,24/12/2999
+Guinea,27,Scattered clouds.,Conakry / Gbessia,"6 Dec 2024, 09:22:56","6 Dec 2024, 08:00",7,1012,74,22,24/12/2999
+Guinea-Bissau,20,Sunny.,Bissau Aeroport,"6 Dec 2024, 09:22:56","6 Dec 2024, 08:00",16,1012,43,7,24/12/2999
+Guyana,23,Passing clouds.,Georgetown/Cheddi Jagan International Airport,"6 Dec 2024, 05:22:57","6 Dec 2024, 04:00",N/A,1010,94,22,24/12/2999
+Honduras,18,Light rain. Partly cloudy.,Tegucigalpa Airport,"6 Dec 2024, 03:22:57","6 Dec 2024, 02:00",6,1020,100,18,24/12/2999
+Hungary,0,Ice fog.,Ferenc Liszt International Airport,"6 Dec 2024, 10:22:57","6 Dec 2024, 09:30",3,1016,100,0,24/12/2999
+Iceland,-4,Clear.,Reykjavik Airport,"6 Dec 2024, 09:22:58","6 Dec 2024, 08:00",16,997,74,-8,24/12/2999
+India,23,Sunny.,New Delhi / Safdarjung,"6 Dec 2024, 14:52:58","6 Dec 2024, 11:30",4,1015,35,6,24/12/2999
+Indonesia,29,Light rain. Partly sunny.,Jakarta/Observatory,"6 Dec 2024, 16:22:58","6 Dec 2024, 13:00",7,1007,79,25,24/12/2999
+Iran,10,Clear.,Tehran-Mehrabad,"6 Dec 2024, 12:52:59","6 Dec 2024, 12:00",7,1026,28,-8,24/12/2999
+Iraq,11,Scattered clouds.,Baghdad,"6 Dec 2024, 12:22:59","6 Dec 2024, 09:00",10,1024,50,1,24/12/2999
+Ireland,4,Partly sunny.,Dublin Airport,"6 Dec 2024, 09:23:00","6 Dec 2024, 08:30",N/A,1015,87,2,24/12/2999
+Isle of Man,7,Passing clouds.,Isle Of Man / Ronaldsway Airport,"6 Dec 2024, 09:23:01","6 Dec 2024, 08:20",N/A,1015,76,3,24/12/2999
+Israel,16,Cool.,Khallat Ḩamāmah - MADIS Station,"6 Dec 2024, 11:23:01","6 Dec 2024, 10:25",N/A,918,45,4,24/12/2999
+Italy,5,Sunny.,Rome / Ciampino,"6 Dec 2024, 10:23:01","6 Dec 2024, 09:20",16,1018,76,1,24/12/2999
+Jamaica,26,Passing clouds.,Kingston / Norman Manley,"6 Dec 2024, 04:23:02","5 Dec 2024, 22:00",20,1015,85,24,24/12/2999
+Japan,16,Passing clouds.,Tokyo Heliport,"6 Dec 2024, 18:23:02","6 Dec 2024, 16:00",N/A,1007,39,2,24/12/2999
+Jordan,13,Haze.,Amman Airport,"6 Dec 2024, 12:23:02","6 Dec 2024, 11:00",5,1024,38,-1,24/12/2999
+Kazakhstan,-5,Overcast.,Astana,"6 Dec 2024, 14:23:02","6 Dec 2024, 13:30",N/A,1025,86,-7,24/12/2999
+Kenya,22,Partly sunny.,Nairobi / Wilson,"6 Dec 2024, 12:23:03","6 Dec 2024, 11:00",N/A,1023,57,13,24/12/2999
+Kiribati,31,Overcast.,Tarawa,"6 Dec 2024, 21:23:03","6 Dec 2024, 12:00",50,1006,71,25,24/12/2999
+Kosovo,6,Light rain. Overcast.,Vranje,"6 Dec 2024, 10:23:03","6 Dec 2024, 07:00",15,1022,98,6,24/12/2999
+Kuwait,18,Haze.,Kuwait Internationalairport,"6 Dec 2024, 12:23:03","6 Dec 2024, 09:00",7,1023,54,8,24/12/2999
+Kyrgyzstan,-4,Fog.,Bishkek,"6 Dec 2024, 15:23:04","6 Dec 2024, 12:00",0,1034,92,-5,24/12/2999
+Laos,31,Passing clouds.,Vientiane Airport,"6 Dec 2024, 16:23:04","6 Dec 2024, 15:30",8,1009,70,25,24/12/2999
+Latvia,0,Overcast.,Riga Airport,"6 Dec 2024, 11:23:04","6 Dec 2024, 10:20",N/A,1020,80,-3,24/12/2999
+Lebanon,21,Clear.,Beirut Airport,"6 Dec 2024, 11:23:04","6 Dec 2024, 10:00",8,1022,46,9,24/12/2999
+Liberia,25,Warm.,Roberts Field,"6 Dec 2024, 09:23:04","6 Dec 2024, 08:30",N/A,1012,94,24,24/12/2999
+Liechtenstein,8,Cool.,Vaduz,"6 Dec 2024, 10:23:05","6 Dec 2024, 09:00",N/A,1015,73,3,24/12/2999
+Lithuania,-3,Low clouds.,Vilnius Airport,"6 Dec 2024, 11:23:05","6 Dec 2024, 10:20",N/A,1020,80,-6,24/12/2999
+Luxembourg,6,Partly sunny.,Luxembourg Airport,"6 Dec 2024, 10:23:05","6 Dec 2024, 09:20",N/A,1012,71,1,24/12/2999
+Madagascar,27,Partly sunny.,Antananarivo / Ivato,"6 Dec 2024, 12:23:06","6 Dec 2024, 11:30",N/A,1019,45,14,24/12/2999
+Malawi,27,Partly sunny.,Lilongwe International Airport,"6 Dec 2024, 11:23:06","6 Dec 2024, 10:00",N/A,1017,54,17,24/12/2999
+Malaysia,34,Passing clouds.,Sultan Abdul Aziz Shah-Subang,"6 Dec 2024, 17:23:06","6 Dec 2024, 16:00",N/A,1005,53,23,24/12/2999
+Maldives,32,Passing clouds.,Male Airport,"6 Dec 2024, 14:23:06","6 Dec 2024, 13:00",N/A,1009,63,24,24/12/2999
+Mali,23,Clear.,Bamako / Senou,"6 Dec 2024, 09:23:07","6 Dec 2024, 08:30",8,1016,19,-2,24/12/2999
+Malta,17,Passing clouds.,Luqa,"6 Dec 2024, 10:23:07","6 Dec 2024, 09:15",N/A,1014,68,11,24/12/2999
+Marshall Islands,29,Cloudy.,Majuro Atoll,"6 Dec 2024, 21:23:08","6 Dec 2024, 18:58",24,1006,82,26,24/12/2999
+Mauritius,26,Scattered clouds.,Vacoas (Mauritius),"6 Dec 2024, 13:23:08","6 Dec 2024, 10:00",25,N/A,65,18,24/12/2999
+Mexico,12,Passing clouds.,Mexico City / Licenci,"6 Dec 2024, 03:23:08","6 Dec 2024, 01:42",13,1029,72,7,24/12/2999
+Micronesia,30,Mostly cloudy.,Pohnpei,"6 Dec 2024, 20:23:09","6 Dec 2024, 18:54",24,1007,77,25,24/12/2999
+Moldova,0,Light snow. Cloudy.,Chisinau International Airport,"6 Dec 2024, 11:23:09","6 Dec 2024, 10:30",9,1025,87,-2,24/12/2999
+Monaco,8,Partly sunny.,Nice Airport,"6 Dec 2024, 10:23:09","6 Dec 2024, 09:30",N/A,1014,66,2,24/12/2999
+Mongolia,-12,Sunny.,Ulan-Bator,"6 Dec 2024, 17:23:10","6 Dec 2024, 16:00",16,1027,61,-18,24/12/2999
+Montenegro,7,Broken clouds.,Podgorica Titograd,"6 Dec 2024, 10:23:10","6 Dec 2024, 09:30",N/A,1018,100,7,24/12/2999
+Montserrat,26,Scattered showers. Passing clouds.,Vc Bird International Antigua Airport,"6 Dec 2024, 05:23:11","6 Dec 2024, 04:00",N/A,1013,79,22,24/12/2999
+Morocco,9,Clear.,Rabat-Sale,"6 Dec 2024, 10:23:11","6 Dec 2024, 09:30",8,1028,100,9,24/12/2999
+Mozambique,29,Partly sunny.,Maputo / Mavalane,"6 Dec 2024, 11:23:11","6 Dec 2024, 10:00",N/A,1009,66,22,24/12/2999
+Namibia,23,Mild.,Windhoek,"6 Dec 2024, 11:23:12","6 Dec 2024, 08:00",N/A,N/A,21,-1,24/12/2999
+Nepal,18,Passing clouds.,Kathmandu Airport,"6 Dec 2024, 15:08:13","6 Dec 2024, 14:15",6,1014,56,9,24/12/2999
+Netherlands,9,Drizzle. Partly sunny.,Amsterdam Schiphol Airport,"6 Dec 2024, 10:23:14","6 Dec 2024, 09:25",N/A,1005,82,6,24/12/2999
+New Zealand,16,Passing clouds.,Wellington Airport,"6 Dec 2024, 22:23:14","6 Dec 2024, 21:30",N/A,1016,72,11,24/12/2999
+Nicaragua,25,Passing clouds.,Managua A. C. Sandino,"6 Dec 2024, 03:23:15","6 Dec 2024, 00:00",N/A,1011,89,23,24/12/2999
+Niger,24,Sunny.,Niamey-Aero,"6 Dec 2024, 10:23:15","6 Dec 2024, 09:00",16,1014,18,-2,24/12/2999
+Niue,24,Clear.,Alofi / Niue,"5 Dec 2024, 22:23:16","5 Dec 2024, 21:30",N/A,1013,89,22,24/12/2999
+North Korea,1,Sunny.,Pyongyang,"6 Dec 2024, 18:23:17","6 Dec 2024, 15:00",10,1022,54,-7,24/12/2999
+North Macedonia,8,Mostly cloudy.,Skopje-Petrovec,"6 Dec 2024, 10:23:17","6 Dec 2024, 09:20",7,1020,100,8,24/12/2999
+Norway,1,Overcast.,Oslo-Blindern,"6 Dec 2024, 10:23:18","6 Dec 2024, 07:00",20,1006,97,1,24/12/2999
+Oman,26,Warm.,Mina Sultan Qaboos,"6 Dec 2024, 13:23:18","6 Dec 2024, 12:00",N/A,1017,58,17,24/12/2999
+Pakistan,17,Sunny.,Islamabad Airport,"6 Dec 2024, 14:23:19","6 Dec 2024, 11:00",10,1016,38,2,24/12/2999
+Palau,28,Overcast.,Babelthuap Island  Babelthuap/Koror Airport,"6 Dec 2024, 18:23:19","6 Dec 2024, 15:00",23,1004,85,26,24/12/2999
+Panama,26,Mostly cloudy.,Marcos A. Gelabert,"6 Dec 2024, 04:23:20","6 Dec 2024, 02:00",N/A,1009,89,24,24/12/2999
+Papua New Guinea,30,Scattered clouds.,Moresby,"6 Dec 2024, 19:23:21","6 Dec 2024, 18:00",N/A,1005,75,25,24/12/2999
+Paraguay,26,Clear.,Asuncion / Aeropuerto,"6 Dec 2024, 06:23:21","6 Dec 2024, 05:00",16,1004,84,23,24/12/2999
+Peru,18,Passing clouds.,Lima-Callao / Aerop. Internacional Jorgechavez,"6 Dec 2024, 04:23:21","6 Dec 2024, 01:00",10,1012,86,16,24/12/2999
+Philippines,32,Partly sunny.,Science Garden,"6 Dec 2024, 17:23:22","6 Dec 2024, 14:00",8,1007,58,23,24/12/2999
+Poland,2,Partly sunny.,Warsaw Okecie Airport,"6 Dec 2024, 10:23:22","6 Dec 2024, 09:30",N/A,1012,81,-1,24/12/2999
+Portugal,14,Passing clouds.,Lisbon Portela Airport,"6 Dec 2024, 09:23:22","6 Dec 2024, 08:30",N/A,1031,100,14,24/12/2999
+Puerto Rico,26,Passing clouds.,Luis Munoz Marin,"6 Dec 2024, 05:23:22","6 Dec 2024, 03:56",16,1015,90,24,24/12/2999
+Qatar,26,Passing clouds.,Doha International Airport,"6 Dec 2024, 12:23:23","6 Dec 2024, 11:30",N/A,1019,54,16,24/12/2999
+Réunion (French),30,Scattered clouds.,Saint-Denis / Gillot,"6 Dec 2024, 13:23:24","6 Dec 2024, 12:30",N/A,1015,55,20,24/12/2999
+Romania,1,Light rain. Fog.,Bucharest / Imh,"6 Dec 2024, 11:23:24","6 Dec 2024, 10:30",3,1023,100,1,24/12/2999
+Russia,-6,Overcast.,Moskva,"6 Dec 2024, 12:23:24","6 Dec 2024, 09:00",17,1039,81,-9,24/12/2999
+Rwanda,21,Partly sunny.,Kigali Airport,"6 Dec 2024, 11:23:25","6 Dec 2024, 10:00",6,1021,83,18,24/12/2999
+Saint Helena,17,Low clouds.,Saint Helena Island,"6 Dec 2024, 09:23:26","6 Dec 2024, 08:00",N/A,1018,88,15,24/12/2999
+Saint Kitts and Nevis,27,Passing clouds.,Golden Rock,"6 Dec 2024, 05:23:26","5 Dec 2024, 21:00",28,1016,73,22,24/12/2999
+Saint Lucia,27,Partly cloudy.,Hewanorra International Airport,"6 Dec 2024, 05:23:26","6 Dec 2024, 04:00",N/A,1011,79,23,24/12/2999
+Saint Vincent and Grenadines,27,Partly cloudy.,Hewanorra International Airport,"6 Dec 2024, 05:23:27","6 Dec 2024, 04:00",N/A,1011,79,23,24/12/2999
+Samoa,29,Overcast.,Apia / Upolu Island,"6 Dec 2024, 22:23:27","6 Dec 2024, 19:00",20,1009,79,25,24/12/2999
+San Marino,7,Sunny.,Rimini Airport,"6 Dec 2024, 10:23:27","6 Dec 2024, 09:20",16,1016,66,1,24/12/2999
+Saudi Arabia,25,Sunny.,King Khaled International Airport,"6 Dec 2024, 12:23:28","6 Dec 2024, 11:00",16,1022,28,5,24/12/2999
+Senegal,25,Passing clouds.,Dakar / Yoff,"6 Dec 2024, 09:23:28","6 Dec 2024, 08:00",N/A,1014,61,17,24/12/2999
+Serbia,4,Light rain. Overcast.,Beograd,"6 Dec 2024, 10:23:28","6 Dec 2024, 07:00",15,1020,90,2,24/12/2999
+Seychelles,28,Partly sunny.,National Airport,"6 Dec 2024, 13:23:29","6 Dec 2024, 12:00",N/A,1010,74,23,24/12/2999
+Sierra Leone,21,Partly sunny.,Lungi,"6 Dec 2024, 09:23:30","6 Dec 2024, 08:00",N/A,1011,64,14,24/12/2999
+Singapore,36,Partly sunny.,Singapore / Paya Lebar,"6 Dec 2024, 17:23:30","6 Dec 2024, 16:00",N/A,1005,42,21,24/12/2999
+Slovakia,2,Passing clouds.,Bratislava Ivanka,"6 Dec 2024, 10:23:31","6 Dec 2024, 09:30",9,1012,87,0,24/12/2999
+Slovenia,-2,Overcast.,Ljubljana / Bezigrad,"6 Dec 2024, 10:23:32","6 Dec 2024, 07:00",20,1019,87,-4,24/12/2999
+Solomon Islands,30,Overcast.,Munda,"6 Dec 2024, 20:23:33","6 Dec 2024, 17:00",20,1007,77,26,24/12/2999
+Solomon Islands,32,Scattered clouds.,Honiara,"6 Dec 2024, 20:23:33","6 Dec 2024, 17:00",20,1007,59,23,24/12/2999
+South Africa,30,Pleasantly warm.,Waterkloof Lmb,"6 Dec 2024, 11:23:33","6 Dec 2024, 10:00",N/A,1019,27,9,24/12/2999
+South Korea,3,Passing clouds.,Seoul / Kimp'O International Airport,"6 Dec 2024, 18:23:34","6 Dec 2024, 17:00",N/A,1022,52,-6,24/12/2999
+Spain,7,Sunny.,Madrid / Cuatro Vientos,"6 Dec 2024, 10:23:34","6 Dec 2024, 09:30",16,1031,93,6,24/12/2999
+Sri Lanka,31,Scattered clouds.,Colombo,"6 Dec 2024, 14:53:34","6 Dec 2024, 11:30",20,1011,57,21,24/12/2999
+Sweden,3,Partly sunny.,Stockholm Bromma Airport,"6 Dec 2024, 10:23:35","6 Dec 2024, 09:20",N/A,1012,87,1,24/12/2999
+Switzerland,8,Broken clouds.,Bern / Belp,"6 Dec 2024, 10:23:36","6 Dec 2024, 09:20",N/A,1017,66,2,24/12/2999
+Syria,14,Sunny.,Damascus Int. Airport,"6 Dec 2024, 12:23:36","6 Dec 2024, 11:00",16,1025,44,2,24/12/2999
+Taiwan,22,Partly sunny.,Sungshan / Taipei,"6 Dec 2024, 17:23:37","6 Dec 2024, 16:30",N/A,1015,69,16,24/12/2999
+Tajikistan,12,Passing clouds.,Dushanbe Airport,"6 Dec 2024, 14:23:37","6 Dec 2024, 13:30",5,1026,41,-1,24/12/2999
+Tanzania,25,Passing clouds.,Dodoma Airport,"6 Dec 2024, 12:23:37","6 Dec 2024, 11:00",N/A,1018,57,16,24/12/2999
+Thailand,33,Passing clouds.,Don Muang Airport,"6 Dec 2024, 16:23:38","6 Dec 2024, 15:30",N/A,1007,38,17,24/12/2999
+Togo,29,Passing clouds.,Lome Airport,"6 Dec 2024, 09:23:38","6 Dec 2024, 08:00",N/A,1012,74,24,24/12/2999
+Tonga,26,Sprinkles. Passing clouds.,Fua'Amotu,"6 Dec 2024, 22:23:38","6 Dec 2024, 21:00",N/A,1013,94,25,24/12/2999
+Trinidad and Tobago,24,Passing clouds.,Piarco International Airport - Trinidad,"6 Dec 2024, 05:23:39","6 Dec 2024, 04:00",N/A,1010,94,23,24/12/2999
+Tunisia,15,Passing clouds.,Tunis-Carthage,"6 Dec 2024, 10:23:40","6 Dec 2024, 09:30",N/A,1022,63,8,24/12/2999
+Turkey,4,Fog.,Ankara / Guvercin Lik,"6 Dec 2024, 12:23:40","6 Dec 2024, 10:50",5,1027,87,2,24/12/2999
+Turkmenistan,7,Scattered clouds.,Ashgabat,"6 Dec 2024, 14:23:40","6 Dec 2024, 13:00",8,1030,71,2,24/12/2999
+Tuvalu,30,Passing clouds.,Funafuti,"6 Dec 2024, 21:23:40","6 Dec 2024, 20:00",N/A,1008,79,26,24/12/2999
+Uganda,18,Overcast.,Entebbe Airport,"6 Dec 2024, 12:23:41","6 Dec 2024, 09:00",9,N/A,90,17,24/12/2999
+Ukraine,-1,Light freezing rain. Low clouds.,Kyiv,"6 Dec 2024, 11:23:41","6 Dec 2024, 08:00",1,1027,95,-2,24/12/2999
+United Arab Emirates,27,Passing clouds.,Abu Dhabi Bateen Airport,"6 Dec 2024, 13:23:42","6 Dec 2024, 12:00",N/A,1018,58,18,24/12/2999
+United Kingdom,6,Passing clouds.,Northolt,"6 Dec 2024, 09:23:42","6 Dec 2024, 08:20",N/A,1017,76,2,24/12/2999
+Uruguay,19,Thunderstorms. Overcast.,Carrasco,"6 Dec 2024, 06:23:42","6 Dec 2024, 05:00",8,1002,100,19,24/12/2999
+USA,-1,Clear.,Reagan National Airport,"6 Dec 2024, 04:23:43","6 Dec 2024, 02:52",16,1022,51,-10,24/12/2999
+Uzbekistan,3,Fog.,Tashkent,"6 Dec 2024, 14:23:43","6 Dec 2024, 13:30",4,1030,81,0,24/12/2999
+Vanuatu,26,Partly cloudy.,Bauerfield Efate,"6 Dec 2024, 20:23:43","6 Dec 2024, 19:00",N/A,1012,94,25,24/12/2999
+Vatican City State,5,Sunny.,Rome / Ciampino,"6 Dec 2024, 10:23:44","6 Dec 2024, 09:20",16,1018,76,1,24/12/2999
+Venezuela,23,Clear.,Caracas / Maiquetia Aerop. Intl. Simon Bolivar,"6 Dec 2024, 05:23:44","6 Dec 2024, 04:03",N/A,1012,69,17,24/12/2999
+Vietnam,21,Broken clouds.,Ha Noi Airport,"6 Dec 2024, 16:23:45","6 Dec 2024, 15:30",6,1012,88,19,24/12/2999
+Zimbabwe,26,Sunny.,Harare Kutsaga,"6 Dec 2024, 11:23:45","6 Dec 2024, 08:00",30,N/A,50,14,24/12/2999
