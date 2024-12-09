@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 
 
 def send_email():
-    email = "huutinh.image@gmail.com"
+    email = "huutinh2412@gmail.com"
     password = "tinh0394707535"  # Please remember to keep this secure and avoid hardcoding in production.
     email_sent = 'huutinh@tuoitrenonglam.com'
 

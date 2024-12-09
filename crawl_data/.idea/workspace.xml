@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86fbabfb-cafb-4242-b038-61b1c41f1634" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../dw_weather/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dw_weather/src/BeautifulSoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/BeautifulSoup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dw_weather/src/ChangingToFact.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/ChangingToFact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dw_weather/src/CreateTableDim.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/CreateTableDim.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dw_weather/src/LoadDataInStaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/LoadDataInStaging.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dw_weather/src/connect_db.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/connect_db.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dw_weather/src/output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/output.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dw_weather/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
   "keyToString": {
     "Python.BeautifulSoup (1).executor": "Run",
     "Python.BeautifulSoup.executor": "Run",
+    "Python.ChangingToFact.executor": "Run",
     "Python.CreateTableDim (1).executor": "Run",
     "Python.CreateTableDim.executor": "Run",
     "Python.LoadDataInStaging (1).executor": "Run",
@@ -63,7 +64,7 @@
       <recent name="D:\Crawl_Data\crawl_data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.ChangingToFact">
     <configuration name="BeautifulSoup (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dw_weather" />
       <option name="ENV_FILES" value="" />
@@ -79,6 +80,29 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/BeautifulSoup.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ChangingToFact" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="dw_weather" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../dw_weather/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../dw_weather/src/ChangingToFact.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -133,29 +157,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="dw_weather" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="dw_weather" />
       <option name="ENV_FILES" value="" />
@@ -181,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ChangingToFact" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.CreateTableDim (1)" />
         <item itemvalue="Python.LoadDataInStaging" />
+        <item itemvalue="Python.CreateTableDim (1)" />
         <item itemvalue="Python.BeautifulSoup (1)" />
-        <item itemvalue="Python.main" />
       </list>
     </recent_temporary>
   </component>
@@ -222,6 +223,7 @@
       <workItem from="1733065476630" duration="1119000" />
       <workItem from="1733066750408" duration="607000" />
       <workItem from="1733382800439" duration="6839000" />
+      <workItem from="1733714383834" duration="2665000" />
     </task>
     <servers />
   </component>
@@ -262,12 +264,18 @@
           <line>54</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../dw_weather/src/CreateTableDim.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/crawl_data$test.coverage" NAME="test Coverage Results" MODIFIED="1733389161637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
-    <SUITE FILE_PATH="coverage/crawl_data$LoadDataInStaging.coverage" NAME="LoadDataInStaging Coverage Results" MODIFIED="1733386927466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
+    <SUITE FILE_PATH="coverage/crawl_data$test.coverage" NAME="test Coverage Results" MODIFIED="1733717067321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
+    <SUITE FILE_PATH="coverage/crawl_data$LoadDataInStaging.coverage" NAME="LoadDataInStaging Coverage Results" MODIFIED="1733716454906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
+    <SUITE FILE_PATH="coverage/crawl_data$ChangingToFact.coverage" NAME="ChangingToFact Coverage Results" MODIFIED="1733716565088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
     <SUITE FILE_PATH="coverage/crawl_data$LoadDataInStaging__1_.coverage" NAME="LoadDataInStaging (1) Coverage Results" MODIFIED="1731902010257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/crawl_data$BeautifulSoup.coverage" NAME="BeautifulSoup Coverage Results" MODIFIED="1731900593483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/crawl_data$CreateTableDim__1_.coverage" NAME="CreateTableDim (1) Coverage Results" MODIFIED="1733387385058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
