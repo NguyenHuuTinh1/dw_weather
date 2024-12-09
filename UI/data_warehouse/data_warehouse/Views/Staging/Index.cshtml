@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bảng Thực Tế</title>
 
-    <!-- Thêm link đến CSS của DataTables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
     <style>
@@ -48,11 +47,22 @@
 <body>
 
     <h2>Bảng Thực Tế</h2>
+    <div class="checkbox-container">
 
-    <!-- Phần checkbox để chọn các cột cần hiển thị -->
+        <label><input type="checkbox" class="column-toggle" data-column="0" checked> #</label>
+        <label><input type="checkbox" class="column-toggle" data-column="1" checked> Quốc Gia</label>
+        <label><input type="checkbox" class="column-toggle" data-column="2" checked> Nhiệt độ</label>
+        <label><input type="checkbox" class="column-toggle" data-column="3" checked> Tình trạng thời tiết</label>
+        <label><input type="checkbox" class="column-toggle" data-column="4" checked> Vị trí</label>
+        <label><input type="checkbox" class="column-toggle" data-column="5" checked> Thời gian hiện tại</label>
+        <label><input type="checkbox" class="column-toggle" data-column="6" checked> Báo cáo mới nhất</label>
+        <label><input type="checkbox" class="column-toggle" data-column="7" checked> Tầm nhìn</label>
+        <label><input type="checkbox" class="column-toggle" data-column="8" checked> Áp suất</label>
+        <label><input type="checkbox" class="column-toggle" data-column="9" checked> Độ ẩm</label>
+        <label><input type="checkbox" class="column-toggle" data-column="10" checked> Điểm sương</label>
+        <label><input type="checkbox" class="column-toggle" data-column="11" checked> Thời gian chết</label>
+    </div>
 
-
-    <!-- Bảng dữ liệu -->
     <table id="example">
         <thead>
             <tr>
@@ -91,16 +101,14 @@
         </tbody>
     </table>
 
-    <!-- Thêm thư viện jQuery và DataTables JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            // Khởi tạo DataTable
+
             var table = $('#example').DataTable();
 
-            // Xử lý sự kiện thay đổi trạng thái checkbox để ẩn/hiện cột
             $('.column-toggle').on('change', function () {
                 var column = table.column($(this).data('column'));
                 column.visible($(this).prop('checked'));
