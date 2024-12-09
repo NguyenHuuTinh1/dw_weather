@@ -3,7 +3,9 @@ import requests
 import csv
 import pymysql
 from datetime import datetime
-import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # Khởi tạo các biến
 list_temperature = []
@@ -18,7 +20,9 @@ url_web = ''
 mainFilePath = ''
 
 
-# Đọc file chứa thông tin cấu hình cơ sở dữ liệu
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+#B Đọc file chứa thông tin cấu hình cơ sở dữ liệu
 def CrawInformationDB():
     lines = []
     try:
@@ -29,7 +33,6 @@ def CrawInformationDB():
     except Exception as e:
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
-
 
 # Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
 def select_data_control_file_config():
@@ -48,7 +51,7 @@ def select_data_control_file_config():
 
         if connection.open:
             cursor = connection.cursor()
-            sql_query = """SELECT url_main_web, url_web, location FROM control_data_config LIMIT 1"""
+            sql_query = """SELECT url_main_web, url_web, location, email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
             cursor.execute(sql_query)
             result = cursor.fetchone()  # Lấy 1 dòng dữ liệu từ kết quả truy vấn
             if result:
@@ -67,17 +70,16 @@ def select_data_control_file_config():
             connection.close()
 
 
-# Gắn các giá trị trả về từ database vào biến toàn cục
+#Gắn các giá trị trả về từ database vào biến toàn cục
 def set_values():
-    global url_main_web, url_web, mainFilePath
-
+    # B1.1 Tạo biến
+    global url_main_web, url_web, mainFilePath, email, password, email_sent
+    # B1.2 Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
     control_info = select_data_control_file_config()
-
+    # B1.3 kiểm tra
     if control_info:
-        url_main_web, url_web, mainFilePath = control_info
-        print(f"url_main_web: {url_main_web}")
-        print(f"url_web: {url_web}")
-        print(f"location: {mainFilePath}")
+        url_main_web, url_web, mainFilePath, email, password, email_sent = control_info
+
     else:
         write_log_to_db("ERROR", "Không thể gán giá trị từ database", "Craw data")
 
@@ -110,6 +112,25 @@ def write_log_to_db(status, note, process,log_date=None ):
             cursor.close()
         if 'connection' in locals() and connection.open:
             connection.close()
+
+# Phương thức gửi gmail report
+def send_email(subject, body):
+
+    session = smtplib.SMTP('smtp.gmail.com', 587)
+    session.starttls()  # Enable security
+    session.login(email, password)
+
+    msg = MIMEMultipart()
+    msg['From'] = email
+    msg['To'] = email_sent
+    msg['Subject'] = subject  # Correct placement of the subject
+
+    # Email body
+    body = body
+    msg.attach(MIMEText(body, 'plain'))
+    session.sendmail(email, email_sent, msg.as_string())
+    session.quit()  # Close the session
+    print('Email sent!')
 
 
 # Lấy nội dung trang web
@@ -207,43 +228,48 @@ def CrawInformation(url):
 # Phương thức lấy ra thông tin chính về thời tiết của các link và kết hợp với CrawInformation
 def CrawDetailedInformation(url):
     try:
-        # Lấy danh sách link và quốc gia
+        #B3.1 Lấy danh sách link
         list_link_country_web = CrawLinkCountry(url_main_web)
+        # B3.2 Lấy tên quốc gia
         list_country = CrawCountry(url_main_web)
+        # B3.3 Kiểm tra giá trị 2 biến có null không
         if not list_link_country_web or not list_country:
             write_log_to_db("ERROR", "Không thể lấy danh sách link quốc gia hoặc tên quốc gia", "Craw data")
+
             return []
 
-        # Lấy thông tin bổ sung về thời tiết
+        #B3.4 Lấy thông tin bổ sung về thời tiết
         CrawInformation(url_web)
-
+        #B3.5 tạo biến
         list_data_country_weather = []
         i = 0
-
+        #B3.6 duyệt qua link lấy data
         for country in list_link_country_web:
             try:
-                # Truy cập URL của từng quốc gia
+                #B3.6.1 Truy cập URL của từng quốc gia
                 url_country = url + country
                 soup = GetPageContent(url_country)
+                # B3.6.2 kiểm trả giá trị của soup
                 if not soup:
                     write_log_to_db("ERROR", f"Không thể lấy nội dung từ URL: {url_country}", "Craw data")
                     continue
-
+                # B3.6.3 Gán giá trị từ thư viên soup
                 title = soup.find('div', class_="bk-focus__qlook")
                 table = soup.find("table", class_="table table--left table--inner-borders-rows")
 
-                # Nếu không tìm thấy bảng, ghi log và bỏ qua quốc gia này
+                # B3.6.4 Nếu không tìm thấy bảng, ghi log và bỏ qua quốc gia này
                 if not table:
                     write_log_to_db("WARNING", f"Không tìm thấy dữ liệu bảng tại URL: {url_country}", "Craw data")
                     continue
-
+                # B3.6.5 chèn dữ liệu vào output
                 output_row = []
                 output_row.append(list_country[i])  # Tên quốc gia
                 output_row.append(list_temperature[i])  # Nhiệt độ
                 output_row.append(list_status[i])  # Trạng thái thời tiết
 
-                # Lấy dữ liệu chi tiết từ bảng
+                # B3.6.6 Lấy dữ liệu chi tiết từ bảng
                 j = 0
+                # B3.6.7 chạy for để lấy dữ liệu từ table
                 for table_row in table.find_all('tr'):
                     list_td = table_row.find_all('td')
                     for td in list_td:
@@ -255,8 +281,9 @@ def CrawDetailedInformation(url):
                         output_row.append(content)
                         j += 1
 
-                # Thêm dữ liệu thời gian giả lập
+                # B3.6.8 Thêm dữ liệu thời gian hết hạn
                 output_row.append("24/12/2999")
+                # B3.6.9 add dữ liệu vào output
                 list_data_country_weather.append(output_row)
                 print(f"Dữ liệu quốc gia {list_country[i]}: {output_row}")
             except Exception as e:
@@ -264,6 +291,7 @@ def CrawDetailedInformation(url):
             i += 1
 
         write_log_to_db("SUCCESS", "Hoàn tất crawl thông tin chi tiết thời tiết", "Craw data")
+        # B3.6.10 trả dữ liệu output
         return list_data_country_weather
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi trong phương thức CrawDetailedInformation: {e}", "Craw data")
@@ -344,16 +372,24 @@ def ExportCsv(data, filePath):
 
 # Quá trình chính
 def CrawData():
+    email = ''
+    password = ''
+    email_sent = ''
+    # Bước 1
     set_values()  # Lấy cấu hình
+    # Bước 2
     if not url_web or not url_main_web or not mainFilePath:
         write_log_to_db("ERROR", "URL hoặc đường dẫn file không hợp lệ", "Craw data")
+        send_email("[ERROR] Craw data", f"URL hoặc đường dẫn file không hợp lệ \n Lỗi xuất hiện vào lúc {current_time}", email, password, email_sent)
         return
-
     try:
         InsertDateDim()
+        # Bước 3
         data = CrawDetailedInformation(url_web)
+        # Bước 4
         ExportCsv(data, mainFilePath)
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi crawl data: {e}", "Craw data")
+        send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e} \n Lỗi xuất hiện vào lúc {current_time}")
 
 CrawData()

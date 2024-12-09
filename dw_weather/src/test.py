@@ -1,11 +1,14 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from datetime import datetime
+
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
-def send_email():
-    email = "huutinh2412@gmail.com"
-    password = "tinh0394707535"  # Please remember to keep this secure and avoid hardcoding in production.
+def send_email(subject, body):
+    email = "huutinh.image@gmail.com"
+    password = "btca betw bewk okrf"  # Please remember to keep this secure and avoid hardcoding in production.
     email_sent = 'huutinh@tuoitrenonglam.com'
 
     session = smtplib.SMTP('smtp.gmail.com', 587)
@@ -15,16 +18,15 @@ def send_email():
     msg = MIMEMultipart()
     msg['From'] = email
     msg['To'] = email_sent
-    msg['Subject'] = 'ALO ALO'  # Correct placement of the subject
+    msg['Subject'] = subject  # Correct placement of the subject
 
     # Email body
-    body = 'This is the content of the email.'
+    body = body
     msg.attach(MIMEText(body, 'plain'))
-
     session.sendmail(email, email_sent, msg.as_string())
     session.quit()  # Close the session
-
     print('Email sent!')
 
 
-send_email()
+send_email("[ERROR] Craw data", f"URL hoặc đường dẫn file không hợp lệ \n Lỗi xuất hiện vào lúc {current_time}")
+
