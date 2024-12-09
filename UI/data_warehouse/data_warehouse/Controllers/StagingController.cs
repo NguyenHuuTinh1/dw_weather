@@ -18,5 +18,12 @@ namespace data_warehouse.Controllers
             ViewBag.Staging = stagingService.findAll();
             return View();
         }
+        [Route("index2")]
+       
+        public IActionResult Index2()
+        {
+            ViewBag.Staging = stagingService.findAll();
+            return View("index2");
+        }
     }
 }
