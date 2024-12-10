@@ -7,7 +7,7 @@
     <list default="true" id="86fbabfb-cafb-4242-b038-61b1c41f1634" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dw_weather/src/BeautifulSoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/BeautifulSoup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dw_weather/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dw_weather/src/output.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../dw_weather/src/output.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +220,8 @@
       <workItem from="1733065476630" duration="1119000" />
       <workItem from="1733066750408" duration="607000" />
       <workItem from="1733382800439" duration="6839000" />
-      <workItem from="1733714383834" duration="8316000" />
+      <workItem from="1733714383834" duration="9780000" />
+      <workItem from="1733799868644" duration="2363000" />
     </task>
     <servers />
   </component>
@@ -276,6 +277,11 @@
           <line>228</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../dw_weather/src/BeautifulSoup.py</url>
+          <line>393</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -285,7 +291,7 @@
     <SUITE FILE_PATH="coverage/crawl_data$ChangingToFact.coverage" NAME="ChangingToFact Coverage Results" MODIFIED="1733717210593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
     <SUITE FILE_PATH="coverage/crawl_data$LoadDataInStaging__1_.coverage" NAME="LoadDataInStaging (1) Coverage Results" MODIFIED="1731902010257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/crawl_data$CreateTableDim__1_.coverage" NAME="CreateTableDim (1) Coverage Results" MODIFIED="1733387385058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
-    <SUITE FILE_PATH="coverage/crawl_data$BeautifulSoup.coverage" NAME="BeautifulSoup Coverage Results" MODIFIED="1733719303254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
+    <SUITE FILE_PATH="coverage/crawl_data$BeautifulSoup.coverage" NAME="BeautifulSoup Coverage Results" MODIFIED="1733800663105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../dw_weather/src" />
     <SUITE FILE_PATH="coverage/crawl_data$CreateTableDim.coverage" NAME="CreateTableDim Coverage Results" MODIFIED="1731902133914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/crawl_data$main.coverage" NAME="main Coverage Results" MODIFIED="1732807383599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/crawl_data$BeautifulSoup__1_.coverage" NAME="BeautifulSoup (1) Coverage Results" MODIFIED="1732808012165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />

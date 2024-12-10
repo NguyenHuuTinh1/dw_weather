@@ -26,7 +26,7 @@ current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 def CrawInformationDB():
     lines = []
     try:
-        with open(r"E:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())
         return lines
@@ -380,7 +380,7 @@ def CrawData():
     # Bước 2
     if not url_web or not url_main_web or not mainFilePath:
         write_log_to_db("ERROR", "URL hoặc đường dẫn file không hợp lệ", "Craw data")
-        send_email("[ERROR] Craw data", f"URL hoặc đường dẫn file không hợp lệ \n Lỗi xuất hiện vào lúc {current_time}", email, password, email_sent)
+        send_email("[ERROR] Craw data", f"URL hoặc đường dẫn file không hợp lệ \n Lỗi xuất hiện vào lúc {current_time}")
         return
     try:
         InsertDateDim()
@@ -390,6 +390,7 @@ def CrawData():
         ExportCsv(data, mainFilePath)
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi crawl data: {e}", "Craw data")
+        send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e} \n Lỗi xuất hiện vào lúc {current_time}")
         send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e} \n Lỗi xuất hiện vào lúc {current_time}")
 
 CrawData()
