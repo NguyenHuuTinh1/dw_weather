@@ -107,23 +107,26 @@ def select_location_file_csv():
             connection.close()
 
 # Phương thức gửi gmail report
-def send_email(subject, body):
-    set_values();
-    session = smtplib.SMTP('smtp.gmail.com', 587)
-    session.starttls()  # Enable security
-    session.login(email, password)
+def send_email_main(subject, body, main_email, main_pass, main_email_sent):
+    try:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        full_body = f"{body}\n\nThời gian gửi: {current_time}"
 
-    msg = MIMEMultipart()
-    msg['From'] = email
-    msg['To'] = email_sent
-    msg['Subject'] = subject  # Correct placement of the subject
+        session = smtplib.SMTP('smtp.gmail.com', 587)
+        session.starttls()  # Enable security
+        session.login(main_email, main_pass)
 
-    # Email body
-    body = body
-    msg.attach(MIMEText(body, 'plain'))
-    session.sendmail(email, email_sent, msg.as_string())
-    session.quit()  # Close the session
-    print('Email sent!')
+        msg = MIMEMultipart()
+        msg['From'] = main_email
+        msg['To'] = main_email_sent
+        msg['Subject'] = subject
+
+        msg.attach(MIMEText(full_body, 'plain'))
+        session.sendmail(main_email, main_email_sent, msg.as_string())
+        session.quit()  # Close the session
+        print('Main email sent!')
+    except Exception as e:
+        write_log_to_db("ERROR", f"Lỗi khi gửi email chính: {e}", "Craw data")
 
 #Gắn các giá trị trả về từ database vào biến toàn cục
 def set_values():
@@ -263,10 +266,10 @@ def insert_data_weather_in_DB():
                 write_log_to_db("SUCCESS", "Dữ liệu Weather đã được chèn thành công!", "Loading data in Staging")
             else:
                 write_log_to_db("ERROR", "Không có dữ liệu để chèn.", "Loading data in Staging")
-                send_email("[ERROR] Loading data in Staging",f"Không có dữ liệu để chèn. \n Lỗi xuất hiện vào lúc {current_time}")
+                send_email_main("[ERROR] Loading data in Staging",f"Không có dữ liệu để chèn. \n Lỗi xuất hiện vào lúc {current_time}", lines[4], lines[5],lines[6])
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu: {e}", "Loading data in Staging")
-        send_email("[ERROR] Loading data in Staging",f"Lỗi khi chèn dữ liệu: {e} \n Lỗi xuất hiện vào lúc {current_time}")
+        send_email_main("[ERROR] Loading data in Staging",f"Lỗi khi chèn dữ liệu: {e} \n Lỗi xuất hiện vào lúc {current_time}", lines[4], lines[5],lines[6])
     finally:
         if 'cursor' in locals():
             cursor.close()

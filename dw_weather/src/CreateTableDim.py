@@ -49,7 +49,7 @@ def parse_datetime(value):
 def CrawInformationDB():
     lines = []
     try:
-        with open(r"E:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())
         return lines
@@ -176,7 +176,6 @@ def write_log_to_db(status, note, process,log_date=None ):
             data = (status, note, process, log_date if log_date else datetime.now())
             cursor.execute(sql_query, data)
             connection.commit()
-            print("Log đã được ghi thành công!")
     except Exception as e:
         print(f"Lỗi khi ghi log: {e}")
     finally:
@@ -194,7 +193,6 @@ def get_data_location_from_csv(filepath):
         for row in reader:
             location = row[3]
             data.add(location)  # Thêm địa điểm vào tập hợp
-            print(f"Dữ liệu dòng: location={location}")
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
 # đọc lấy dữ liệu từ cột country
@@ -206,7 +204,6 @@ def get_data_country_from_csv(filepath):
         for row in reader:
             country = row[0]
             data.add(country)  # Thêm địa điểm vào tập hợp
-            print(f"Dữ liệu dòng: country={country}")
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
 # đọc lấy dữ liệu từ cột weather_description
@@ -218,7 +215,6 @@ def get_data_weather_description_from_csv(filepath):
         for row in reader:
             weather = row[2]
             data.add(weather)  # Thêm địa điểm vào tập hợp
-            print(f"Dữ liệu dòng: weather={weather}")
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
 # -----------------------------------------------------------------
