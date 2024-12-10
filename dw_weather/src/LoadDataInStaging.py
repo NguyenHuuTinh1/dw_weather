@@ -1,7 +1,15 @@
 import csv
 import pymysql
 from datetime import datetime
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
+# Các biến
+email = ''
+password = ''
+email_sent = ''
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # Hàm chuyển đổi kiểu dữ liệu
 def parse_float(value):
@@ -98,6 +106,73 @@ def select_location_file_csv():
         if 'connection' in locals() and connection.open:
             connection.close()
 
+# Phương thức gửi gmail report
+def send_email(subject, body):
+    set_values();
+    session = smtplib.SMTP('smtp.gmail.com', 587)
+    session.starttls()  # Enable security
+    session.login(email, password)
+
+    msg = MIMEMultipart()
+    msg['From'] = email
+    msg['To'] = email_sent
+    msg['Subject'] = subject  # Correct placement of the subject
+
+    # Email body
+    body = body
+    msg.attach(MIMEText(body, 'plain'))
+    session.sendmail(email, email_sent, msg.as_string())
+    session.quit()  # Close the session
+    print('Email sent!')
+
+#Gắn các giá trị trả về từ database vào biến toàn cục
+def set_values():
+    # B1.1 Tạo biến
+    global email, password, email_sent
+    # B1.2 Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
+    control_info = select_data_control_file_config()
+    # B1.3 kiểm tra
+    if control_info:
+        email, password, email_sent = control_info
+    else:
+        write_log_to_db("ERROR", "Không thể gán giá trị từ database", "Craw data")
+
+# Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
+def select_data_control_file_config():
+    lines = CrawInformationDB()
+    if not lines:
+        write_log_to_db("ERROR", "Không lấy được thông tin cấu hình từ file connect_db.txt", "Craw data")
+        return None
+
+    try:
+        connection = pymysql.connect(
+            host=lines[0],
+            user=lines[1],
+            password=lines[2],  # Đảm bảo mật khẩu đúng
+            database=lines[3]
+        )
+
+        if connection.open:
+            cursor = connection.cursor()
+            sql_query = """SELECT email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
+            cursor.execute(sql_query)
+            result = cursor.fetchone()  # Lấy 1 dòng dữ liệu từ kết quả truy vấn
+            if result:
+                write_log_to_db("SUCCESS", "Lấy thông tin cấu hình từ database thành công", "Craw data")
+                return result
+            else:
+                write_log_to_db("ERROR", "Không có dữ liệu trả về từ bảng control_data_config", "Craw data")
+                return None
+    except Exception as e:
+        write_log_to_db("ERROR", f"Lỗi truy vấn dữ liệu cấu hình: {e}", "Craw data")
+        return None
+    finally:
+        if 'cursor' in locals():
+            cursor.close()
+        if 'connection' in locals() and connection.open:
+            connection.close()
+
+
 # Phương thức ghi log
 def write_log_to_db(status, note, process,log_date=None ):
     lines = CrawInformationDB()
@@ -188,8 +263,10 @@ def insert_data_weather_in_DB():
                 write_log_to_db("SUCCESS", "Dữ liệu Weather đã được chèn thành công!", "Loading data in Staging")
             else:
                 write_log_to_db("ERROR", "Không có dữ liệu để chèn.", "Loading data in Staging")
+                send_email("[ERROR] Loading data in Staging",f"Không có dữ liệu để chèn. \n Lỗi xuất hiện vào lúc {current_time}")
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu: {e}", "Loading data in Staging")
+        send_email("[ERROR] Loading data in Staging",f"Lỗi khi chèn dữ liệu: {e} \n Lỗi xuất hiện vào lúc {current_time}")
     finally:
         if 'cursor' in locals():
             cursor.close()

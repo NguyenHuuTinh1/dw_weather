@@ -39,6 +39,7 @@ def select_data_control_file_config():
     lines = CrawInformationDB()
     if not lines:
         write_log_to_db("ERROR", "Không lấy được thông tin cấu hình từ file connect_db.txt", "Craw data")
+
         return None
 
     try:
@@ -113,7 +114,7 @@ def write_log_to_db(status, note, process,log_date=None ):
         if 'connection' in locals() and connection.open:
             connection.close()
 
-# Phương thức gửi gmail report
+# Phương thức gửi gmail report cho ds gmail trong db
 def send_email(subject, body):
 
     session = smtplib.SMTP('smtp.gmail.com', 587)
@@ -132,6 +133,24 @@ def send_email(subject, body):
     session.quit()  # Close the session
     print('Email sent!')
 
+# Phương thức gửi gmail report cho email chính
+def send_email_main(subject, body, main_email, main_pass, main_email_sent ):
+
+    session = smtplib.SMTP('smtp.gmail.com', 587)
+    session.starttls()  # Enable security
+    session.login(main_email, main_pass)
+
+    msg = MIMEMultipart()
+    msg['From'] = main_email
+    msg['To'] = main_email_sent
+    msg['Subject'] = subject  # Correct placement of the subject
+
+    # Email body
+    body = body
+    msg.attach(MIMEText(body, 'plain'))
+    session.sendmail(main_email, main_email_sent, msg.as_string())
+    session.quit()  # Close the session
+    print('Email sent!')
 
 # Lấy nội dung trang web
 def GetPageContent(url):
@@ -391,6 +410,6 @@ def CrawData():
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi crawl data: {e}", "Craw data")
         send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e} \n Lỗi xuất hiện vào lúc {current_time}")
-        send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e} \n Lỗi xuất hiện vào lúc {current_time}")
+
 
 CrawData()

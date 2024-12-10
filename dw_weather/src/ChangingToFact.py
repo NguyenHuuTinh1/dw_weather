@@ -4,7 +4,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-
+# Các biến
 email = ''
 password = ''
 email_sent = ''
@@ -20,6 +20,7 @@ def CrawInformationDB():
     except Exception as e:
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
+
 # Phương thức gửi gmail report
 def send_email(subject, body):
     set_values();
@@ -143,7 +144,7 @@ def transform_staging_to_fact():
     db_credentials = CrawInformationDB()
     if not db_credentials:
         write_log_to_db("ERROR", "Missing database credentials for staging to fact transformation.", "Changing to Fact")
-        send_email("[ERROR] Changing to Fact", "Missing database credentials for staging to fact transformation. \n Lỗi xuất hiện vào lúc {current_time}")
+        send_email("[ERROR] Changing to Fact", f"Missing database credentials for staging to fact transformation. \n Lỗi xuất hiện vào lúc {current_time}")
         return
 
     try:
