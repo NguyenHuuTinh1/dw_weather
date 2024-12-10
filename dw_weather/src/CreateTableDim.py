@@ -1,7 +1,6 @@
 import csv
 import pymysql
 from datetime import datetime
-<<<<<<< Updated upstream
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -13,10 +12,10 @@ email_sent = ''
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # def biến đổi dữ liệu
-=======
+
 # 6.2,6.3,
 # def biến đổi dữ liệu buoc 4.1
->>>>>>> Stashed changes
+
 def parse_float(value):
     """Chuyển đổi giá trị thành float hoặc None nếu giá trị không hợp lệ."""
     try:

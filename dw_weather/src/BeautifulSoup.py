@@ -29,13 +29,11 @@ def CrawInformationDB():
     lines = []
 
     try:
-<<<<<<< Updated upstream
-        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
-=======
+
         # Buoc 2
         with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             # Buoc 3
->>>>>>> Stashed changes
+
             for line in file:
                 # Buoc 4
                 lines.append(line.strip())
@@ -97,11 +95,16 @@ def select_data_control_file_config():
 
 # Gắn các giá trị trả về từ database vào biến toàn cục
 def set_values():
+    # 1.1
     global url_main_web, url_web, mainFilePath, email, password, email_sent
+    # 1.2
     control_info = select_data_control_file_config()
+    # 1.3
     if control_info:
+        # 1.4
         url_main_web, url_web, mainFilePath, email, password, email_sent = control_info
     else:
+        # 1.3.1
         write_log_to_db("ERROR", "Không thể gán giá trị từ database", "Craw data")
 
 
@@ -407,15 +410,22 @@ def ExportCsv(data, filePath):
 
 # Quá trình chính
 def CrawData():
+    # 1
     set_values()  # Lấy cấu hình
+    # 2
     if not url_web or not url_main_web or not mainFilePath:
+        # 2.1
         write_log_to_db("ERROR", "URL hoặc đường dẫn file không hợp lệ", "Craw data")
+        # 2.2
         send_email("[ERROR] Craw data", "URL hoặc đường dẫn file không hợp lệ")
         return
     try:
+        # 3
         data = CrawDetailedInformation(url_web)
+        # 4
         ExportCsv(data, mainFilePath)
     except Exception as e:
+        # 5
         write_log_to_db("ERROR", f"Lỗi khi crawl data: {e}", "Craw data")
         send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e}")
 CrawData()
