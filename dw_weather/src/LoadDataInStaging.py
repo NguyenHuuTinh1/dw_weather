@@ -2,6 +2,7 @@ import csv
 import pymysql
 from datetime import datetime
 
+
 # Hàm chuyển đổi kiểu dữ liệu
 def parse_float(value):
     """Chuyển đổi giá trị thành float hoặc None nếu giá trị không hợp lệ."""
