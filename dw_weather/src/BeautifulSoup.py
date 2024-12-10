@@ -11,18 +11,19 @@ from email.mime.multipart import MIMEMultipart
 list_temperature = []
 list_status = []
 
-list_title = 'Nation, Temperature, Weather status, Location, Current Time, Latest Report, Visibility, Pressure, Humidity, Dew Point, Dead Time'
-list_title = list_title.split(', ')
-
 # Biến toàn cục
 url_main_web = ''
 url_web = ''
 mainFilePath = ''
+email = ''
+password = ''
+email_sent = ''
 
 
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-#B Đọc file chứa thông tin cấu hình cơ sở dữ liệu
+
+# Đọc file chứa thông tin cấu hình cơ sở dữ liệu
 def CrawInformationDB():
     lines = []
     try:
@@ -34,19 +35,19 @@ def CrawInformationDB():
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
 
+
 # Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
 def select_data_control_file_config():
     lines = CrawInformationDB()
     if not lines:
         write_log_to_db("ERROR", "Không lấy được thông tin cấu hình từ file connect_db.txt", "Craw data")
-
         return None
 
     try:
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
-            password=lines[2],  # Đảm bảo mật khẩu đúng
+            password=lines[2],
             database=lines[3]
         )
 
@@ -54,7 +55,7 @@ def select_data_control_file_config():
             cursor = connection.cursor()
             sql_query = """SELECT url_main_web, url_web, location, email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
             cursor.execute(sql_query)
-            result = cursor.fetchone()  # Lấy 1 dòng dữ liệu từ kết quả truy vấn
+            result = cursor.fetchone()
             if result:
                 write_log_to_db("SUCCESS", "Lấy thông tin cấu hình từ database thành công", "Craw data")
                 return result
@@ -62,7 +63,19 @@ def select_data_control_file_config():
                 write_log_to_db("ERROR", "Không có dữ liệu trả về từ bảng control_data_config", "Craw data")
                 return None
     except Exception as e:
-        write_log_to_db("ERROR", f"Lỗi truy vấn dữ liệu cấu hình: {e}", "Craw data")
+        error_message = f"Lỗi truy vấn dữ liệu cấu hình: {e}"
+        write_log_to_db("ERROR", error_message, "Craw data")
+        try:
+            # Nếu xảy ra lỗi, gửi email thông báo
+            subject = "Lỗi kết nối cơ sở dữ liệu"
+            body = f"Không kết nối được đến cơ sở dữ liệu.\n\nChi tiết lỗi: {error_message}"
+            # Các thông tin email cần lấy từ `lines`
+            main_email = lines[4]
+            main_pass = lines[5]
+            main_email_sent = lines[6]
+            send_email_main(subject, body, main_email, main_pass, main_email_sent)
+        except Exception as email_error:
+            write_log_to_db("ERROR", f"Lỗi khi gửi email thông báo: {email_error}", "Craw data")
         return None
     finally:
         if 'cursor' in locals():
@@ -71,22 +84,18 @@ def select_data_control_file_config():
             connection.close()
 
 
-#Gắn các giá trị trả về từ database vào biến toàn cục
+# Gắn các giá trị trả về từ database vào biến toàn cục
 def set_values():
-    # B1.1 Tạo biến
     global url_main_web, url_web, mainFilePath, email, password, email_sent
-    # B1.2 Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
     control_info = select_data_control_file_config()
-    # B1.3 kiểm tra
     if control_info:
         url_main_web, url_web, mainFilePath, email, password, email_sent = control_info
-
     else:
         write_log_to_db("ERROR", "Không thể gán giá trị từ database", "Craw data")
 
 
 # Phương thức ghi log
-def write_log_to_db(status, note, process,log_date=None ):
+def write_log_to_db(status, note, process, log_date=None):
     lines = CrawInformationDB()
     if not lines:
         print("Không thể ghi log do không có thông tin kết nối database.")
@@ -114,43 +123,51 @@ def write_log_to_db(status, note, process,log_date=None ):
         if 'connection' in locals() and connection.open:
             connection.close()
 
+
 # Phương thức gửi gmail report cho ds gmail trong db
 def send_email(subject, body):
+    try:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        full_body = f"{body}\n\nThời gian gửi: {current_time}"
 
-    session = smtplib.SMTP('smtp.gmail.com', 587)
-    session.starttls()  # Enable security
-    session.login(email, password)
+        session = smtplib.SMTP('smtp.gmail.com', 587)
+        session.starttls()  # Enable security
+        session.login(email, password)
 
-    msg = MIMEMultipart()
-    msg['From'] = email
-    msg['To'] = email_sent
-    msg['Subject'] = subject  # Correct placement of the subject
+        msg = MIMEMultipart()
+        msg['From'] = email
+        msg['To'] = email_sent
+        msg['Subject'] = subject
 
-    # Email body
-    body = body
-    msg.attach(MIMEText(body, 'plain'))
-    session.sendmail(email, email_sent, msg.as_string())
-    session.quit()  # Close the session
-    print('Email sent!')
+        msg.attach(MIMEText(full_body, 'plain'))
+        session.sendmail(email, email_sent, msg.as_string())
+        session.quit()  # Close the session
+        print('Email sent!')
+    except Exception as e:
+        write_log_to_db("ERROR", f"Lỗi khi gửi email: {e}", "Craw data")
+
 
 # Phương thức gửi gmail report cho email chính
-def send_email_main(subject, body, main_email, main_pass, main_email_sent ):
+def send_email_main(subject, body, main_email, main_pass, main_email_sent):
+    try:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        full_body = f"{body}\n\nThời gian gửi: {current_time}"
 
-    session = smtplib.SMTP('smtp.gmail.com', 587)
-    session.starttls()  # Enable security
-    session.login(main_email, main_pass)
+        session = smtplib.SMTP('smtp.gmail.com', 587)
+        session.starttls()  # Enable security
+        session.login(main_email, main_pass)
 
-    msg = MIMEMultipart()
-    msg['From'] = main_email
-    msg['To'] = main_email_sent
-    msg['Subject'] = subject  # Correct placement of the subject
+        msg = MIMEMultipart()
+        msg['From'] = main_email
+        msg['To'] = main_email_sent
+        msg['Subject'] = subject
 
-    # Email body
-    body = body
-    msg.attach(MIMEText(body, 'plain'))
-    session.sendmail(main_email, main_email_sent, msg.as_string())
-    session.quit()  # Close the session
-    print('Email sent!')
+        msg.attach(MIMEText(full_body, 'plain'))
+        session.sendmail(main_email, main_email_sent, msg.as_string())
+        session.quit()  # Close the session
+        print('Main email sent!')
+    except Exception as e:
+        write_log_to_db("ERROR", f"Lỗi khi gửi email chính: {e}", "Craw data")
 
 # Lấy nội dung trang web
 def GetPageContent(url):
@@ -315,56 +332,14 @@ def CrawDetailedInformation(url):
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi trong phương thức CrawDetailedInformation: {e}", "Craw data")
         return []
-# Insert data into date_dim table
-def InsertDateDim():
-    lines = CrawInformationDB()
-    if not lines:
-        print("Không thể ghi vào date_dim do không có thông tin kết nối database.")
-        return
-
-    try:
-        # Connect to the database
-        connection = pymysql.connect(
-            host=lines[0],
-            user=lines[1],
-            password=lines[2],
-            database=lines[3]
-        )
-        if connection.open:
-            cursor = connection.cursor()
-
-            # Get the current date values
-            current_date = datetime.now()
-            date_values = current_date.strftime('%Y-%m-%d %H:%M:%S')  # Store the full datetime value
-            day = current_date.day  # Extract integer day
-            month = current_date.month  # Extract integer month
-            year = current_date.year  # Extract integer year
-
-            # Insert the record into the date_dim table
-            sql_query = """INSERT INTO date_dim (date_values, day, month, year) VALUES (%s, %s, %s, %s)"""
-            data = (date_values, day, month, year)
-            cursor.execute(sql_query, data)
-            connection.commit()
-            print("Dữ liệu đã được thêm vào bảng date_dim thành công!")
-            write_log_to_db("SUCCESS", "Dữ liệu được thêm vào bảng date_dim thành công", "Craw data")
-    except Exception as e:
-        print(f"Lỗi khi thêm dữ liệu vào bảng date_dim: {e}")
-        write_log_to_db("ERROR", f"Lỗi khi thêm dữ liệu vào bảng date_dim: {e}", "Craw data")
-    finally:
-        if 'cursor' in locals():
-            cursor.close()
-        if 'connection' in locals() and connection.open:
-            connection.close()
 
 # Xuất dữ liệu ra file CSV
 def ExportCsv(data, filePath):
     import os
-
     try:
         # Kiểm tra nếu filePath rỗng
         if not filePath:
             raise ValueError("Đường dẫn file (filePath) không được để trống")
-
         # Tạo thư mục nếu cần
         directory = os.path.dirname(filePath)
         if directory and not os.path.exists(directory):
@@ -377,10 +352,6 @@ def ExportCsv(data, filePath):
         with open(filePath, 'a' if file_exists else 'w', newline='', encoding='utf-8') as csvfile:
             csv_writer = csv.writer(csvfile)
 
-            # Thêm tiêu đề nếu file mới
-            if not file_exists:
-                csv_writer.writerow(list_title)  # list_title chứa tiêu đề các cột
-
             # Ghi dữ liệu
             csv_writer.writerows(data)
 
@@ -388,28 +359,17 @@ def ExportCsv(data, filePath):
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi thêm dữ liệu vào file CSV: {e}", "Craw data")
 
-
 # Quá trình chính
 def CrawData():
-    email = ''
-    password = ''
-    email_sent = ''
-    # Bước 1
     set_values()  # Lấy cấu hình
-    # Bước 2
     if not url_web or not url_main_web or not mainFilePath:
         write_log_to_db("ERROR", "URL hoặc đường dẫn file không hợp lệ", "Craw data")
-        send_email("[ERROR] Craw data", f"URL hoặc đường dẫn file không hợp lệ \n Lỗi xuất hiện vào lúc {current_time}")
+        send_email("[ERROR] Craw data", "URL hoặc đường dẫn file không hợp lệ")
         return
     try:
-        InsertDateDim()
-        # Bước 3
         data = CrawDetailedInformation(url_web)
-        # Bước 4
         ExportCsv(data, mainFilePath)
     except Exception as e:
         write_log_to_db("ERROR", f"Lỗi khi crawl data: {e}", "Craw data")
-        send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e} \n Lỗi xuất hiện vào lúc {current_time}")
-
-
+        send_email("[ERROR] Craw data", f"Lỗi khi crawl data: {e}")
 CrawData()
