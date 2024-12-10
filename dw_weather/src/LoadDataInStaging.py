@@ -264,6 +264,7 @@ def insert_data_weather_in_DB():
         if connection.open:
             write_log_to_db("SUCCESS", "Kết nối database thành công.", "Loading data in Staging")
             cursor = connection.cursor()
+            # insert staging
             sql_query = """INSERT INTO staging 
                           (nation, temperature, weather_status, location, currentTime, latestReport, 
                            visibility, pressure, humidity, dew_point, dead_time) 

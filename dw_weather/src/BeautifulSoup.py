@@ -31,7 +31,7 @@ def CrawInformationDB():
     try:
 
         # Buoc 2
-        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"E:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             # Buoc 3
 
             for line in file:
@@ -45,7 +45,7 @@ def CrawInformationDB():
         return []
 
 
-# Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
+# Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình (GetControlDataConfig)
 def select_data_control_file_config():
     lines = CrawInformationDB()
     if not lines:
@@ -108,7 +108,7 @@ def set_values():
         write_log_to_db("ERROR", "Không thể gán giá trị từ database", "Craw data")
 
 
-# Phương thức ghi log
+# Phương thức ghi log (insertLog)
 def write_log_to_db(status, note, process, log_date=None):
     lines = CrawInformationDB()
     if not lines:
@@ -125,11 +125,11 @@ def write_log_to_db(status, note, process, log_date=None):
         if connection.open:
             cursor = connection.cursor()
             sql_query = """INSERT INTO log (status, note, 
-            , log_date) VALUES (%s, %s, %s, %s)"""
+            process, log_date) VALUES (%s, %s, %s, %s)"""
             data = (status, note, process, log_date if log_date else datetime.now())
             cursor.execute(sql_query, data)
             connection.commit()
-            write_log_to_db("Log đã được ghi thành công!")
+            write_log_to_db("INFO","Log đã được ghi thành công!","CrawData")
     except Exception as e:
         print(f"Lỗi khi ghi log: {e}")
     finally:

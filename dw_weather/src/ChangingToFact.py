@@ -19,7 +19,7 @@ def CrawInformationDB():
         # Buoc 6
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
-# Method to write logs to the database
+# Method to write logs to the database (insertLog)
 def write_log_to_db(status, note, process,log_date=None ):
     lines = CrawInformationDB()
     if not lines:
@@ -103,7 +103,7 @@ def transform_staging_to_fact():
 
                 # Buoc 6
                 write_log_to_db("INFO", "Fetching data from staging table.", "Changing to Fact")
-                # Buoc 7
+                # Buoc 7 GetStagingData
                 cursor.execute("""
                     SELECT nation, temperature, weather_status, location, currentTime, latestReport, 
                            visibility, pressure, humidity, dew_point, dead_time
@@ -130,7 +130,7 @@ def transform_staging_to_fact():
                         day = current_time.day
                         month = current_time.month
                         year = current_time.year
-                        # Buoc 9.2.3
+                        # Buoc 9.2.3 insertDateDim
                         cursor.execute(
                             "INSERT INTO date_dim (date_values, day, month, year) VALUES (%s, %s, %s, %s)",
                             (current_time, day, month, year)
@@ -157,7 +157,7 @@ def transform_staging_to_fact():
                 if fact_inserts:
                     # Buoc 9.4.1
                     write_log_to_db("INFO", "Thêm dữ liệu vào bảng fact.", "Changing to Fact")
-                    # Buoc 9.4.2
+                    # Buoc 9.4.2 insertFactTable
                     insert_query = """
                         INSERT INTO fact_table (
                             country_id, location_id, weather_id, date_id, report_id, temperature,

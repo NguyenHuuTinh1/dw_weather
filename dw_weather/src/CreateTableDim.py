@@ -78,6 +78,7 @@ def select_location_file_csv():
         write_log_to_db("SUCCESS", "Kết nối database thành công.", "Create table Dim")
         if connection.open:
             cursor = connection.cursor()
+            # Get control data config
             sql_query = """SELECT location FROM control_data_config LIMIT 1"""
             cursor.execute(sql_query)
             result = cursor.fetchone()
@@ -145,6 +146,7 @@ def select_data_control_file_config():
 
         if connection.open:
             cursor = connection.cursor()
+            # Get email config
             sql_query = """SELECT email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
             cursor.execute(sql_query)
             result = cursor.fetchone()  # Lấy 1 dòng dữ liệu từ kết quả truy vấn
@@ -178,6 +180,7 @@ def write_log_to_db(status, note, process,log_date=None ):
         )
         if connection.open:
             cursor = connection.cursor()
+            # insertLog
             sql_query = """INSERT INTO log (status, note, process, log_date) VALUES (%s, %s, %s, %s)"""
             data = (status, note, process, log_date if log_date else datetime.now())
             cursor.execute(sql_query, data)
@@ -248,7 +251,9 @@ def insert_data_location_in_DB():
             data = get_data_location_from_csv(csv_file_path)
             # 5.5
             # Prepare query to check for existing data
+            # CheckLocationCount
             check_query = "SELECT COUNT(*) FROM location WHERE values_location = %s"
+            # InsertDimLocation
             insert_query = "INSERT INTO location (values_location) VALUES (%s)"
 
             for value in data:
@@ -298,6 +303,7 @@ def insert_data_country_in_DB():
             data = get_data_country_from_csv(csv_file_path)
             #6.5
             # Prepare query to check for existing data
+            # InsertCountry,CheckCountryCount
             check_query = "SELECT COUNT(*) FROM country WHERE values_country = %s"
             insert_query = "INSERT INTO country (values_country) VALUES (%s)"
 
@@ -348,6 +354,7 @@ def insert_data_weather_description_in_DB():
             data = get_data_weather_description_from_csv(csv_file_path)
             # 7.5
             # Prepare query to check for existing data
+            # InsertWeatherDescription,CheckWeatherDescriptionCount
             check_query = "SELECT COUNT(*) FROM weather_description WHERE values_weather = %s"
             insert_query = "INSERT INTO weather_description (values_weather) VALUES (%s)"
 
@@ -395,6 +402,7 @@ def insert_data_late_report_in_DB():
             data = ["SÁNG", "CHIỀU", "TỐI", "ĐÊM"]
 
             # Prepare query to check for existing data
+            # CheckLatesReportCount,InsertLatesReport
             check_query = "SELECT COUNT(*) FROM latesReport WHERE time = %s"
             insert_query = "INSERT INTO latesReport (time) VALUES (%s)"
 

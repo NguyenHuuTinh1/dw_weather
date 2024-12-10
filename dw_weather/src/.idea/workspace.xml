@@ -9,6 +9,7 @@
       <change beforePath="$PROJECT_DIR$/BeautifulSoup.py" beforeDir="false" afterPath="$PROJECT_DIR$/BeautifulSoup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChangingToFact.py" beforeDir="false" afterPath="$PROJECT_DIR$/ChangingToFact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CreateTableDim.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreateTableDim.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoadDataInStaging.py" beforeDir="false" afterPath="$PROJECT_DIR$/LoadDataInStaging.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +90,9 @@
       <workItem from="1733810908783" duration="324000" />
       <workItem from="1733811244895" duration="19895000" />
       <workItem from="1733834620482" duration="455000" />
+      <workItem from="1733835825683" duration="1231000" />
+      <workItem from="1733837793617" duration="5271000" />
+      <workItem from="1733846156344" duration="3345000" />
     </task>
     <servers />
   </component>
@@ -97,9 +101,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/src$CreateTableDim.coverage" NAME="CreateTableDim Coverage Results" MODIFIED="1733826391341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/src$BeautifulSoup.coverage" NAME="BeautifulSoup Coverage Results" MODIFIED="1733725060816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/src$BeautifulSoup.coverage" NAME="BeautifulSoup Coverage Results" MODIFIED="1733838681252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/src$ChangingToFact.coverage" NAME="ChangingToFact Coverage Results" MODIFIED="1733480011167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/src$LoadDataInStaging.coverage" NAME="LoadDataInStaging Coverage Results" MODIFIED="1733725343863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/src$transform_to_data_mart.coverage" NAME="transform_to_data_mart Coverage Results" MODIFIED="1733827150947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/src$transform_to_data_mart.coverage" NAME="transform_to_data_mart Coverage Results" MODIFIED="1733840879083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
