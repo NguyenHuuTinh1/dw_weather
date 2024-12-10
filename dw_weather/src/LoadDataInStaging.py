@@ -60,7 +60,7 @@ def convert_time_to_period(time):
     else:
         return "ĐÊM"
 
-# Đọc file chứa thông tin cấu hình cơ sở dữ liệu
+# 2.1 Đọc file chứa thông tin cấu hình cơ sở dữ liệu
 def CrawInformationDB():
     lines = []
     try:
@@ -71,10 +71,48 @@ def CrawInformationDB():
     except Exception as e:
         return []
 
-# Lấy thông tin địa chỉ lưu file CSV
+# 2.2 Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
+def select_data_control_file_config():
+    lines = CrawInformationDB()
+    if not lines:
+        write_log_to_db("ERROR", "Không lấy được thông tin cấu hình từ file connect_db.txt", "Craw data")
+        return None
+
+    try:
+        connection = pymysql.connect(
+            host=lines[0],
+            user=lines[1],
+            password=lines[2],  # Đảm bảo mật khẩu đúng
+            database=lines[3]
+        )
+
+        if connection.open:
+            cursor = connection.cursor()
+            sql_query = """SELECT email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
+            cursor.execute(sql_query)
+            result = cursor.fetchone()  # Lấy 1 dòng dữ liệu từ kết quả truy vấn
+            if result:
+                 # 2.2.1 Ghi log lấy được thông tin cấu hình database thành công
+                write_log_to_db("SUCCESS", "Lấy thông tin cấu hình từ database thành công", "Craw data")
+                return result
+            else:
+                 # 2.2.2 Ghi log không lấy được thông tin cấu hình file
+                write_log_to_db("ERROR", "Không có dữ liệu trả về từ bảng control_data_config", "Craw data")
+                return None
+    except Exception as e:
+        write_log_to_db("ERROR", f"Lỗi truy vấn dữ liệu cấu hình: {e}", "Craw data")
+        return None
+    finally:
+        if 'cursor' in locals():
+            cursor.close()
+        if 'connection' in locals() and connection.open:
+            connection.close()
+
+# 2.3 Lấy thông tin địa chỉ lưu file CSV
 def select_location_file_csv():
     lines = CrawInformationDB()
     if not lines:
+        
         write_log_to_db("ERROR", "Không lấy được thông tin cấu hình từ file connect_db.txt", "Loading data in Staging")
         return None
     try:
@@ -84,6 +122,7 @@ def select_location_file_csv():
             password=lines[2],  # Đảm bảo mật khẩu đúng
             database=lines[3]
         )
+        
         write_log_to_db("SUCCESS", "Kết nối database thành công.", "Loading data in Staging")
         if connection.open:
             cursor = connection.cursor()
@@ -92,9 +131,11 @@ def select_location_file_csv():
             result = cursor.fetchone()
             if result:
                 first_value = result[0]  # Trích xuất giá trị đầu tiên từ tuple
+                # 2.3.1 Ghi lại log lấy thông tin thành công
                 write_log_to_db("SUCCESS", f"Lấy thông tin location file csv từ database: {first_value}", "Loading data in Staging")
                 return first_value
             else:
+                # 2.3.2 Ghi lại log lấy thông tin không thành công
                 write_log_to_db("ERROR", "Không có dữ liệu trả về từ bảng control_data_config.", "Loading data in Staging")
                 return None
     except Exception as e:
@@ -140,40 +181,7 @@ def set_values():
     else:
         write_log_to_db("ERROR", "Không thể gán giá trị từ database", "Craw data")
 
-# Kết nối đến cơ sở dữ liệu và lấy thông tin cấu hình
-def select_data_control_file_config():
-    lines = CrawInformationDB()
-    if not lines:
-        write_log_to_db("ERROR", "Không lấy được thông tin cấu hình từ file connect_db.txt", "Craw data")
-        return None
 
-    try:
-        connection = pymysql.connect(
-            host=lines[0],
-            user=lines[1],
-            password=lines[2],  # Đảm bảo mật khẩu đúng
-            database=lines[3]
-        )
-
-        if connection.open:
-            cursor = connection.cursor()
-            sql_query = """SELECT email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
-            cursor.execute(sql_query)
-            result = cursor.fetchone()  # Lấy 1 dòng dữ liệu từ kết quả truy vấn
-            if result:
-                write_log_to_db("SUCCESS", "Lấy thông tin cấu hình từ database thành công", "Craw data")
-                return result
-            else:
-                write_log_to_db("ERROR", "Không có dữ liệu trả về từ bảng control_data_config", "Craw data")
-                return None
-    except Exception as e:
-        write_log_to_db("ERROR", f"Lỗi truy vấn dữ liệu cấu hình: {e}", "Craw data")
-        return None
-    finally:
-        if 'cursor' in locals():
-            cursor.close()
-        if 'connection' in locals() and connection.open:
-            connection.close()
 
 
 # Phương thức ghi log
@@ -205,7 +213,7 @@ def write_log_to_db(status, note, process,log_date=None ):
         if 'connection' in locals() and connection.open:
             connection.close()
 
-# Đọc dữ liệu từ file CSV
+# 2.4 Trích xuất và định dạng dữ liệu từ file CSV để chuẩn bị chèn vào database
 def get_data_from_csv(filepath):
     """Trích xuất và định dạng dữ liệu từ CSV để chèn vào MySQL."""
     data = []
@@ -233,13 +241,15 @@ def get_data_from_csv(filepath):
                 ))
                 # Debug thông tin
                 print("INFO", f"Row data: {row[0]}, {row[3]} - current_time={current_time}, latest_report={latest_report}", "Loading data in Staging")
+                # 2.4.1 Ghi log trích xuất và định dạng dữ liệu từ file CSV thành công
         write_log_to_db("SUCCESS", "Dữ liệu CSV đã được trích xuất thành công.", "Loading data in Staging")
         return data
     except Exception as e:
+         # 2.4.2 Ghi log trích xuất và định dạng dữ liệu từ file CSV không thành công
         write_log_to_db("ERROR", f"Lỗi khi đọc dữ liệu CSV: {e}", "Loading data in Staging")
         return []
 
-# Chèn dữ liệu weather vào bảng staging
+# 2.5 Gọi Procedure để load dữ liệu weather vào staging
 def insert_data_weather_in_DB():
     lines = CrawInformationDB()
     csv_file_path = select_location_file_csv()
@@ -263,11 +273,13 @@ def insert_data_weather_in_DB():
             if data:
                 cursor.executemany(sql_query, data)
                 connection.commit()
+                # 2.5.1 Ghi log gọi load dữ liệu thành công
                 write_log_to_db("SUCCESS", "Dữ liệu Weather đã được chèn thành công!", "Loading data in Staging")
             else:
                 write_log_to_db("ERROR", "Không có dữ liệu để chèn.", "Loading data in Staging")
                 send_email_main("[ERROR] Loading data in Staging",f"Không có dữ liệu để chèn. \n Lỗi xuất hiện vào lúc {current_time}", lines[4], lines[5],lines[6])
     except Exception as e:
+         # 2.5.2 Ghi log gọi load dữ liệu không thành công
         write_log_to_db("ERROR", f"Lỗi khi chèn dữ liệu: {e}", "Loading data in Staging")
         send_email_main("[ERROR] Loading data in Staging",f"Lỗi khi chèn dữ liệu: {e} \n Lỗi xuất hiện vào lúc {current_time}", lines[4], lines[5],lines[6])
     finally:
