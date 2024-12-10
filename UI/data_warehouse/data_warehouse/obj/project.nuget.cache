@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IFVvF7h3cN0=",
+  "dgSpecHash": "fD6XtBavHms=",
   "success": true,
-  "projectFilePath": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
+  "projectFilePath": "D:\\code\\wh\\dw_weather\\UI\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",

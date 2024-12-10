@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj": {}
+    "D:\\code\\wh\\dw_weather\\UI\\data_warehouse\\data_warehouse\\data_warehouse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj": {
+    "D:\\code\\wh\\dw_weather\\UI\\data_warehouse\\data_warehouse\\data_warehouse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
+        "projectUniqueName": "D:\\code\\wh\\dw_weather\\UI\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
         "projectName": "data_warehouse",
-        "projectPath": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
+        "projectPath": "D:\\code\\wh\\dw_weather\\UI\\data_warehouse\\data_warehouse\\data_warehouse.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PC\\source\\repos\\data_warehouse\\data_warehouse\\obj\\",
+        "outputPath": "D:\\code\\wh\\dw_weather\\UI\\data_warehouse\\data_warehouse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
