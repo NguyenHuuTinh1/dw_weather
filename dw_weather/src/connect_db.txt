@@ -5,3 +5,8 @@ data_warehouse
 huutinh.image@gmail.com
 btca betw bewk okrf
 huutinh@tuoitrenonglam.com
+
+localhost
+root
+
+data_mart
