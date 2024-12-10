@@ -25,13 +25,24 @@ current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # Đọc file chứa thông tin cấu hình cơ sở dữ liệu
 def CrawInformationDB():
+    # Buoc 1
     lines = []
+
     try:
+<<<<<<< Updated upstream
         with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+=======
+        # Buoc 2
+        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+            # Buoc 3
+>>>>>>> Stashed changes
             for line in file:
+                # Buoc 4
                 lines.append(line.strip())
         return lines
+    # Buoc 5
     except Exception as e:
+        # Buoc 6
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
 
@@ -110,11 +121,12 @@ def write_log_to_db(status, note, process, log_date=None):
         )
         if connection.open:
             cursor = connection.cursor()
-            sql_query = """INSERT INTO log (status, note, process, log_date) VALUES (%s, %s, %s, %s)"""
+            sql_query = """INSERT INTO log (status, note, 
+            , log_date) VALUES (%s, %s, %s, %s)"""
             data = (status, note, process, log_date if log_date else datetime.now())
             cursor.execute(sql_query, data)
             connection.commit()
-            print("Log đã được ghi thành công!")
+            write_log_to_db("Log đã được ghi thành công!")
     except Exception as e:
         print(f"Lỗi khi ghi log: {e}")
     finally:
@@ -181,84 +193,118 @@ def GetPageContent(url):
 
 # Lấy danh sách link từ trang chủ
 def CrawLinkCountry(url):
+    # B1
     soup = GetPageContent(url)
+    # B2
     if not soup:
+        # B2.1
         return []
 
     try:
+        # B3
         table = soup.find("table", class_="zebra fw tb-theme")
+        # B4
         list_link_country_web = []
+        # B5
         if table:
+            # B6
             for table_row in table.find_all('tr'):
+                #6.1
                 columns = table_row.find_all('a')
                 for column in columns:
+                    # B6.2
                     link = column['href']
+                    # B6.3
                     list_link_country_web.append(link)
+        #             B7
         return list_link_country_web
+
     except Exception as e:
+        #8.
         write_log_to_db("ERROR", f"Lỗi khi lấy link quốc gia từ URL {url}: {e}", "Craw data")
+        # b8.1
         return []
 
 
 # Phương thức lấy ra tên các quốc gia từ liên kết trên trang chủ
 def CrawCountry(url):
     try:
+        # 1
         list_country = []
+        # 2
         soup = GetPageContent(url)
-
-        # Kiểm tra nếu không lấy được nội dung trang
+        # Kiểm tra nếu không lấy được nội dung trang // 3
         if not soup:
+            # 3.1
             write_log_to_db("ERROR", f"Không thể truy cập nội dung trang: {url}", "Craw data")
+            # 3.2
             return []
-
+        # 4
         table = soup.find("table", class_="zebra fw tb-theme")
-
         # Kiểm tra nếu không tìm thấy bảng dữ liệu
+        # 5
         if not table:
+            # 5.1
             write_log_to_db("WARNING", f"Không tìm thấy bảng dữ liệu trên trang: {url}", "Craw data")
+            # 5.2
             return []
-
+        # 6
         for table_row in table.find_all('tr'):
             columns = table_row.find_all('a')
+            # 6.1
             for column in columns:
+                # 6/2
                 country = column.text
-                # Tách lấy phần tên quốc gia (trước dấu phẩy nếu có)
+                # Tách lấy phần tên quốc gia (trước dấu phẩy nếu có) // 6.3
                 first_part = country.split(",")[0]
+                # 6.4
                 list_country.append(first_part)
-
-        # Ghi log thành công
+        # Ghi log thành công // 7
         write_log_to_db("SUCCESS", "Lấy danh sách quốc gia thành công", "Craw data")
+        # 8
         return list_country
     except Exception as e:
-        # Ghi log lỗi nếu xảy ra ngoại lệ
+        # Ghi log lỗi nếu xảy ra ngoại lệ // 9
         write_log_to_db("ERROR", f"Lỗi trong phương thức CrawCountry: {e}", "Craw data")
+        # 9.1
         return []
-
-
 # Lấy thông tin bổ sung
 def CrawInformation(url):
+    # b1
     list_link_country_web = CrawLinkCountry(url_main_web)
+    # b2
     if not list_link_country_web:
+        # b2.1
         write_log_to_db("ERROR", "Không thể lấy danh sách quốc gia", "Craw data")
         return
-
+    # b3
     for country in list_link_country_web:
         try:
+            # b3.1
             url_country = url + country
+            # b3.2
             soup = GetPageContent(url_country)
+            # b3.3
             if not soup:
                 continue
+            # b3.4
             qlook_div = soup.find('div', id='qlook')
+            # b3.5
             if qlook_div:
+                # b3.6
                 h2_tag = qlook_div.find('div', class_='h2')
                 p_tag = qlook_div.find('p')
+                # b3.7
                 if h2_tag and p_tag:
+                    # b3.8
                     list_temperature.append(h2_tag.text.strip().rstrip('°C').split()[0])
                     list_status.append(p_tag.text.strip())
             else:
+                # b3.5.1
                 list_temperature.append("No data available")
                 list_status.append("No p tag found")
         except Exception as e:
+            # b3.9
             write_log_to_db("ERROR", f"Lỗi khi lấy thông tin thời tiết từ URL {url_country}: {e}", "Craw data")
 
 # Phương thức lấy ra thông tin chính về thời tiết của các link và kết hợp với CrawInformation

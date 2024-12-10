@@ -1,6 +1,7 @@
 import csv
 import pymysql
 from datetime import datetime
+<<<<<<< Updated upstream
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -12,18 +13,24 @@ email_sent = ''
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 # def biến đổi dữ liệu
+=======
+# 6.2,6.3,
+# def biến đổi dữ liệu buoc 4.1
+>>>>>>> Stashed changes
 def parse_float(value):
     """Chuyển đổi giá trị thành float hoặc None nếu giá trị không hợp lệ."""
     try:
         return float(value) if value != 'N/A' else None
     except ValueError:
         return None
+#     buoc 4.2
 def parse_int(value):
     """Chuyển đổi giá trị thành int hoặc None nếu giá trị không hợp lệ."""
     try:
         return int(value) if value != 'N/A' else None
     except ValueError:
         return None
+#     buoc 4.3
 def parse_datetime(value):
     """Chuyển chuỗi ngày thành kiểu DATETIME của MySQL hoặc None nếu không hợp lệ."""
     # Danh sách các định dạng ngày giờ có thể có trong CSV
@@ -45,7 +52,7 @@ def parse_datetime(value):
     print(f"Could not parse date: {value}")
     return None  # Trả về None nếu không thể phân tích cú pháp
 
-# Đọc file chứa thông tin cấu hình cơ sở dữ liệu
+# Đọc file chứa thông tin cấu hình cơ sở dữ liệu Buoc 1
 def CrawInformationDB():
     lines = []
     try:
@@ -56,7 +63,7 @@ def CrawInformationDB():
     except Exception as e:
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
-# Lấy thông tin địa chỉ lưu file CSV
+# Lấy thông tin địa chỉ lưu file CSV buoc 2
 def select_location_file_csv():
     lines = CrawInformationDB()
     if not lines:
@@ -184,7 +191,7 @@ def write_log_to_db(status, note, process,log_date=None ):
         if 'connection' in locals() and connection.open:
             connection.close()
 
-# đọc lấy dữ liệu từ cột location
+# đọc lấy dữ liệu từ cột location buoc
 def get_data_location_from_csv(filepath):
     data = set()  # Sử dụng tập hợp (set) để lưu trữ các địa điểm duy nhất
     with open(filepath, mode='r', encoding='utf-8', errors='ignore') as file:
@@ -195,7 +202,8 @@ def get_data_location_from_csv(filepath):
             data.add(location)  # Thêm địa điểm vào tập hợp
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
-# đọc lấy dữ liệu từ cột country
+# đọc lấy dữ liệu từ cột country 6.1
+
 def get_data_country_from_csv(filepath):
     data = set()  # Sử dụng tập hợp (set) để lưu trữ các địa điểm duy nhất
     with open(filepath, mode='r', encoding='utf-8', errors='ignore') as file:
@@ -206,7 +214,7 @@ def get_data_country_from_csv(filepath):
             data.add(country)  # Thêm địa điểm vào tập hợp
     return list(data)  # Chuyển tập hợp thành danh sách nếu cần
 
-# đọc lấy dữ liệu từ cột weather_description
+# đọc lấy dữ liệu từ cột weather_description 7.1
 def get_data_weather_description_from_csv(filepath):
     data = set()  # Sử dụng tập hợp (set) để lưu trữ các địa điểm duy nhất
     with open(filepath, mode='r', encoding='utf-8', errors='ignore') as file:
@@ -221,6 +229,7 @@ def get_data_weather_description_from_csv(filepath):
 # Chèn dữ liệu location để làm bảng dim
 def insert_data_location_in_DB():
     lines = CrawInformationDB()
+    # 5.4
     csv_file_path = select_location_file_csv()
     try:
         connection = pymysql.connect(
@@ -231,26 +240,29 @@ def insert_data_location_in_DB():
         )
 
         if connection.open:
+
             write_log_to_db("SUCCESS", "Kết nối thành công đến MySQL cho bảng location", "Create table Dim")
             print("Kết nối thành công đến MySQL")
             cursor = connection.cursor()
 
             # Load data from CSV
             data = get_data_location_from_csv(csv_file_path)
-
+            # 5.5
             # Prepare query to check for existing data
             check_query = "SELECT COUNT(*) FROM location WHERE values_location = %s"
             insert_query = "INSERT INTO location (values_location) VALUES (%s)"
 
             for value in data:
+                # 5.6
                 cursor.execute(check_query, (value,))
                 count = cursor.fetchone()[0]
+                # 5.7
                 if count == 0:
                     cursor.execute(insert_query, (value,))
                     write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.", "Create table Dim")
                 else:
                     write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.", "Create table Dim")
-
+            # 5.8
             connection.commit()
             write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu location đã hoàn tất.", "Create table Dim")
     except Exception as e:
@@ -264,9 +276,10 @@ def insert_data_location_in_DB():
             write_log_to_db("SUCCESS", "Đã đóng kết nối MySQL", "Create table Dim")
             print("Đã đóng kết nối MySQL")
 
-# Chèn dữ liệu country để làm bảng dim
+# Chèn dữ liệu country để làm bảng dim 6.4
 def insert_data_country_in_DB():
     lines = CrawInformationDB()
+
     csv_file_path = select_location_file_csv()
     try:
         connection = pymysql.connect(
@@ -277,26 +290,29 @@ def insert_data_country_in_DB():
         )
 
         if connection.open:
+
             write_log_to_db("SUCCESS", "Kết nối thành công đến MySQL cho bảng country", "Create table Dim")
             print("Kết nối thành công đến MySQL")
             cursor = connection.cursor()
 
-            # Load data from CSV
+            # Load data from CSV 6.1
             data = get_data_country_from_csv(csv_file_path)
-
+            #6.5
             # Prepare query to check for existing data
             check_query = "SELECT COUNT(*) FROM country WHERE values_country = %s"
             insert_query = "INSERT INTO country (values_country) VALUES (%s)"
 
             for value in data:
+                # 6.6
                 cursor.execute(check_query, (value,))
                 count = cursor.fetchone()[0]
                 if count == 0:
                     cursor.execute(insert_query, (value,))
+                    # 6.7
                     write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.", "Create table Dim")
                 else:
                     write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.", "Create table Dim")
-
+            # 6.8
             connection.commit()
             write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu country đã hoàn tất.", "Create table Dim")
     except Exception as e:
@@ -311,9 +327,10 @@ def insert_data_country_in_DB():
             print("Đã đóng kết nối MySQL")
 
 
-# Chèn dữ liệu weather_description để làm bảng dim
+# Chèn dữ liệu weather_description để làm bảng dim 7.4
 def insert_data_weather_description_in_DB():
     lines = CrawInformationDB()
+
     csv_file_path = select_location_file_csv()
     try:
         connection = pymysql.connect(
@@ -330,7 +347,7 @@ def insert_data_weather_description_in_DB():
 
             # Load data from CSV
             data = get_data_weather_description_from_csv(csv_file_path)
-
+            # 7.5
             # Prepare query to check for existing data
             check_query = "SELECT COUNT(*) FROM weather_description WHERE values_weather = %s"
             insert_query = "INSERT INTO weather_description (values_weather) VALUES (%s)"
@@ -339,11 +356,13 @@ def insert_data_weather_description_in_DB():
                 cursor.execute(check_query, (value,))
                 count = cursor.fetchone()[0]
                 if count == 0:
+                    # 7.6
                     cursor.execute(insert_query, (value,))
+                    # 7.7
                     write_log_to_db("INFO", f"Dữ liệu {value} được chèn thành công.", "Create table Dim")
                 else:
                     write_log_to_db("INFO", f"Dữ liệu {value} đã tồn tại trong cơ sở dữ liệu.", "Create table Dim")
-
+            # 7.8
             connection.commit()
             write_log_to_db("SUCCESS", "Quá trình chèn dữ liệu weather_description đã hoàn tất.", "Create table Dim")
     except Exception as e:
