@@ -31,7 +31,7 @@ def CrawInformationDB():
     try:
 
         # Buoc 2
-        with open(r"E:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
+        with open(r"D:\dw_weather\dw_weather\src\connect_db.txt", "r", encoding="utf-8") as file:
             # Buoc 3
 
             for line in file:
@@ -62,8 +62,8 @@ def select_data_control_file_config():
 
         if connection.open:
             cursor = connection.cursor()
-            sql_query = """SELECT url_main_web, url_web, location, email_report, pass_email, email_sent FROM control_data_config LIMIT 1"""
-            cursor.execute(sql_query)
+            procedure_name = "GetControlDataConfig"  # Thay 'your_procedure_name' bằng tên thủ tục thực tế
+            cursor.callproc(procedure_name)
             result = cursor.fetchone()
             if result:
                 write_log_to_db("SUCCESS", "Lấy thông tin cấu hình từ database thành công", "Craw data")
@@ -114,7 +114,6 @@ def write_log_to_db(status, note, process, log_date=None):
     if not lines:
         print("Không thể ghi log do không có thông tin kết nối database.")
         return
-
     try:
         connection = pymysql.connect(
             host=lines[0],
@@ -124,12 +123,15 @@ def write_log_to_db(status, note, process, log_date=None):
         )
         if connection.open:
             cursor = connection.cursor()
-            sql_query = """INSERT INTO log (status, note, 
-            process, log_date) VALUES (%s, %s, %s, %s)"""
-            data = (status, note, process, log_date if log_date else datetime.now())
-            cursor.execute(sql_query, data)
+            # Gọi stored procedure InsertLog
+            procedure_name = "InsertLog"
+            log_date = log_date if log_date else datetime.now()
+
+            # Thực thi stored procedure với các tham số
+            cursor.callproc(procedure_name, (status, note, process, log_date))
+
             connection.commit()
-            write_log_to_db("INFO","Log đã được ghi thành công!","CrawData")
+            write_log_to_db("INFO", "Log đã được ghi thành công!", "CrawData")
     except Exception as e:
         print(f"Lỗi khi ghi log: {e}")
     finally:
