@@ -111,34 +111,34 @@ def set_values():
 # Phương thức ghi log (insertLog)
 def write_log_to_db(status, note, process, log_date=None):
     lines = CrawInformationDB()
-    if not lines:
+    if not lines or len(lines) < 4:
         print("Không thể ghi log do không có thông tin kết nối database.")
         return
+
     try:
+        # Kết nối đến database
         connection = pymysql.connect(
             host=lines[0],
             user=lines[1],
             password=lines[2],
             database=lines[3]
         )
-        if connection.open:
-            cursor = connection.cursor()
-            # Gọi stored procedure InsertLog
-            procedure_name = "InsertLog"
-            log_date = log_date if log_date else datetime.now()
 
-            # Thực thi stored procedure với các tham số
-            cursor.callproc(procedure_name, (status, note, process, log_date))
+        with connection:
+            with connection.cursor() as cursor:
+                # Gọi stored procedure InsertLog
+                procedure_name = "InsertLog"
+                log_date = log_date if log_date else datetime.now()
 
-            connection.commit()
-            write_log_to_db("INFO", "Log đã được ghi thành công!", "CrawData")
+                try:
+                    # Thực thi stored procedure
+                    cursor.callproc(procedure_name, (status, note, process, log_date))
+                    connection.commit()
+                    print("Log đã được ghi thành công!")
+                except Exception as e:
+                    print(f"Lỗi khi thực thi stored procedure: {e}")
     except Exception as e:
-        print(f"Lỗi khi ghi log: {e}")
-    finally:
-        if 'cursor' in locals():
-            cursor.close()
-        if 'connection' in locals() and connection.open:
-            connection.close()
+        print(f"Lỗi khi kết nối database: {e}")
 
 
 # Phương thức gửi gmail report cho ds gmail trong db
@@ -229,7 +229,6 @@ def CrawLinkCountry(url):
         write_log_to_db("ERROR", f"Lỗi khi lấy link quốc gia từ URL {url}: {e}", "Craw data")
         # b8.1
         return []
-
 
 # Phương thức lấy ra tên các quốc gia từ liên kết trên trang chủ
 def CrawCountry(url):

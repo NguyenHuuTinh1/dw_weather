@@ -10,4 +10,3 @@ localhost
 root
 
 data_mart
-select_data_control_file_config: SELECT url_main_web, url_web, location, email_report, pass_email, email_sent FROM control_data_config LIMIT 1

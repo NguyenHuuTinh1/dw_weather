@@ -20,12 +20,11 @@ def CrawInformationDB():
         print(f"Lỗi đọc file cấu hình: {e}")
         return []
 # Method to write logs to the database (insertLog)
-def write_log_to_db(status, note, process,log_date=None ):
+def write_log_to_db(status, note, process, log_date=None):
     lines = CrawInformationDB()
     if not lines:
         print("Không thể ghi log do không có thông tin kết nối database.")
         return
-
     try:
         connection = pymysql.connect(
             host=lines[0],
@@ -35,10 +34,15 @@ def write_log_to_db(status, note, process,log_date=None ):
         )
         if connection.open:
             cursor = connection.cursor()
-            sql_query = """INSERT INTO log (status, note, process, log_date) VALUES (%s, %s, %s, %s)"""
-            data = (status, note, process, log_date if log_date else datetime.now())
-            cursor.execute(sql_query, data)
+            # Gọi stored procedure InsertLog
+            procedure_name = "InsertLog"
+            log_date = log_date if log_date else datetime.now()
+
+            # Thực thi stored procedure với các tham số
+            cursor.callproc(procedure_name, (status, note, process, log_date))
+
             connection.commit()
+            write_log_to_db("INFO", "Log đã được ghi thành công!", "CrawData")
     except Exception as e:
         print(f"Lỗi khi ghi log: {e}")
     finally:
@@ -46,7 +50,6 @@ def write_log_to_db(status, note, process,log_date=None ):
             cursor.close()
         if 'connection' in locals() and connection.open:
             connection.close()
-
 # Database connection manager class
 class DatabaseConnection:
     def __init__(self, host, user, password, database):
@@ -86,34 +89,27 @@ def transform_staging_to_fact():
                 # Buoc 4
                 write_log_to_db("INFO", "Fetching lookup table data.", "Changing to Fact")
                 # Buoc 5
-                cursor.execute("SELECT id, values_country FROM country")
+                cursor.callproc('GetCountryMap')
                 country_map = {row[1]: row[0] for row in cursor.fetchall()}
 
-                cursor.execute("SELECT id, values_location FROM location")
+                cursor.callproc('GetLocationMap')
                 location_map = {row[1]: row[0] for row in cursor.fetchall()}
 
-                cursor.execute("SELECT id, values_weather FROM weather_description")
+                cursor.callproc('GetWeatherDescription')
                 weather_map = {row[1]: row[0] for row in cursor.fetchall()}
 
-                cursor.execute("SELECT id, time FROM latesreport")
+                cursor.callproc('GetLatestReport')
                 latest_report_map = {row[1]: row[0] for row in cursor.fetchall()}
 
-                cursor.execute("SELECT id, date_values FROM date_dim")
+                cursor.callproc('GetDateDim')
                 date_map = {row[1]: row[0] for row in cursor.fetchall()}
 
                 # Buoc 6
                 write_log_to_db("INFO", "Fetching data from staging table.", "Changing to Fact")
                 # Buoc 7 GetStagingData
-                cursor.execute("""
-                    SELECT nation, temperature, weather_status, location, currentTime, latestReport, 
-                           visibility, pressure, humidity, dew_point, dead_time
-                    FROM staging
-                """)
-                staging_data = cursor.fetchall()
+                staging_data = cursor.callproc('procedureGetStagingData')
                 # Buoc 8
                 write_log_to_db("INFO", f"Đã lấy thành công {len(staging_data)} dòng dữ liệu từ bảng staging.", "Changing to Fact")
-
-
                 fact_inserts = []
                 # Buoc 9
                 for record in staging_data:
@@ -131,10 +127,7 @@ def transform_staging_to_fact():
                         month = current_time.month
                         year = current_time.year
                         # Buoc 9.2.3 insertDateDim
-                        cursor.execute(
-                            "INSERT INTO date_dim (date_values, day, month, year) VALUES (%s, %s, %s, %s)",
-                            (current_time, day, month, year)
-                        )
+                        cursor.callproc('InsertDateDim', (current_time, day, month, year))
                         conn.commit()
                         cursor.execute("SELECT LAST_INSERT_ID()")
                         date_id = cursor.fetchone()[0]
@@ -158,13 +151,7 @@ def transform_staging_to_fact():
                     # Buoc 9.4.1
                     write_log_to_db("INFO", "Thêm dữ liệu vào bảng fact.", "Changing to Fact")
                     # Buoc 9.4.2 insertFactTable
-                    insert_query = """
-                        INSERT INTO fact_table (
-                            country_id, location_id, weather_id, date_id, report_id, temperature,
-                            visibility, pressure, humidity, dew_point, dead_time
-                        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-                    """
-                    cursor.executemany(insert_query, fact_inserts)
+                    cursor.callproc('InsertFactTable', fact_inserts)
                     conn.commit()
                     # Buoc 9.4.3
                     write_log_to_db("SUCCESS", f"Thành công thêm {len(fact_inserts)} vào bảng fact.", "Changing to Fact")
@@ -175,8 +162,6 @@ def transform_staging_to_fact():
     except Exception as e:
         # Buoc 10.1
         write_log_to_db("ERROR", f"Error during staging to fact transformation: {e}", "Changing to Fact")
-
-
 
 # Entry point
 transform_staging_to_fact()
