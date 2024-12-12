@@ -17,7 +17,7 @@ public partial class Staging
 
     public DateTime CurrentTime { get; set; }
 
-    public DateTime LatestReport { get; set; }
+    public string LatestReport { get; set; } = null!;
 
     public double Visibility { get; set; }
 

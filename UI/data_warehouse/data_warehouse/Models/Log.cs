@@ -12,4 +12,6 @@ public partial class Log
     public string? Note { get; set; }
 
     public DateTime? LogDate { get; set; }
+
+    public string? Process { get; set; }
 }

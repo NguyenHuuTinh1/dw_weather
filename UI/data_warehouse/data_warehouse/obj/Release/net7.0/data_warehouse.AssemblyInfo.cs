@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("data_warehouse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1385362b82a966325f540804ef9369fea5d6d17")]
 [assembly: System.Reflection.AssemblyProductAttribute("data_warehouse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("data_warehouse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

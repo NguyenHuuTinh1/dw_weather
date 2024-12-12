@@ -9,15 +9,15 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = data_warehouse
 build_property.RootNamespace = data_warehouse
-build_property.ProjectDir = D:\code\wh\dw_weather\UI\data_warehouse\data_warehouse\
+build_property.ProjectDir = D:\code\data_warehouse\data_warehouse\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\code\wh\dw_weather\UI\data_warehouse\data_warehouse
+build_property.MSBuildProjectDirectory = D:\code\data_warehouse\data_warehouse
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/code/wh/dw_weather/UI/data_warehouse/data_warehouse/Views/Staging/Index.cshtml]
+[D:/code/data_warehouse/data_warehouse/Views/Staging/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZ2luZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

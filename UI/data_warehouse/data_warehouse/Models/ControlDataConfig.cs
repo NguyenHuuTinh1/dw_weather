@@ -18,4 +18,10 @@ public partial class ControlDataConfig
     public string? Location { get; set; }
 
     public string? CreateBy { get; set; }
+
+    public string? EmailReport { get; set; }
+
+    public string? PassEmail { get; set; }
+
+    public string? EmailSent { get; set; }
 }
